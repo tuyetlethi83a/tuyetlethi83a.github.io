@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "sample-1",
+    "name": "Bim quan sieu thoang (demo)",
+    "image": "/assets/img/products/sample-1.webp",
+    "price_vnd": 99000,
+    "origin_url": "https://shopee.vn/",
+    "merchant": "shopee",
+    "category": "me-va-be"
+  },
+  {
+    "sku": "sample-2",
+    "name": "Sua tam tre em huong diu nhe (demo)",
+    "image": "/assets/img/products/sample-2.webp",
+    "price_vnd": 129000,
+    "origin_url": "https://lazada.vn/",
+    "merchant": "lazada",
+    "category": "me-va-be"
+  }
+]
