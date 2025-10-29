@@ -16,5 +16,41 @@
     "origin_url": "https://lazada.vn/",
     "merchant": "lazada",
     "category": "me-va-be"
+  },
+  {
+    "sku": "sample-t1",
+    "name": "Ao thun unisex co ban (demo)",
+    "image": "/assets/img/products/sample-t1.webp",
+    "price_vnd": 79000,
+    "origin_url": "https://shopee.vn/",
+    "merchant": "shopee",
+    "category": "thoi-trang"
+  },
+  {
+    "sku": "sample-t2",
+    "name": "Quan jeans ong rong (demo)",
+    "image": "/assets/img/products/sample-t2.webp",
+    "price_vnd": 199000,
+    "origin_url": "https://lazada.vn/",
+    "merchant": "lazada",
+    "category": "thoi-trang"
+  },
+  {
+    "sku": "sample-m1",
+    "name": "Sua rua mat diu nhe (demo)",
+    "image": "/assets/img/products/sample-m1.webp",
+    "price_vnd": 89000,
+    "origin_url": "https://shopee.vn/",
+    "merchant": "shopee",
+    "category": "my-pham"
+  },
+  {
+    "sku": "sample-m2",
+    "name": "Kem duong am da (demo)",
+    "image": "/assets/img/products/sample-m2.webp",
+    "price_vnd": 159000,
+    "origin_url": "https://lazada.vn/",
+    "merchant": "lazada",
+    "category": "my-pham"
   }
 ]
