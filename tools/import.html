@@ -1,3 +1,4 @@
+<!-- FILE: /tools/import.html (REPLACE WHOLE FILE) -->
 <!doctype html>
 <html lang="vi">
 <head>
@@ -6,21 +7,27 @@
   <title>MXD Importer-Lite</title>
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="canonical" href="https://tuyetlethi83a.github.io/tools/import.html"/>
+
+  <!-- Base styles + MXD -->
   <link rel="stylesheet" href="/assets/site.css"/>
+
   <style>
-    header.topbar{position:sticky;top:0;background:#fff;z-index:10}
+    header.topbar{position:sticky;top:0;background:#fff;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.06)}
     .tool-wrap{max-width:1100px;margin:0 auto;padding:16px}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
     textarea{width:100%;min-height:120px}
-    table{width:100%;border-collapse:collapse} th,td{border:1px solid #e5e7eb;padding:6px;vertical-align:top}
-    .ok{color:#047857}.warn{color:#b45309}.err{color:#b91c1c}
-    .btn.small{padding:.4rem .65rem;border-radius:8px;font-size:14px}
+    table{width:100%;border-collapse:collapse}
+    th,td{border:1px solid #e5e7eb;padding:6px;vertical-align:top}
+    .btn.small{padding:.45rem .7rem;border-radius:10px;font-size:14px}
     .hint{color:#6b7280;font-size:13px}
     .drop{border:2px dashed #cbd5e1;border-radius:12px;padding:16px;text-align:center;background:#f8fafc}
     .drop.drag{background:#eef2ff;border-color:#818cf8}
   </style>
+
+  <!-- GA4 luôn trước affiliate theo MXD -->
   <script defer src="/assets/analytics.js"></script>
+
   <!-- ZIP client-side cho ảnh đã chuẩn tên -->
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 </head>
@@ -38,13 +45,13 @@
 
 <div class="tool-wrap">
   <h1>MXD Importer-Lite</h1>
-  <p class="muted">Nhập CSV / thêm sản phẩm thủ công / kéo-thả ảnh → gộp <code>affiliates.json</code> + ZIP ảnh <code>.webp</code> để up vào <code>/assets/img/products/</code>. (Không dùng token.)</p>
+  <p class="muted">Nhập CSV / thêm nhanh / dán hàng loạt / kéo-thả ảnh → gộp <code>affiliates.json</code> + ZIP ảnh <code>.webp</code> đúng chuẩn <code>/assets/img/products/&lt;sku&gt;.webp</code>.</p>
 
   <div class="grid">
     <div>
       <h3>1) Tải CSV</h3>
       <input type="file" id="csvFile" accept=".csv,.txt"/>
-      <p class="hint">CSV Shopee/Excel: có cột như <em>Mã sản phẩm, Tên sản phẩm, Giá, Link sản phẩm…</em></p>
+      <p class="hint">CSV Shopee/Excel có thể gồm: <em>Mã sản phẩm, Tên sản phẩm, Giá, Link sản phẩm…</em></p>
 
       <h3>2) Tuỳ chọn</h3>
       <label>Merchant mặc định:
@@ -57,7 +64,7 @@
       </label>
       <br/>
       <label>Tiền tố SKU (tuỳ chọn): <input id="skuPrefix" placeholder="vd: tt-"/></label>
-      <p class="hint">Ảnh luôn theo chuẩn MXD: <code>/assets/img/products/&lt;sku&gt;.webp</code>.</p>
+      <p class="hint">Ảnh luôn theo chuẩn: <code>/assets/img/products/&lt;sku&gt;.webp</code></p>
 
       <h3>3) Hành động dữ liệu</h3>
       <button class="btn small" id="btnParse">Đọc CSV</button>
@@ -91,7 +98,7 @@
       </label><br/>
       <label>SKU (để trống sẽ tự tạo): <input id="mSku" placeholder="auto từ tên"/></label><br/>
       <button class="btn small" id="btnAddManual">Thêm vào danh sách</button>
-      <p class="hint">Sau khi thêm, nhớ bấm “Gộp…” để đưa vào <code>affiliates.json</code>.</p>
+      <p class="hint">Sau khi thêm, bấm “Gộp…” để đưa vào <code>affiliates.json</code>.</p>
     </div>
     <div>
       <h3>Danh sách hiện tại</h3>
@@ -99,13 +106,19 @@
     </div>
   </div>
 
+  <h3>4b) Thêm hàng loạt (dán mỗi dòng)</h3>
+  <p class="hint">Format: <code>Tên | Link | Giá | Merchant?</code> | <em>SKU?</em> (có thể dùng <kbd>|</kbd>, <kbd>,</kbd> hoặc Tab; SKU trống sẽ tự tạo).</p>
+  <textarea id="bulkBox" class="mono" placeholder="Áo Thể Thao | https://shopee.vn/... | 99000 | shopee"></textarea>
+  <br/>
+  <button class="btn small" id="btnBulk">Thêm hàng loạt</button>
+
   <h3>5) Ảnh sản phẩm (.webp theo SKU)</h3>
   <div class="grid">
     <div>
-      <div id="drop" class="drop">Kéo-thả ảnh vào đây (hoặc chọn) — tên file nên **trùng SKU**<br/><br/>
+      <div id="drop" class="drop">Kéo-thả ảnh (hoặc chọn) — tên file nên <strong>trùng SKU</strong><br/><br/>
         <input type="file" id="imgFiles" accept="image/*" multiple/>
       </div>
-      <p class="hint">Tool sẽ cố gắng ghép ảnh ↔ SKU theo tên file. Nếu không khớp, bạn có thể sửa SKU ngay trong bảng.</p>
+      <p class="hint">Tool sẽ cố khớp ảnh ↔ SKU theo tên file; có thể sửa SKU trực tiếp trong bảng.</p>
       <button class="btn small" id="btnZip">Tạo ZIP ảnh chuẩn tên</button>
       <button class="btn small" id="btnNeedList">Tải danh sách SKU cần ảnh</button>
     </div>
@@ -122,6 +135,7 @@
   <div id="mergePreview"></div>
 </div>
 
+<!-- Logic importer -->
 <script defer src="/assets/importer-lite.js"></script>
 </body>
 </html>
