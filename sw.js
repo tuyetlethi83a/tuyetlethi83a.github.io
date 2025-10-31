@@ -1,5 +1,5 @@
 // REPLACE WHOLE FILE: /sw.js
-const VERSION = '2025-10-31-a8';
+const VERSION = '2025-10-31-b2';
 const ASSET_CACHE = 'mxd-assets-' + VERSION;
 
 self.addEventListener('install', e => self.skipWaiting());
