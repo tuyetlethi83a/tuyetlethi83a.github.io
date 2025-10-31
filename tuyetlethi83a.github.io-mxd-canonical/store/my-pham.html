@@ -1,0 +1,33 @@
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mỹ phẩm — Hub | MXD</title><meta name="description" content="Danh mục Mỹ phẩm theo chuẩn MXD."/>
+<link rel="canonical" href="https://tuyetlethi83a.github.io/store/my-pham.html"/><meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Mỹ phẩm — Hub | MXD"/><meta property="og:description" content="Danh mục Mỹ phẩm theo chuẩn MXD."/>
+<meta property="og:url" content="https://tuyetlethi83a.github.io/store/my-pham.html"/><meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
+<link rel="stylesheet" href="/assets/site.css"/><script defer src="/assets/analytics.js"></script><script defer src="/assets/mxd-affiliate.js"></script></head>
+<body><header><h1>Mỹ phẩm — Hub</h1></header><div class="container"><div id="grid" class="grid"></div></div>
+<footer><div class="container"><small class="muted">Nguồn: affiliates.json (category = "my-pham")</small></div></footer>
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+  var grid = document.getElementById('grid');
+  try {
+    var res = await fetch('/affiliates.json');
+    var data = await res.json();
+    var items = data.filter(function(x){ return x.category === 'my-pham'; });
+    if (!items.length) { grid.innerHTML = '<p>Chưa có sản phẩm trong danh mục này.</p>'; return; }
+    var html = items.map(function(x){
+      return ''
+      + '<div class="card product-card">'
+      +   '<a class="product-meta" href="' + x.origin_url + '" data-merchant="' + x.merchant + '" data-sku="' + x.sku + '" data-img="' + x.image + '" data-price="' + x.price_vnd + '">' + x.name + '</a>'
+      +   '<img loading="lazy" src="' + x.image + '" alt="' + x.name + '"/>'
+      +   '<div><span class="badge">' + x.merchant + '</span></div>'
+      +   '<p><strong>' + Number(x.price_vnd).toLocaleString('vi-VN') + ' ₫</strong></p>'
+      +   '<p><a class="btn buy" href="#">Mua ở nơi gốc</a></p>'
+      + '</div>';
+    }).join('');
+    grid.innerHTML = html;
+  } catch(e) {
+    grid.innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+  }
+});
+</script></body></html>
