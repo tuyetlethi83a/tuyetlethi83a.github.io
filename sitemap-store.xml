@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Thêm từng hub danh mục vào đây sau khi tạo, theo MXD Rule 53 -->
-</urlset>
+<!-- INSERT (3 hub URLs) -->
+<url>
+  <loc>https://tuyetlethi83a.github.io/store/thoi-trang.html</loc>
+  <lastmod>2025-10-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://tuyetlethi83a.github.io/store/my-pham.html</loc>
+  <lastmod>2025-10-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://tuyetlethi83a.github.io/store/me-va-be.html</loc>
+  <lastmod>2025-10-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
