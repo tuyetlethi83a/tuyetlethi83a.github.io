@@ -1,11 +1,1738 @@
 [
   {
-    "sku": "mxd-sample",
-    "name": "(Sample) Sản phẩm mẫu để test luồng",
-    "image": "/assets/img/products/mxd-sample.webp",
-    "price_vnd": 123000,
-    "origin_url": "https://shopee.vn/",
+    "name": "Áo croptop ba lỗ nữ TOPTIFY",
+    "price": 99000,
+    "origin": "https://shopee.vn/%C3%81o-croptop-ba-l%E1%BB%97-n%E1%BB%AF-TOPTIFY-c%E1%BB%95-l%E1%BB%8D-tr%C6%A1n-s%C3%A1t-n%C3%A1ch-thun-bo-g%C3%A2n-co-gi%C3%A3n-form-basic-Trip-Away-Top-AC221-TTF023-i.408175384.11370273132?sp_atk=00f330f5-6016-46bd-984a-0120c7a353c6&xptdk=00f330f5-6016-46bd-984a-0120c7a353c6",
     "merchant": "shopee",
-    "category": "demo"
+    "sku": "ao-croptop-ba-lo-nu-toptify",
+    "image": "/assets/img/products/ao-croptop-ba-lo-nu-toptify.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T15:15:59.067Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-croptop-ba-l%25E1%25BB%2597-n%25E1%25BB%25AF-TOPTIFY-c%25E1%25BB%2595-l%25E1%25BB%258D-tr%25C6%25A1n-s%25C3%25A1t-n%25C3%25A1ch-thun-bo-g%25C3%25A2n-co-gi%25C3%25A3n-form-basic-Trip-Away-Top-AC221-TTF023-i.408175384.11370273132%3Fsp_atk%3D00f330f5-6016-46bd-984a-0120c7a353c6%26xptdk%3D00f330f5-6016-46bd-984a-0120c7a353c6&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Hoodie Zip Nỉ Bông Form Rộng Nam Nữ",
+    "price": 119000,
+    "origin": "https://shopee.vn/%C3%81o-Hoodie-Zip-N%E1%BB%89-B%C3%B4ng-Form-R%E1%BB%99ng-Nam-N%E1%BB%AF-T%C3%BAi-D%C3%A2y-K%C3%A9o-N%C3%B3n-To-Logo-Th%C3%AAu-Ng%E1%BB%B1a-i.1141437072.29266108904?sp_atk=fdcc0e3b-cb46-4bd0-b186-6a275ec63eae&xptdk=fdcc0e3b-cb46-4bd0-b186-6a275ec63eae",
+    "merchant": "shopee",
+    "sku": "ao-hoodie-zip-ni-bong-form-rong-nam-nu",
+    "image": "/assets/img/products/ao-hoodie-zip-ni-bong-form-rong-nam-nu.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-14T15:53:56.492Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-Hoodie-Zip-N%25E1%25BB%2589-B%25C3%25B4ng-Form-R%25E1%25BB%2599ng-Nam-N%25E1%25BB%25AF-T%25C3%25BAi-D%25C3%25A2y-K%25C3%25A9o-N%25C3%25B3n-To-Logo-Th%25C3%25AAu-Ng%25E1%25BB%25B1a-i.1141437072.29266108904%3Fsp_atk%3Dfdcc0e3b-cb46-4bd0-b186-6a275ec63eae%26xptdk%3Dfdcc0e3b-cb46-4bd0-b186-6a275ec63eae&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Khoác Nỉ Nam KRIK Form Relaxed Chất Liệu Cotton Thiết Kế Cổ Trụ Thanh Lịch Hiện Đạ",
+    "price": 679000,
+    "origin": "https://shopee.vn/%C3%81o-Kho%C3%A1c-N%E1%BB%89-Nam-KRIK-Form-Relaxed-Ch%E1%BA%A5t-Li%E1%BB%87u-Cotton-Thi%E1%BA%BFt-K%E1%BA%BF-C%E1%BB%95-Tr%E1%BB%A5-Thanh-L%E1%BB%8Bch-Hi%E1%BB%87n-%C4%90%E1%BA%A1i-AK5167-i.200790122.25247020068?extraParams=%7B%22display_model_id%22%3A266603434221%2C%22model_selection_logic%22%3A3%7D&sp_atk=65fd4e8f-40c3-4236-91d3-9d58582d4272&xptdk=65fd4e8f-40c3-4236-91d3-9d58582d4272",
+    "merchant": "shopee",
+    "sku": "ao-khoac-ni-nam-krik-form-relaxed-chat-lieu-cotton-thiet-ke-co-tru-thanh-lich-hien-da",
+    "image": "/assets/img/products/ao-khoac-ni-nam-krik-form-relaxed-chat-lieu-cotton-thiet-ke-co-tru-thanh-lich-hien-da.webp",
+    "category": "",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-29T14:59:26.996Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-Kho%25C3%25A1c-N%25E1%25BB%2589-Nam-KRIK-Form-Relaxed-Ch%25E1%25BA%25A5t-Li%25E1%25BB%2587u-Cotton-Thi%25E1%25BA%25BFt-K%25E1%25BA%25BF-C%25E1%25BB%2595-Tr%25E1%25BB%25A5-Thanh-L%25E1%25BB%258Bch-Hi%25E1%25BB%2587n-%25C4%2590%25E1%25BA%25A1i-AK5167-i.200790122.25247020068%3FextraParams%3D%257B%2522display_model_id%2522%253A266603434221%252C%2522model_selection_logic%2522%253A3%257D%26sp_atk%3D65fd4e8f-40c3-4236-91d3-9d58582d4272%26xptdk%3D65fd4e8f-40c3-4236-91d3-9d58582d4272&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Khoác Tập Gym Nữ Ôm Sát Co Giãn Thấm Hút Mồ Hôi Evasport",
+    "price": 118000,
+    "origin": "https://shopee.vn/%C3%81o-Kho%C3%A1c-T%E1%BA%ADp-Gym-N%E1%BB%AF-%C3%81o-Kho%C3%A1c-Ch%E1%BB%91ng-N%E1%BA%AFng-D%C3%A2y-K%C3%A9o-D%C3%A0i-Yoga-%C3%94m-S%C3%A1t-Co-Gi%C3%A3n-Th%E1%BA%A5m-H%C3%BAt-M%E1%BB%93-H%C3%B4i-Evasport-i.155602237.12338849351?sp_atk=08359b42-7c6c-412c-867b-462bbe70ebe1&xptdk=08359b42-7c6c-412c-867b-462bbe70ebe1",
+    "merchant": "shopee",
+    "sku": "ao-khoac-tap-gym-nu-om-sat-co-gian-tham-hut-mo-hoi-evasport",
+    "image": "/assets/img/products/ao-khoac-tap-gym-nu-om-sat-co-gian-tham-hut-mo-hoi-evasport.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T15:56:10.863Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-Kho%25C3%25A1c-T%25E1%25BA%25ADp-Gym-N%25E1%25BB%25AF-%25C3%2581o-Kho%25C3%25A1c-Ch%25E1%25BB%2591ng-N%25E1%25BA%25AFng-D%25C3%25A2y-K%25C3%25A9o-D%25C3%25A0i-Yoga-%25C3%2594m-S%25C3%25A1t-Co-Gi%25C3%25A3n-Th%25E1%25BA%25A5m-H%25C3%25BAt-M%25E1%25BB%2593-H%25C3%25B4i-Evasport-i.155602237.12338849351%3Fsp_atk%3D08359b42-7c6c-412c-867b-462bbe70ebe1%26xptdk%3D08359b42-7c6c-412c-867b-462bbe70ebe1&sub1=ao-khoac-tap-gym-nu-om-sat-co-gian-tham-hut-mo-hoi-evasport&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Nỉ Sweater Kèm Quần Shorts Form Chuẩn Đủ Size",
+    "price": 210000,
+    "origin": "https://shopee.vn/B%E1%BB%99-N%E1%BB%89-Cotton-Thu-%C4%90%C3%B4ng-In-H%E1%BB%8Da-Ti%E1%BA%BFt-G%E1%BA%A5u-%C3%81o-N%E1%BB%89-Sweater-K%C3%A8m-Qu%E1%BA%A7n-Shorts-Form-Chu%E1%BA%A9n-%C4%90%E1%BB%A7-Size-B%E1%BB%99-%C4%90%E1%BB%93-Thu-%C4%90%C3%B4ng-N%E1%BB%AF-i.1372658712.27340106194?sp_atk=aa1f9851-7cbf-4b3f-a4c0-c77a677fd841&xptdk=aa1f9851-7cbf-4b3f-a4c0-c77a677fd841",
+    "merchant": "shopee",
+    "sku": "ao-ni-sweater-kem-quan-shorts-form-chuan-du-size",
+    "image": "/assets/img/products/ao-ni-sweater-kem-quan-shorts-form-chuan-du-size.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T16:37:12.670Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-N%25E1%25BB%2589-Cotton-Thu-%25C4%2590%25C3%25B4ng-In-H%25E1%25BB%258Da-Ti%25E1%25BA%25BFt-G%25E1%25BA%25A5u-%25C3%2581o-N%25E1%25BB%2589-Sweater-K%25C3%25A8m-Qu%25E1%25BA%25A7n-Shorts-Form-Chu%25E1%25BA%25A9n-%25C4%2590%25E1%25BB%25A7-Size-B%25E1%25BB%2599-%25C4%2590%25E1%25BB%2593-Thu-%25C4%2590%25C3%25B4ng-N%25E1%25BB%25AF-i.1372658712.27340106194%3Fsp_atk%3Daa1f9851-7cbf-4b3f-a4c0-c77a677fd841%26xptdk%3Daa1f9851-7cbf-4b3f-a4c0-c77a677fd841&sub1=ao-ni-sweater-kem-quan-shorts-form-chuan-du-size&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Phao Béo Siêu Nhẹ Nam Nữ GUNO",
+    "price": 599000,
+    "origin": "https://shopee.vn/%C3%81o-Phao-B%C3%A9o-Si%C3%AAu-Nh%E1%BA%B9-Nam-N%E1%BB%AF-GUNO-Ch%E1%BA%A7n-B%C3%B4ng-Cao-C%E1%BA%A5p-C%C3%B3-M%C5%A9-Gi%E1%BB%AF-%E1%BA%A4m-%C3%81o-Kho%C3%A1c-M%C3%B9a-%C4%90%C3%B4ng-SP5-25AG158-AB192-i.225457932.42168167813",
+    "merchant": "shopee",
+    "sku": "ao-phao-beo-sieu-nhe-nam-nu-guno",
+    "image": "/assets/img/products/ao-phao-beo-sieu-nhe-nam-nu-guno.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-11T15:56:29.283Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-Phao-B%25C3%25A9o-Si%25C3%25AAu-Nh%25E1%25BA%25B9-Nam-N%25E1%25BB%25AF-GUNO-Ch%25E1%25BA%25A7n-B%25C3%25B4ng-Cao-C%25E1%25BA%25A5p-C%25C3%25B3-M%25C5%25A9-Gi%25E1%25BB%25AF-%25E1%25BA%25A4m-%25C3%2581o-Kho%25C3%25A1c-M%25C3%25B9a-%25C4%2590%25C3%25B4ng-SP5-25AG158-AB192-i.225457932.42168167813&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Áo phao GUNO siêu nhẹ, có mũ, chần bông giữ ấm và dễ phối đồ — giá tham khảo 599.000 đ.",
+    "seo": {
+      "description": "Áo phao GUNO siêu nhẹ, chần bông giữ ấm, form unisex dễ phối — giá tham khảo 599.000 đ."
+    }
+  },
+  {
+    "name": "Áo Sơ Mi Trắng Nữ Rymola, Không Nhăn, Giấu Nút",
+    "price": 199000,
+    "origin": "https://shopee.vn/%C3%81o-S%C6%A1-Mi-Tr%E1%BA%AFng-N%E1%BB%AF-Rymola-Kh%C3%B4ng-Nh%C4%83n-Gi%E1%BA%A5u-N%C3%BAt-Tay-D%C3%A0i-C%C3%B3-Bigsize-S%C6%A1-Mi-Tr%E1%BA%AFng-C%C3%B4ng-S%E1%BB%9F-Ch%E1%BA%A5t-V%E1%BA%A3i-Cotton-Form-Su%C3%B4ng-i.8496476.6342798120?sp_atk=950dcfb9-cb5e-4abb-9615-dcdc5b5e36be&xptdk=950dcfb9-cb5e-4abb-9615-dcdc5b5e36be",
+    "merchant": "shopee",
+    "sku": "ao-so-mi-trang-nu-rymola-khong-nhan-giau-nut",
+    "image": "/assets/img/products/ao-so-mi-trang-nu-rymola-khong-nhan-giau-nut.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T15:19:36.186Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-S%25C6%25A1-Mi-Tr%25E1%25BA%25AFng-N%25E1%25BB%25AF-Rymola-Kh%25C3%25B4ng-Nh%25C4%2583n-Gi%25E1%25BA%25A5u-N%25C3%25BAt-Tay-D%25C3%25A0i-C%25C3%25B3-Bigsize-S%25C6%25A1-Mi-Tr%25E1%25BA%25AFng-C%25C3%25B4ng-S%25E1%25BB%259F-Ch%25E1%25BA%25A5t-V%25E1%25BA%25A3i-Cotton-Form-Su%25C3%25B4ng-i.8496476.6342798120%3Fsp_atk%3D950dcfb9-cb5e-4abb-9615-dcdc5b5e36be%26xptdk%3D950dcfb9-cb5e-4abb-9615-dcdc5b5e36be&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo thun NELLY - COUPLE \"HER-HIM\" 100% cotton",
+    "price": 210000,
+    "origin": "https://shopee.vn/product/301785019/29080067518?seoName=%C3%81o%20thun%20NELLY%20-%20COUPLE%20%22HER-HIM%22%20100%25%20cotton%20260gsm%20Premium%20-Tay%20L%E1%BB%A1%20Form%20R%E1%BB%99ng%20Oversize%20Nam%20N%E1%BB%AF",
+    "merchant": "shopee",
+    "sku": "ao-thun-nelly-couple-her-him-100-cotton",
+    "image": "/assets/img/products/ao-thun-nelly-couple-her-him-100-cotton.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T15:12:53.235Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2Fproduct%2F301785019%2F29080067518%3FseoName%3D%25C3%2581o%2520thun%2520NELLY%2520-%2520COUPLE%2520%2522HER-HIM%2522%2520100%2525%2520cotton%2520260gsm%2520Premium%2520-Tay%2520L%25E1%25BB%25A1%2520Form%2520R%25E1%25BB%2599ng%2520Oversize%2520Nam%2520N%25E1%25BB%25AF&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo thun NELLY Cotton 260gsm",
+    "price": 210000,
+    "origin": "https://shopee.vn/%C3%81o-thun-NELLY-Cotton-260gsm-Premium-Loes-Yonk-Esof-Tay-L%E1%BB%A1-Form-R%E1%BB%99ng-Nam-N%E1%BB%AF-i.301785019.18384121432?sp_atk=8d3b53e0-7882-452c-aa9d-2b12d9be9356&xptdk=8d3b53e0-7882-452c-aa9d-2b12d9be9356",
+    "merchant": "shopee",
+    "sku": "ao-thun-nelly-cotton-260gsm",
+    "image": "/assets/img/products/ao-thun-nelly-cotton-260gsm.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-21T14:40:00.941Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-thun-NELLY-Cotton-260gsm-Premium-Loes-Yonk-Esof-Tay-L%25E1%25BB%25A1-Form-R%25E1%25BB%2599ng-Nam-N%25E1%25BB%25AF-i.301785019.18384121432%3Fsp_atk%3D8d3b53e0-7882-452c-aa9d-2b12d9be9356%26xptdk%3D8d3b53e0-7882-452c-aa9d-2b12d9be9356&sub1=ao-thun-nelly-cotton-260gsm&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo thun nữ cổ tròn FA1-0044-14",
+    "price": 42000,
+    "origin": "https://shopee.vn/-Choice-New-%C3%81o-thun-n%E1%BB%AF-c%E1%BB%95-tr%C3%B2n-FA1-0044-14-phong-c%C3%A1ch-%C4%91%C6%A1n-gi%E1%BA%A3n-ch%E1%BA%A5t-thun-g%C3%A2n-co-gi%C3%A3n-%C3%B4m-body-i.851157471.27141370977",
+    "merchant": "shopee",
+    "sku": "ao-thun-nu-co-tron-fa1-0044-14",
+    "image": "/assets/img/products/ao-thun-nu-co-tron-fa1-0044-14.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-14T16:14:19.641Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-Choice-New-%25C3%2581o-thun-n%25E1%25BB%25AF-c%25E1%25BB%2595-tr%25C3%25B2n-FA1-0044-14-phong-c%25C3%25A1ch-%25C4%2591%25C6%25A1n-gi%25E1%25BA%25A3n-ch%25E1%25BA%25A5t-thun-g%25C3%25A2n-co-gi%25C3%25A3n-%25C3%25B4m-body-i.851157471.27141370977&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Áo Trễ Vai Choice FA1-2711",
+    "price": 79000,
+    "origin": "https://shopee.vn/%C3%81o-Tr%E1%BB%85-Vai-Choice-FA1-2711-1-Thun-L%C6%B0%E1%BB%9Bi-%C3%94m-Body-Phong-C%C3%A1ch-Slay-i.851157471.44009299624",
+    "merchant": "shopee",
+    "sku": "ao-tre-vai-choice-fa1-2711",
+    "image": "/assets/img/products/ao-tre-vai-choice-fa1-2711.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-14T16:23:36.898Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C3%2581o-Tr%25E1%25BB%2585-Vai-Choice-FA1-2711-1-Thun-L%25C6%25B0%25E1%25BB%259Bi-%25C3%2594m-Body-Phong-C%25C3%25A1ch-Slay-i.851157471.44009299624&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Bình giữ nhiệt HUKAN HK-BGN504BD",
+    "price": 50000,
+    "origin": "https://shopee.vn/B%C3%ACnh-gi%E1%BB%AF-nhi%E1%BB%87t-HUKAN-HK-BGN504BD-Dung-t%C3%ADch-500ml-Gi%E1%BB%AF-nhi%E1%BB%87t-n%C3%B3ng-l%E1%BA%A1nh-C%C3%B3-hi%E1%BB%83n-th%E1%BB%8B-nhi%E1%BB%87t-%C4%91%E1%BB%99-i.319001815.43170676207",
+    "merchant": "shopee",
+    "sku": "binh-giu-nhiet-hukan-hk-bgn504bd",
+    "image": "/assets/img/products/binh-giu-nhiet-hukan-hk-bgn504bd.webp",
+    "category": "do-gia-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:24:12.311Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25C3%25ACnh-gi%25E1%25BB%25AF-nhi%25E1%25BB%2587t-HUKAN-HK-BGN504BD-Dung-t%25C3%25ADch-500ml-Gi%25E1%25BB%25AF-nhi%25E1%25BB%2587t-n%25C3%25B3ng-l%25E1%25BA%25A1nh-C%25C3%25B3-hi%25E1%25BB%2583n-th%25E1%25BB%258B-nhi%25E1%25BB%2587t-%25C4%2591%25E1%25BB%2599-i.319001815.43170676207&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Bình giữ nhiệt 500ml, hiển thị nhiệt độ, giữ nóng–lạnh lâu, nắp kín chống tràn — 50.000 đ.",
+    "seo": {
+      "description": "Bình giữ nhiệt HUKAN 500ml, hiển thị nhiệt độ, giữ nóng–lạnh bền bỉ — giá tham khảo 50.000 đ."
+    }
+  },
+  {
+    "name": "Bộ 10 phụ kiện đa năng HUKAN G1-BPK10c",
+    "price": 180000,
+    "origin": "https://shopee.vn/B%E1%BB%99-10-ph%E1%BB%A5-ki%E1%BB%87n-%C4%91a-n%C4%83ng-HUKAN-G1-BPK10c-5-M%C5%A9i-khoan-m%C5%A9i-v%C3%ADt-%C4%91a-n%C4%83ng-v%C3%A0-chuy%E1%BB%83n-t%E1%BB%AB-v%C3%ADt-sang-bulong-i.319001815.43522215862",
+    "merchant": "shopee",
+    "sku": "bo-10-phu-kien-da-nang-hukan-g1-bpk10c",
+    "image": "/assets/img/products/bo-10-phu-kien-da-nang-hukan-g1-bpk10c.webp",
+    "category": "dung-cu-op-lat",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:21:41.995Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-10-ph%25E1%25BB%25A5-ki%25E1%25BB%2587n-%25C4%2591a-n%25C4%2583ng-HUKAN-G1-BPK10c-5-M%25C5%25A9i-khoan-m%25C5%25A9i-v%25C3%25ADt-%25C4%2591a-n%25C4%2583ng-v%25C3%25A0-chuy%25E1%25BB%2583n-t%25E1%25BB%25Ab-v%25C3%25ADt-sang-bulong-i.319001815.43522215862&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Bộ 10 phụ kiện khoan/vít đa năng, chuyển vít–bulong nhanh, gọn nhẹ cho thợ và gia dụng — 180.000 đ.",
+    "seo": {
+      "description": "HUKAN G1-BPK10c: 10 phụ kiện khoan/vít đa năng, chuyển vít–bulong tiện dụng — giá tham khảo 180.000 đ."
+    }
+  },
+  {
+    "name": "Bộ ngủ nữ tay dài tiểu thư",
+    "price": 93000,
+    "origin": "https://shopee.vn/B%E1%BB%99-ng%E1%BB%A7-n%E1%BB%AF-tay-d%C3%A0i-ti%E1%BB%83u-th%C6%B0-b%E1%BB%99-m%E1%BA%B7c-nh%C3%A0-tr%C6%A1n-ph%E1%BB%91i-b%C3%A8o-ren-d%E1%BB%85-th%C6%B0%C6%A1ng-ch%E1%BA%A5t-%C4%91%C5%A9i-g%C3%A2n-m%E1%BB%81m-d%C3%A0nh-cho-n%E1%BB%AF-m%C3%B9a-thu-%C4%91%C3%B4ng-CARY-i.448441232.26117476683?sp_atk=5d8180fc-88a3-4da1-8c7a-14b2bf05a034&xptdk=5d8180fc-88a3-4da1-8c7a-14b2bf05a034",
+    "merchant": "shopee",
+    "sku": "bo-ngu-nu-tay-dai-tieu-thu",
+    "image": "/assets/img/products/bo-ngu-nu-tay-dai-tieu-thu.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-11T16:03:05.922Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-ng%25E1%25BB%25A7-n%25E1%25BB%25AF-tay-d%25C3%25A0i-ti%25E1%25BB%2583u-th%25C6%25B0-b%25E1%25BB%2599-m%25E1%25BA%25B7c-nh%25C3%25A0-tr%25C6%25A1n-ph%25E1%25BB%2591i-b%25C3%25A8o-ren-d%25E1%25BB%2585-th%25C6%25B0%25C6%25A1ng-ch%25E1%25BA%25A5t-%25C4%2591%25C5%25A9i-g%25C3%25A2n-m%25E1%25BB%2581m-d%25C3%25A0nh-cho-n%25E1%25BB%25AF-m%25C3%25B9a-thu-%25C4%2591%25C3%25B4ng-CARY-i.448441232.26117476683%3Fsp_atk%3D5d8180fc-88a3-4da1-8c7a-14b2bf05a034%26xptdk%3D5d8180fc-88a3-4da1-8c7a-14b2bf05a034&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Bộ mặc nhà tay dài, chất dày ấm, phối bèo ren dễ thương, diện thu–đông xinh xắn — 93.000 đ.",
+    "seo": {
+      "description": "Bộ ngủ tay dài kiểu tiểu thư, chất dày ấm, dễ thương — giá tham khảo 93.000 đ."
+    }
+  },
+  {
+    "name": "Bộ nỉ nữ thu đông chất vải nỉ bông",
+    "price": 175000,
+    "origin": "https://shopee.vn/B%E1%BB%99-n%E1%BB%89-n%E1%BB%AF-thu-%C4%91%C3%B4ng-ch%E1%BA%A5t-v%E1%BA%A3i-n%E1%BB%89-b%C3%B4ng-Set-%C4%91%E1%BB%93-n%E1%BB%AF-thu-%C4%91%C3%B4ng-qu%E1%BA%A7n-%C3%A1o-d%C3%A0i-tay-tr%E1%BA%BB-trung-phong-c%C3%A1ch-H%C3%A0n-Qu%E1%BB%91c-i.403990146.13742655195?sp_atk=ee0f1a57-f24e-4d3f-aa57-51f846c54685&xptdk=ee0f1a57-f24e-4d3f-aa57-51f846c54685",
+    "merchant": "shopee",
+    "sku": "bo-ni-nu-thu-dong-chat-vai-ni-bong",
+    "image": "/assets/img/products/bo-ni-nu-thu-dong-chat-vai-ni-bong.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-11T16:06:31.423Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-n%25E1%25BB%2589-n%25E1%25BB%25AF-thu-%25C4%2591%25C3%25B4ng-ch%25E1%25BA%25A5t-v%25E1%25BA%25A3i-n%25E1%25BB%2589-b%25C3%25B4ng-Set-%25C4%2591%25E1%25BB%2593-n%25E1%25BB%25AF-thu-%25C4%2591%25C3%25B4ng-qu%25E1%25BA%25A7n-%25C3%25A1o-d%25C3%25A0i-tay-tr%25E1%25BA%25BB-trung-phong-c%25C3%25A1ch-H%25C3%25A0n-Qu%25E1%25BB%2591c-i.403990146.13742655195%3Fsp_atk%3Dee0f1a57-f24e-4d3f-aa57-51f846c54685%26xptdk%3Dee0f1a57-f24e-4d3f-aa57-51f846c54685&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Set nỉ bông mềm, form trẻ trung phong cách Hàn, mặc ấm áp ngày lạnh — 175.000 đ.",
+    "seo": {
+      "description": "Bộ nỉ nữ thu đông, nỉ bông mềm ấm, style trẻ trung — giá tham khảo 175.000 đ."
+    }
+  },
+  {
+    "name": "Bộ Quần Áo Nỉ Nam Nữ GUNO Cổ Tròn",
+    "price": 249000,
+    "origin": "https://shopee.vn/B%E1%BB%99-Qu%E1%BA%A7n-%C3%81o-N%E1%BB%89-Nam-N%E1%BB%AF-GUNO-C%E1%BB%95-Tr%C3%B2n-Logo-Th%C3%AAu-K%C3%A8m-Qu%E1%BA%A7n-Su%C3%B4ng-Set-B%E1%BB%99-Thu-%C4%90%C3%B4ng-Cao-C%E1%BA%A5p-SP5-25BG127-BB181-i.225457932.28290393380?sp_atk=a4d62aaa-7508-4f55-989f-3acc65f335d4&xptdk=a4d62aaa-7508-4f55-989f-3acc65f335d4",
+    "merchant": "shopee",
+    "sku": "bo-quan-ao-ni-nam-nu-guno-co-tron",
+    "image": "/assets/img/products/bo-quan-ao-ni-nam-nu-guno-co-tron.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-11T16:00:54.285Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-Qu%25E1%25BA%25A7n-%25C3%2581o-N%25E1%25BB%2589-Nam-N%25E1%25BB%25AF-GUNO-C%25E1%25BB%2595-Tr%25C3%25B2n-Logo-Th%25C3%25AAu-K%25C3%25A8m-Qu%25E1%25BA%25A7n-Su%25C3%25B4ng-Set-B%25E1%25BB%2599-Thu-%25C4%2590%25C3%25B4ng-Cao-C%25E1%25BA%25A5p-SP5-25BG127-BB181-i.225457932.28290393380%3Fsp_atk%3Da4d62aaa-7508-4f55-989f-3acc65f335d4%26xptdk%3Da4d62aaa-7508-4f55-989f-3acc65f335d4&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Set nỉ cổ tròn logo thêu, kèm quần suông thoải mái, ấm áp cho thu–đông — 249.000 đ.",
+    "seo": {
+      "description": "GUNO set nỉ cổ tròn logo thêu, quần suông ấm áp — giá tham khảo 249.000 đ."
+    }
+  },
+  {
+    "name": "Bộ Serum 30ml và 2 kem dưỡng siêu cấp ẩm và giảm nếp nhăn 15ml x2 L'Oreal Paris Revitalift",
+    "price": 390000,
+    "origin": "shopee.vn/Bộ-Serum-30ml-và-2-kem-dưỡng-siêu-cấp-ẩm-và-giảm-nếp-nhăn-15ml-x2-L'Oreal-Paris-Revitalift-HA-1.5--i.37251933.22116856263",
+    "merchant": "shopee",
+    "sku": "bo-serum-30ml-va-2-kem-duong-sieu-cap-am-va-giam-nep-nhan-15ml-x2-l-oreal-paris-revitalift",
+    "image": "/assets/img/products/bo-serum-30ml-va-2-kem-duong-sieu-cap-am-va-giam-nep-nhan-15ml-x2-l-oreal-paris-revitalift.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-22T15:42:11.038Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FB%E1%BB%99-Serum-30ml-v%C3%A0-2-kem-d%C6%B0%E1%BB%A1ng-si%C3%AAu-c%E1%BA%A5p-%E1%BA%A9m-v%C3%A0-gi%E1%BA%A3m-n%E1%BA%BFp-nh%C4%83n-15ml-x2-L'Oreal-Paris-Revitalift-HA-1.5--i.37251933.22116856263&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Bộ Thu Đông Nữ Dài Tay Cổ Tim",
+    "price": 169000,
+    "origin": "https://shopee.vn/B%E1%BB%99-Thu-%C4%90%C3%B4ng-N%E1%BB%AF-D%C3%A0i-Tay-C%E1%BB%95-Tim-Ch%E1%BA%A5t-T%C4%83m-Cotton-Co-Gi%C3%A3n-4-Chi%E1%BB%81u-C%E1%BB%A7a-H%C3%A0n-Ch%E1%BA%A5t-M%E1%BB%81m-M%E1%BB%8Bn-%C4%90%E1%BB%A7-Size-44-85kg-i.824432216.27615550294?sp_atk=a9631362-d080-49f2-bcdd-11ff13185151&xptdk=a9631362-d080-49f2-bcdd-11ff13185151",
+    "merchant": "shopee",
+    "sku": "bo-thu-dong-nu-dai-tay-co-tim",
+    "image": "/assets/img/products/bo-thu-dong-nu-dai-tay-co-tim.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-11T16:05:53.702Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FB%25E1%25BB%2599-Thu-%25C4%2590%25C3%25B4ng-N%25E1%25BB%25AF-D%25C3%25A0i-Tay-C%25E1%25BB%2595-Tim-Ch%25E1%25BA%25A5t-T%25C4%2583m-Cotton-Co-Gi%25C3%25A3n-4-Chi%25E1%25BB%2581u-C%25E1%25BB%25A7a-H%25C3%25A0n-Ch%25E1%25BA%25A5t-M%25E1%25BB%2581m-M%25E1%25BB%258Bn-%25C4%2590%25E1%25BB%25A7-Size-44-85kg-i.824432216.27615550294%3Fsp_atk%3Da9631362-d080-49f2-bcdd-11ff13185151%26xptdk%3Da9631362-d080-49f2-bcdd-11ff13185151&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Bộ thun cổ tim chất tăm cotton co giãn 4 chiều, mềm mịn, dễ mặc — 169.000 đ.",
+    "seo": {
+      "description": "Bộ thu đông cổ tim chất tăm cotton co giãn 4 chiều, êm ái — 169.000 đ."
+    }
+  },
+  {
+    "name": "Bộ Thun Nữ Thời Trang H-Fashion",
+    "price": 99000,
+    "origin": "https://shopee.vn/%C4%90%E1%BB%93-B%E1%BB%99-Thu-%C4%90%C3%B4ng-D%C3%A0i-Tay-N%E1%BB%AF-GI%E1%BA%A2M-36-Set-%C4%90%E1%BB%93-B%E1%BB%99-Thun-N%E1%BB%AF-Th%E1%BB%9Di-Trang-H-Fashion-2022-%C4%90%E1%BB%A7-Size-43-70Kg-i.125880283.22608245253?sp_atk=c7defa5e-063f-41da-ab1b-78964584f70d&xptdk=c7defa5e-063f-41da-ab1b-78964584f70d",
+    "merchant": "shopee",
+    "sku": "bo-thun-nu-thoi-trang-h-fashion",
+    "image": "/assets/img/products/bo-thun-nu-thoi-trang-h-fashion.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-11T16:04:59.149Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F%25C4%2590%25E1%25BB%2593-B%25E1%25BB%2599-Thu-%25C4%2590%25C3%25B4ng-D%25C3%25A0i-Tay-N%25E1%25BB%25AF-GI%25E1%25BA%25A2M-36-Set-%25C4%2590%25E1%25BB%2593-B%25E1%25BB%2599-Thun-N%25E1%25BB%25AF-Th%25E1%25BB%259Di-Trang-H-Fashion-2022-%25C4%2590%25E1%25BB%25A7-Size-43-70Kg-i.125880283.22608245253%3Fsp_atk%3Dc7defa5e-063f-41da-ab1b-78964584f70d%26xptdk%3Dc7defa5e-063f-41da-ab1b-78964584f70d&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Set thun dài tay mặc nhà thoải mái, chất co giãn dễ chịu, giá tiết kiệm — 99.000 đ.",
+    "seo": {
+      "description": "Bộ thun nữ mặc nhà, chất co giãn thoải mái — giá tham khảo 99.000 đ."
+    }
+  },
+  {
+    "name": "cân bằng laser 12 tia BOSCOM BS-1288LD",
+    "price": 1300000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-12-tia-BOSCOM-BS-1288LD-c%C3%B3-%C4%91i%E1%BB%81u-khi%E1%BB%83n-t%E1%BB%AB-xa-i.355266415.21776517395?sp_atk=f85a904e-42d9-4ee8-916e-148a17f0b0a9&xptdk=f85a904e-42d9-4ee8-916e-148a17f0b0a9",
+    "merchant": "shopee",
+    "sku": "can-bang-laser-12-tia-boscom-bs-1288ld",
+    "image": "/assets/img/products/can-bang-laser-12-tia-boscom-bs-1288ld.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:34:17.323Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-12-tia-BOSCOM-BS-1288LD-c%25C3%25B3-%25C4%2591i%25E1%25BB%2581u-khi%25E1%25BB%2583n-t%25E1%25BB%25Ab-xa-i.355266415.21776517395%3Fsp_atk%3Df85a904e-42d9-4ee8-916e-148a17f0b0a9%26xptdk%3Df85a904e-42d9-4ee8-916e-148a17f0b0a9&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cân bằng laser 12 tia xanh, độ sáng cao, cân chỉnh chính xác cho thi công — 1.300.000 đ.",
+    "seo": {
+      "description": "BOSCOM BS-1288LD: máy cân bằng laser 12 tia xanh, chính xác, dễ dùng — giá tham khảo 1.300.000 đ."
+    }
+  },
+  {
+    "name": "cân bằng Laser 12 tia xanh DEKTON DK-LS1201",
+    "price": 1550000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-Laser-12-tia-xanh-DEKTON-DK-LS1201-Tym-shop-i.37962412.15197890461?sp_atk=dc2c5f4a-7804-40b2-932c-74c533856f69&xptdk=dc2c5f4a-7804-40b2-932c-74c533856f69",
+    "merchant": "shopee",
+    "sku": "can-bang-laser-12-tia-xanh-dekton-dk-ls1201",
+    "image": "/assets/img/products/can-bang-laser-12-tia-xanh-dekton-dk-ls1201.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:39:20.995Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-Laser-12-tia-xanh-DEKTON-DK-LS1201-Tym-shop-i.37962412.15197890461%3Fsp_atk%3Ddc2c5f4a-7804-40b2-932c-74c533856f69%26xptdk%3Ddc2c5f4a-7804-40b2-932c-74c533856f69&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "DEKTON DK-LS1201: laser xanh 12 tia, đường nét sáng rõ, phục vụ căn cốt, lắp đặt — 1.550.000 đ.",
+    "seo": {
+      "description": "Máy laser xanh 12 tia DEKTON DK-LS1201, sáng rõ, cân chỉnh chính xác — 1.550.000 đ."
+    }
+  },
+  {
+    "name": "cân bằng Laser 16 tia Kenmax KMLS016",
+    "price": 1350000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-Laser-16-tia-Kenmax-KMLS016-cao-c%E1%BA%A5p-m%C3%A1y-c%C3%A2n-m%E1%BB%B1c-l%E1%BA%A5y-n%C3%A9t-i.188067685.24807165474?sp_atk=f76da61c-b268-4442-a401-6592d1cbe217&xptdk=f76da61c-b268-4442-a401-6592d1cbe217",
+    "merchant": "shopee",
+    "sku": "can-bang-laser-16-tia-kenmax-kmls016",
+    "image": "/assets/img/products/can-bang-laser-16-tia-kenmax-kmls016.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:34:51.143Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-Laser-16-tia-Kenmax-KMLS016-cao-c%25E1%25BA%25A5p-m%25C3%25A1y-c%25C3%25A2n-m%25E1%25BB%25B1c-l%25E1%25BA%25A5y-n%25C3%25A9t-i.188067685.24807165474%3Fsp_atk%3Df76da61c-b268-4442-a401-6592d1cbe217%26xptdk%3Df76da61c-b268-4442-a401-6592d1cbe217&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Kenmax KMLS016: máy laser 16 tia xanh, phủ phòng hiệu quả, cân chỉnh nhanh — 1.350.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser Kenmax KMLS016, 16 tia xanh sáng rõ — giá 1.350.000 đ."
+    }
+  },
+  {
+    "name": "Cân Bằng Laser Dekton DK-LS1201 - 12 Tia",
+    "price": 1760000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-B%E1%BA%B1ng-Laser-Dekton-DK-LS1201-12-Tia-B%C3%B3ng-Led-Si%C3%AAu-S%C3%A1ng-B%E1%BA%A3o-H%C3%A0nh-6-Th%C3%A1ng-i.126345929.44302456595?sp_atk=d455a60f-904d-4659-a525-aaeb97c32c29&xptdk=d455a60f-904d-4659-a525-aaeb97c32c29",
+    "merchant": "shopee",
+    "sku": "can-bang-laser-dekton-dk-ls1201-12-tia",
+    "image": "/assets/img/products/can-bang-laser-dekton-dk-ls1201-12-tia.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:35:15.450Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-B%25E1%25BA%B1ng-Laser-Dekton-DK-LS1201-12-Tia-B%25C3%25B3ng-Led-Si%25C3%25AAu-S%25C3%25A1ng-B%25E1%25BA%A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.126345929.44302456595%3Fsp_atk%3Dd455a60f-904d-4659-a525-aaeb97c32c29%26xptdk%3Dd455a60f-904d-4659-a525-aaeb97c32c29&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Dekton DK-LS1201 bản 12 tia, bóng LED sáng, cân chỉnh chuẩn cho thi công lắp đặt — 1.760.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser Dekton DK-LS1201 (12 tia), sáng rõ, hỗ trợ thi công chính xác — 1.760.000 đ."
+    }
+  },
+  {
+    "name": "cân bằng laze HUKAN KH-12",
+    "price": 1440000,
+    "origin": "https://shopee.vn/M%C3%A1y-b%E1%BA%AFn-cos-c%C3%A2n-b%E1%BA%B1ng-laze-HUKAN-KH-12-tia-xanh-c%C3%B3-%C4%91i%E1%BB%81u-khi%E1%BB%83n-tia-t%E1%BB%AB-xa-i.93201189.13051209781?sp_atk=eeaebff4-8bd5-4c92-a5b3-db08820aa1d5&xptdk=eeaebff4-8bd5-4c92-a5b3-db08820aa1d5",
+    "merchant": "shopee",
+    "sku": "can-bang-laze-hukan-kh-12",
+    "image": "/assets/img/products/can-bang-laze-hukan-kh-12.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:27:37.170Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-b%25E1%25BA%25AFn-cos-c%25C3%25A2n-b%25E1%25BA%B1ng-laze-HUKAN-KH-12-tia-xanh-c%25C3%25B3-%25C4%2591i%25E1%25BB%2581u-khi%25E1%25BB%2583n-tia-t%25E1%25BB%25Ab-xa-i.93201189.13051209781%3Fsp_atk%3Deeaebff4-8bd5-4c92-a5b3-db08820aa1d5%26xptdk%3Deeaebff4-8bd5-4c92-a5b3-db08820aa1d5&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN KH-12: máy laze 12 tia xanh, có điều khiển tia từ xa, cân mực nhanh — 1.440.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laze HUKAN KH-12, 12 tia xanh, điều khiển từ xa — giá tham khảo 1.440.000 đ."
+    }
+  },
+  {
+    "name": "Cân Bằng Tia Laser 12 Tia Xanh DEKTON DK-LS1201",
+    "price": 2015000,
+    "origin": "https://shopee.vn/M%C3%A1y-B%E1%BA%AFn-C%E1%BB%91t-C%C3%A2n-B%E1%BA%B1ng-Tia-Laser-12-Tia-Xanh-DEKTON-DK-LS1201-%C4%90i%E1%BB%81u-Khi%E1%BB%83n-T%E1%BB%AB-Xa-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-i.355266415.23479576373?sp_atk=98e2b74c-8750-4a0b-a894-603829225dba&xptdk=98e2b74c-8750-4a0b-a894-603829225dba",
+    "merchant": "shopee",
+    "sku": "can-bang-tia-laser-12-tia-xanh-dekton-dk-ls1201",
+    "image": "/assets/img/products/can-bang-tia-laser-12-tia-xanh-dekton-dk-ls1201.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:35:43.713Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-B%25E1%25BA%25AFn-C%25E1%25BB%2591t-C%25C3%25A2n-B%25E1%25BA%B1ng-Tia-Laser-12-Tia-Xanh-DEKTON-DK-LS1201-%25C4%2590i%25E1%25BB%2581u-Khi%25E1%25BB%2583n-T%25E1%25BB%25Ab-Xa-H%25C3%25A0ng-Ch%25C3%25ADnh-H%25C3%25A3ng-i.355266415.23479576373%3Fsp_atk%3D98e2b74c-8750-4a0b-a894-603829225dba%26xptdk%3D98e2b74c-8750-4a0b-a894-603829225dba&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Laser xanh 12 tia DEKTON DK-LS1201, điều khiển từ xa, hàng chính hãng — 2.015.000 đ.",
+    "seo": {
+      "description": "Máy bắn cốt laser 12 tia xanh DEKTON DK-LS1201, kèm remote — 2.015.000 đ."
+    }
+  },
+  {
+    "name": "cắt ron gạch men có hút bụi - 1200W",
+    "price": 1900000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%E1%BA%AFt-m%E1%BA%A1ch-c%E1%BA%AFt-ron-g%E1%BA%A1ch-men-c%C3%B3-h%C3%BAt-b%E1%BB%A5i-1200W-B%E1%BA%A3o-h%C3%A0nh-6-th%C3%A1ng-i.898976645.27517758801?sp_atk=7265518f-90c4-41de-be19-24bd39b22429&xptdk=7265518f-90c4-41de-be19-24bd39b22429",
+    "merchant": "shopee",
+    "sku": "cat-ron-gach-men-co-hut-bui-1200w",
+    "image": "/assets/img/products/cat-ron-gach-men-co-hut-bui-1200w.webp",
+    "category": "may-cat",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:38:36.951Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25E1%25BA%25AFt-m%25E1%25BA%A1ch-c%25E1%25BA%25AFt-ron-g%25E1%25BA%25A1ch-men-c%25C3%25B3-h%25C3%25BAt-b%25E1%25BB%25A5i-1200W-B%25E1%25BA%A3o-h%25C3%25A0nh-6-th%25C3%25A1ng-i.898976645.27517758801%3Fsp_atk%3D7265518f-90c4-41de-be19-24bd39b22429%26xptdk%3D7265518f-90c4-41de-be19-24bd39b22429&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt ron gạch men 1200W, có hút bụi giảm bẩn, đường cắt gọn — 1.900.000 đ.",
+    "seo": {
+      "description": "Máy cắt mạch/ron gạch 1200W, kèm hút bụi, gọn sạch — giá tham khảo 1.900.000 đ."
+    }
+  },
+  {
+    "name": "Chân Váy Thể Thao Tennis Nữ",
+    "price": 2829000,
+    "origin": "https://shopee.vn/Wilson-Midtown-Tiered-Skirt-Perforated-Chân-Váy-Thể-Thao-Tennis-Nữ-WW00500531-i.1362431986.26693324542?extraParams=%7B\"display_model_id\"%3A249061492788%2C\"model_selection_logic\"%3A3%7D&sp_atk=02b655b6-a6b6-4bee-bf7f-ead6a526de6d&xptdk=02b655b6-a6b6-4bee-bf7f-ead6a526de6d",
+    "merchant": "shopee",
+    "sku": "chan-vay-the-thao-tennis-nu",
+    "image": "/assets/img/products/chan-vay-the-thao-tennis-nu.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:20:17.188Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FWilson-Midtown-Tiered-Skirt-Perforated-Ch%C3%A2n-V%C3%A1y-Th%E1%BB%83-Thao-Tennis-N%E1%BB%AF-WW00500531-i.1362431986.26693324542%3FextraParams%3D%257B%22display_model_id%22%253A249061492788%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3D02b655b6-a6b6-4bee-bf7f-ead6a526de6d%26xptdk%3D02b655b6-a6b6-4bee-bf7f-ead6a526de6d&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "COMBO 10 Miếng Mặt Nạ BANOBAGI PREMIUM Thế Hệ Mới, Dưỡng Da Chuyên Sâu",
+    "price": 174900,
+    "origin": "shopee.vn/COMBO-10-Miếng-Mặt-Nạ-BANOBAGI-PREMIUM-Thế-Hệ-Mới-Dưỡng-Da-Chuyên-Sâu-Dành-Cho-Mọi-Loại-Da-30ml-i.1469171260.28576819573?extraParams=%7B\"display_model_id\"%3A157690775767%2C\"model_selection_logic\"%3A3%7D&rModelId=157690775767&sp_atk=06b9747a-72a5-4753-b936-45c13bf9c4ea&vItemId=40124065713&vModelId=306953939591&vShopId=1506174776&xptdk=06b9747a-72a5-4753-b936-45c13bf9c4ea",
+    "merchant": "shopee",
+    "sku": "combo-10-mieng-mat-na-banobagi-premium-the-he-moi-duong-da-chuyen-sau",
+    "image": "/assets/img/products/sg-11134253-825aj-mftalqodc1l456.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:02:39.759Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FCOMBO-10-Mi%E1%BA%BFng-M%E1%BA%B7t-N%E1%BA%A1-BANOBAGI-PREMIUM-Th%E1%BA%BF-H%E1%BB%87-M%E1%BB%9Bi-D%C6%B0%E1%BB%A1ng-Da-Chuy%C3%AAn-S%C3%A2u-D%C3%A0nh-Cho-M%E1%BB%8Di-Lo%E1%BA%A1i-Da-30ml-i.1469171260.28576819573%3FextraParams%3D%257B%22display_model_id%22%253A157690775767%252C%22model_selection_logic%22%253A3%257D%26rModelId%3D157690775767%26sp_atk%3D06b9747a-72a5-4753-b936-45c13bf9c4ea%26vItemId%3D40124065713%26vModelId%3D306953939591%26vShopId%3D1506174776%26xptdk%3D06b9747a-72a5-4753-b936-45c13bf9c4ea&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Combo Sữa tắm Dưỡng thể Dove 500g Da Mịn Hương Hoa 500g",
+    "price": 520000,
+    "origin": "https://shopee.vn/Combo-Sữa-tắm-Dưỡng-thể-Dove-500g-Da-Mịn-Hương-Hoa-500g-Tẩy-Da-Chết-Dưỡng-Ẩm-Dove-Hương-Hoa-Anh-Đào-Lựu-Đỏ-298g-i.111138057.18267714914",
+    "merchant": "shopee",
+    "sku": "combo-sua-tam-duong-the-dove-500g-da-min-huong-hoa-500g",
+    "image": "/assets/img/products/combo-sua-tam-duong-the-dove-500g-da-min-huong-hoa-500g.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T15:40:28.834Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FCombo-S%E1%BB%AFa-t%E1%BA%AFm-D%C6%B0%E1%BB%A1ng-th%E1%BB%83-Dove-500g-Da-M%E1%BB%8Bn-H%C6%B0%C6%A1ng-Hoa-500g-T%E1%BA%A9y-Da-Ch%E1%BA%BFt-D%C6%B0%E1%BB%A1ng-%E1%BA%A8m-Dove-H%C6%B0%C6%A1ng-Hoa-Anh-%C4%90%C3%A0o-L%E1%BB%B1u-%C4%90%E1%BB%8F-298g-i.111138057.18267714914&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Dép Cross, dép sục cao cấp tặng kèm 12 sticker",
+    "price": 59000,
+    "origin": "shopee.vn/Dép-Cross-dép-sục-cao-cấp-tặng-kèm-12-sticker-hỗ-trợ-đổi-trả-i.690520140.24125894887?extraParams=%7B\"display_model_id\"%3A215050445087%2C\"model_selection_logic\"%3A3%7D&sp_atk=a7e43e0e-5cbd-4b87-9aa7-30dd344d0093&xptdk=a7e43e0e-5cbd-4b87-9aa7-30dd344d0093",
+    "merchant": "shopee",
+    "sku": "dep-cross-dep-suc-cao-cap-tang-kem-12-sticker",
+    "image": "/assets/img/products/dep-cross-dep-suc-cao-cap-tang-kem-12-sticker.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-27T15:10:00.052Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FD%C3%A9p-Cross-d%C3%A9p-s%E1%BB%A5c-cao-c%E1%BA%A5p-t%E1%BA%B7ng-k%C3%A8m-12-sticker-h%E1%BB%97-tr%E1%BB%A3-%C4%91%E1%BB%95i-tr%E1%BA%A3-i.690520140.24125894887%3FextraParams%3D%257B%22display_model_id%22%253A215050445087%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3Da7e43e0e-5cbd-4b87-9aa7-30dd344d0093%26xptdk%3Da7e43e0e-5cbd-4b87-9aa7-30dd344d0093&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Dép sục clog classic nam nữ đúc nguyên khối chất liệu EVA Êm nhẹ",
+    "price": 56000,
+    "origin": "https://shopee.vn/Dép-sục-clog-classic-nam-nữ-đúc-nguyên-khối-chất-liệu-EVA-Êm-nhẹ-Tặng-Vớ-chống-trơn-trợt-i.134952940.3443588628?extraParams=%7B\"display_model_id\"%3A266608518756%2C\"model_selection_logic\"%3A3%7D&sp_atk=3952f117-433a-467b-84f7-3d2022602675&xptdk=3952f117-433a-467b-84f7-3d2022602675",
+    "merchant": "shopee",
+    "sku": "dep-suc-clog-classic-nam-nu-duc-nguyen-khoi-chat-lieu-eva-em-nhe",
+    "image": "/assets/img/products/dep-suc-clog-classic-nam-nu-duc-nguyen-khoi-chat-lieu-eva-em-nhe.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-27T15:08:58.758Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FD%C3%A9p-s%E1%BB%A5c-clog-classic-nam-n%E1%BB%AF-%C4%91%C3%BAc-nguy%C3%AAn-kh%E1%BB%91i-ch%E1%BA%A5t-li%E1%BB%87u-EVA-%C3%8Am-nh%E1%BA%B9-T%E1%BA%B7ng-V%E1%BB%9B-ch%E1%BB%91ng-tr%C6%A1n-tr%E1%BB%A3t-i.134952940.3443588628%3FextraParams%3D%257B%22display_model_id%22%253A266608518756%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3D3952f117-433a-467b-84f7-3d2022602675%26xptdk%3D3952f117-433a-467b-84f7-3d2022602675&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Đồ bộ trung niên nữ SANA FASHION chất LỤA PHÁP",
+    "price": 194000,
+    "origin": "shopee.vn/Đồ-bộ-trung-niên-nữ-SANA-FASHION-chất-LỤA-PHÁP-trung-niên-nữ-quần-ống-rộng-cao-cấp-HT50-i.135554853.43624945839?extraParams=%7B\"display_model_id\"%3A262021868587%2C\"model_selection_logic\"%3A3%7D&sp_atk=441117c8-2670-40bd-96f3-3ca57b9d8cb0&xptdk=441117c8-2670-40bd-96f3-3ca57b9d8cb0",
+    "merchant": "shopee",
+    "sku": "do-bo-trung-nien-nu-sana-fashion-chat-lua-phap",
+    "image": "/assets/img/products/do-bo-trung-nien-nu-sana-fashion-chat-lua-phap.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:19:16.769Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2F%C4%90%E1%BB%93-b%E1%BB%99-trung-ni%C3%AAn-n%E1%BB%AF-SANA-FASHION-ch%E1%BA%A5t-L%E1%BB%A4A-PH%C3%81P-trung-ni%C3%AAn-n%E1%BB%AF-qu%E1%BA%A7n-%E1%BB%91ng-r%E1%BB%99ng-cao-c%E1%BA%A5p-HT50-i.135554853.43624945839%3FextraParams%3D%257B%22display_model_id%22%253A262021868587%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3D441117c8-2670-40bd-96f3-3ca57b9d8cb0%26xptdk%3D441117c8-2670-40bd-96f3-3ca57b9d8cb0&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Dove Serum dưỡng sáng khử mùi Dove dành cho nữ với 3% Niacinamide",
+    "price": 83000,
+    "origin": "https://shopee.vn/-CH%C3%8DNH-H%C3%83NG-Dove-Serum-d%C6%B0%E1%BB%A1ng-s%C3%A1ng-kh%E1%BB%AD-m%C3%B9i-Dove-d%C3%A0nh-cho-n%E1%BB%AF-v%E1%BB%9Bi-3-Niacinamide-gi%C3%BAp-da-s%C3%A1ng-m%E1%BB%8Bn-%C4%91%E1%BB%81u-m%C3%A0u-40ml-t%E1%BB%91t-nh%C6%B0-l%C4%83n-i.111138057.6931969733",
+    "merchant": "shopee",
+    "sku": "dove-serum-duong-sang-khu-mui-dove-danh-cho-nu-voi-3-niacinamide",
+    "image": "/assets/img/categories/dove-serum-duong-sang-khu-mui-dove-danh-cho-nu-voi-3-niacinamide.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T04:47:32.831Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-CH%25C3%258DNH-H%25C3%2583NG-Dove-Serum-d%25C6%25B0%25E1%25BB%25A1ng-s%25C3%25A1ng-kh%25E1%25BB%25AD-m%25C3%25B9i-Dove-d%25C3%25A0nh-cho-n%25E1%25BB%25AF-v%25E1%25BB%259Bi-3-Niacinamide-gi%25C3%25BAp-da-s%25C3%25A1ng-m%25E1%25BB%258Bn-%25C4%2591%25E1%25BB%2581u-m%25C3%25A0u-40ml-t%25E1%25BB%2591t-nh%25C6%25B0-l%25C4%2583n-i.111138057.6931969733&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Hộp 10 miếng Mặt Nạ Giấy COLORKEY LUMINOUS Vitamin B5",
+    "price": 109000,
+    "origin": "https://shopee.vn/1-Hộp-10-miếng-Mặt-Nạ-Giấy-COLORKEY-LUMINOUS-Vitamin-B5-Cung-Cấp-Dưỡng-Chất-Phục-Hồi-Dưỡng-Ẩm-i.1476711082.29977573684?extraParams=%7B\"display_model_id\"%3A129261854721%2C\"model_selection_logic\"%3A3%7D&rModelId=129261854721&sp_atk=0ad88559-5c3d-4c93-bb54-919df646813d&vItemId=44118320331&vModelId=271505030588&vShopId=1506174776&xptdk=0ad88559-5c3d-4c93-bb54-919df646813d",
+    "merchant": "shopee",
+    "sku": "hop-10-mieng-mat-na-giay-colorkey-luminous-vitamin-b5",
+    "image": "/assets/img/products/hop-10-mieng-mat-na-giay-colorkey-luminous-vitamin-b5.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-27T15:05:13.953Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F1-H%E1%BB%99p-10-mi%E1%BA%BFng-M%E1%BA%B7t-N%E1%BA%A1-Gi%E1%BA%A5y-COLORKEY-LUMINOUS-Vitamin-B5-Cung-C%E1%BA%A5p-D%C6%B0%E1%BB%A1ng-Ch%E1%BA%A5t-Ph%E1%BB%A5c-H%E1%BB%93i-D%C6%B0%E1%BB%A1ng-%E1%BA%A8m-i.1476711082.29977573684%3FextraParams%3D%257B%22display_model_id%22%253A129261854721%252C%22model_selection_logic%22%253A3%257D%26rModelId%3D129261854721%26sp_atk%3D0ad88559-5c3d-4c93-bb54-919df646813d%26vItemId%3D44118320331%26vModelId%3D271505030588%26vShopId%3D1506174776%26xptdk%3D0ad88559-5c3d-4c93-bb54-919df646813d&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Kem chống nắng nâng tông kiềm dầu INNISFREE Tone Up No Sebum EX SPF",
+    "price": 387000,
+    "origin": "https://shopee.vn/Kem-chống-nắng-nâng-tông-kiềm-dầu-INNISFREE-Tone-Up-No-Sebum-EX-SPF-50-PA-60-mL-i.155343961.2731358357",
+    "merchant": "shopee",
+    "sku": "kem-chong-nang-nang-tong-kiem-dau-innisfree-tone-up-no-sebum-ex-spf",
+    "image": "/assets/img/products/kem-chong-nang-nang-tong-kiem-dau-innisfree-tone-up-no-sebum-ex-spf.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-22T15:48:10.445Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FKem-ch%E1%BB%91ng-n%E1%BA%AFng-n%C3%A2ng-t%C3%B4ng-ki%E1%BB%81m-d%E1%BA%A7u-INNISFREE-Tone-Up-No-Sebum-EX-SPF-50-PA-60-mL-i.155343961.2731358357&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Kem dưỡng thể hỗ trợ giảm mụn và làm mịn da Paula's Choice 2% BHA Body Smoothing Spot Exfoliant",
+    "price": 419000,
+    "origin": "shopee.vn/Kem-dưỡng-thể-hỗ-trợ-giảm-mụn-và-làm-mịn-da-Paula's-Choice-2-BHA-Body-Smoothing-Spot-Exfoliant-5706-i.212004800.3912186784",
+    "merchant": "shopee",
+    "sku": "kem-duong-the-ho-tro-giam-mun-va-lam-min-da-paula-s-choice-2-bha-body-smoothing-spot-exfoliant",
+    "image": "/assets/img/products/kem-duong-the-ho-tro-giam-mun-va-lam-min-da-paula-s-choice-2-bha-body-smoothing-spot-exfoliant.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T15:45:04.086Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FKem-d%C6%B0%E1%BB%A1ng-th%E1%BB%83-h%E1%BB%97-tr%E1%BB%A3-gi%E1%BA%A3m-m%E1%BB%A5n-v%C3%A0-l%C3%A0m-m%E1%BB%8Bn-da-Paula's-Choice-2-BHA-Body-Smoothing-Spot-Exfoliant-5706-i.212004800.3912186784&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Kem dưỡng thể làm sáng da và làm đều màu da Paula's Choice Skin Revealing Body Lotion",
+    "price": 828000,
+    "origin": "shopee.vn/Kem-dưỡng-thể-làm-sáng-da-và-làm-đều-màu-da-Paula's-Choice-Skin-Revealing-Body-Lotion-10-AHA-210ml-5900-i.212004800.3912186788",
+    "merchant": "shopee",
+    "sku": "kem-duong-the-lam-sang-da-va-lam-deu-mau-da-paula-s-choice-skin-revealing-body-lotion",
+    "image": "/assets/img/products/kem-duong-the-lam-sang-da-va-lam-deu-mau-da-paula-s-choice-skin-revealing-body-lotion.webp",
+    "category": "",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T15:46:38.729Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FKem-d%C6%B0%E1%BB%A1ng-th%E1%BB%83-l%C3%A0m-s%C3%A1ng-da-v%C3%A0-l%C3%A0m-%C4%91%E1%BB%81u-m%C3%A0u-da-Paula's-Choice-Skin-Revealing-Body-Lotion-10-AHA-210ml-5900-i.212004800.3912186788&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Laser Lace Half Zip Áo Dài Tay Nữ",
+    "price": 3169000,
+    "origin": "https://shopee.vn/Wilson-Women's-Laser-Lace-Half-Zip-%C3%81o-D%C3%A0i-Tay-N%E1%BB%AF-WW00556531-i.1362431986.28243324393?extraParams=%7B%22display_model_id%22%3A188767072334%2C%22model_selection_logic%22%3A3%7D&sp_atk=3122c0ad-8502-4661-ad61-f678598f963d&xptdk=3122c0ad-8502-4661-ad61-f678598f963d",
+    "merchant": "shopee",
+    "sku": "ao-dai-tay-nu-wilson-women-s-laser-lace-half-zip",
+    "image": "/assets/img/products/ao-dai-tay-nu-wilson-women-s-laser-lace-half-zip.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:27:58.367Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FWilson-Women's-Laser-Lace-Half-Zip-%25C3%2581o-D%25C3%25A0i-Tay-N%25E1%25BB%25AF-WW00556531-i.1362431986.28243324393%3FextraParams%3D%257B%2522display_model_id%2522%253A188767072334%252C%2522model_selection_logic%2522%253A3%257D%26sp_atk%3D3122c0ad-8502-4661-ad61-f678598f963d%26xptdk%3D3122c0ad-8502-4661-ad61-f678598f963d&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Laser Lace Half Zip Áo Dài Tay Nữ",
+    "price": 3169000,
+    "origin": "https://shopee.vn/Wilson-Women's-Laser-Lace-Half-Zip-%C3%81o-D%C3%A0i-Tay-N%E1%BB%AF-WW00556531-i.1362431986.28243324393?extraParams=%7B%22display_model_id%22%3A188767072334%2C%22model_selection_logic%22%3A3%7D&sp_atk=3122c0ad-8502-4661-ad61-f678598f963d&xptdk=3122c0ad-8502-4661-ad61-f678598f963d",
+    "merchant": "shopee",
+    "sku": "laser-lace-half-zip-ao-dai-tay-nu",
+    "image": "/assets/img/products/laser-lace-half-zip-ao-dai-tay-nu.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:27:58.367Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FWilson-Women's-Laser-Lace-Half-Zip-%25C3%2581o-D%25C3%25A0i-Tay-N%25E1%25BB%25AF-WW00556531-i.1362431986.28243324393%3FextraParams%3D%257B%2522display_model_id%2522%253A188767072334%252C%2522model_selection_logic%2522%253A3%257D%26sp_atk%3D3122c0ad-8502-4661-ad61-f678598f963d%26xptdk%3D3122c0ad-8502-4661-ad61-f678598f963d&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Mài Điện Cắt Góc Cầm Tay Hukan AG 5030",
+    "price": 580000,
+    "origin": "https://shopee.vn/M%C3%A1y-M%C3%A0i-%C4%90i%E1%BB%87n-C%E1%BA%AFt-G%C3%B3c-C%E1%BA%A7m-Tay-Hukan-AG-5030-C%C3%B4ng-Su%E1%BA%A5t-900W-T%E1%BA%B7ng-K%C3%A8m-Th%C6%B0%E1%BB%9Bc-%C4%90o-v%C3%A0-%C4%90%C3%A1-C%E1%BA%AFt-B%E1%BA%A3o-H%C3%A0nh-6-Th%C3%A1ng-i.131704252.29071117876?sp_atk=c3d509a3-fdff-4746-ac78-8b8f15869dcb&xptdk=c3d509a3-fdff-4746-ac78-8b8f15869dcb",
+    "merchant": "shopee",
+    "sku": "mai-dien-cat-goc-cam-tay-hukan-ag-5030",
+    "image": "/assets/img/products/mai-dien-cat-goc-cam-tay-hukan-ag-5030.webp",
+    "category": "may-cat",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:16:34.304Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-M%25C3%25A0i-%25C4%2590i%25E1%25BB%2587n-C%25E1%25BA%25AFt-G%25C3%25B3c-C%25E1%25BA%A7m-Tay-Hukan-AG-5030-C%25C3%25B4ng-Su%25E1%25BA%25A5t-900W-T%25E1%25BA%B7ng-K%25C3%25A8m-Th%25C6%25B0%25E1%25BB%259Bc-%25C4%2590o-v%25C3%25A0-%25C4%2590%25C3%25A1-C%25E1%25BA%25AFt-B%25E1%25BA%A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.131704252.29071117876%3Fsp_atk%3Dc3d509a3-fdff-4746-ac78-8b8f15869dcb%26xptdk%3Dc3d509a3-fdff-4746-ac78-8b8f15869dcb&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài/cắt góc 900W Hukan AG5030, nhỏ gọn, tặng thước đo & đá cắt — 580.000 đ.",
+    "seo": {
+      "description": "Máy mài điện cầm tay Hukan AG 5030, 900W, đa dụng — giá tham khảo 580.000 đ."
+    }
+  },
+  {
+    "name": "Mặt Nạ Nhau Thai Cừu Cuống Rốn Tế Bào Gốc Nhật Bản Date 2028",
+    "price": 134000,
+    "origin": "shopee.vn/Mặt-Nạ-Nhau-Thai-Cừu-Nhật-Bản-Tăng-Đàn-Hồi-Da-Giảm-Mẩn-Đỏ-Hộp-50-Miếng-i.66648887.20582699301?extraParams=%7B\"display_model_id\"%3A206940408082%2C\"model_selection_logic\"%3A3%7D&rModelId=206940408082&sp_atk=3f4431b3-0006-4c15-acd6-28fa0b584201&vItemId=41913218535&vModelId=301099955042&vShopId=1506174776&xptdk=3f4431b3-0006-4c15-acd6-28fa0b584201",
+    "merchant": "shopee",
+    "sku": "mat-na-nhau-thai-cuu-cuong-ron-te-bao-goc-nhat-ban-date-2028",
+    "image": "/assets/img/products/mat-na-nhau-thai-cuu-cuong-ron-te-bao-goc-nhat-ban-date-2028.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-27T15:03:54.059Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FM%E1%BA%B7t-N%E1%BA%A1-Nhau-Thai-C%E1%BB%ABu-Nh%E1%BA%ADt-B%E1%BA%A3n-T%C4%83ng-%C4%90%C3%A0n-H%E1%BB%93i-Da-Gi%E1%BA%A3m-M%E1%BA%A9n-%C4%90%E1%BB%8F-H%E1%BB%99p-50-Mi%E1%BA%BFng-i.66648887.20582699301%3FextraParams%3D%257B%22display_model_id%22%253A206940408082%252C%22model_selection_logic%22%253A3%257D%26rModelId%3D206940408082%26sp_atk%3D3f4431b3-0006-4c15-acd6-28fa0b584201%26vItemId%3D41913218535%26vModelId%3D301099955042%26vShopId%3D1506174776%26xptdk%3D3f4431b3-0006-4c15-acd6-28fa0b584201&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Máy Bắn Tia BOSCOM BS – 1288LD",
+    "price": 1199000,
+    "origin": "https://shopee.vn/M%C3%A1y-B%E1%BA%AFn-C%E1%BB%91t-C%C3%A2n-B%E1%BA%B1ng-Laser-12-Tia-Xanh-M%C3%A1y-C%C3%A2n-M%E1%BB%B1c-Laser-M%C3%A1y-B%E1%BA%AFn-Tia-BOSCOM-BS-%E2%80%93-1288LD-Ch%C3%ADnh-X%C3%A1c-M%C3%A1y-%C4%90%C3%BAc-B%E1%BA%B1ng-H%E1%BB%A3p-Ki-i.100232063.19591790278?sp_atk=6db9c47a-cccf-4473-90b5-05f5d4de44af&xptdk=6db9c47a-cccf-4473-90b5-05f5d4de44af",
+    "merchant": "shopee",
+    "sku": "may-ban-tia-boscom-bs-1288ld",
+    "image": "/assets/img/products/may-ban-tia-boscom-bs-1288ld.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:32:30.579Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-B%25E1%25BA%25AFn-C%25E1%25BB%2591t-C%25C3%25A2n-B%25E1%25BA%B1ng-Laser-12-Tia-Xanh-M%C3%A1y-C%C3%25A2n-M%25E1%25BB%25B1c-Laser-M%C3%25A1y-B%25E1%25BA%25AFn-Tia-BOSCOM-BS-%25E2%2580%2593-1288LD-Ch%25C3%25ADnh-X%25C3%25A1c-M%25C3%25A1y-%25C4%2590%25C3%25BAc-B%25E1%25BA%B1ng-H%25E1%25BB%25A3p-Ki-i.100232063.19591790278%3Fsp_atk%3D6db9c47a-cccf-4473-90b5-05f5d4de44af%26xptdk%3D6db9c47a-cccf-4473-90b5-05f5d4de44af&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "BOSCOM BS-1288LD: máy bắn cốt laser 12 tia xanh, độ chính xác cao, kèm hộp — 1.199.000 đ.",
+    "seo": {
+      "description": "Máy bắn tia BOSCOM BS-1288LD, 12 tia xanh, chính xác, gọn kèm hộp — 1.199.000 đ."
+    }
+  },
+  {
+    "name": "Máy bơm hơi HUKAN GEN2 G2-BHP2120",
+    "price": 799000,
+    "origin": "https://shopee.vn/-M%E1%BB%9Bi-nh%E1%BA%A5t-M%C3%A1y-b%C6%A1m-h%C6%A1i-HUKAN-GEN2-G2-BHP2120-Nh%E1%BA%B9-0.94kg-Ch%C3%A2n-pin-ph%E1%BB%95-th%C3%B4ng-B%E1%BA%A3ng-led-hi%E1%BB%83n-th%E1%BB%8B-i.319001815.19191675017",
+    "merchant": "shopee",
+    "sku": "may-bom-hoi-hukan-gen2-g2-bhp2120",
+    "image": "/assets/img/products/may-bom-hoi-hukan-gen2-g2-bhp2120.webp",
+    "category": "may-khoan-duc-vit",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:20:09.409Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-M%25E1%25BB%259Bi-nh%25E1%25BA%25A5t-M%25C3%25A1y-b%25C6%25A1m-h%25C6%25A1i-HUKAN-GEN2-G2-BHP2120-Nh%25E1%25BA%B9-0.94kg-Ch%25C3%25A2n-pin-ph%25E1%25BB%2595-th%25C3%25B4ng-B%25E1%25BA%25A3ng-led-hi%25E1%25BB%2583n-th%25E1%25BB%258B-i.319001815.19191675017&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy bơm hơi GEN2 G2-BHP2120, nhẹ 0,94kg, chân pin phổ thông, màn LED hiển thị — 799.000 đ.",
+    "seo": {
+      "description": "Máy bơm hơi HUKAN Gen2 G2-BHP2120, gọn nhẹ, chân pin phổ thông — 799.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Bằng Cốt 12 Tia Xanh Hukan HK - T97",
+    "price": 1250000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-B%E1%BA%B1ng-C%E1%BB%91t-12-Tia-Xanh-Hukan-HK-T97-Pin-Dung-L%C6%B0%E1%BB%A3ng-L%E1%BB%9Bn-K%C3%A8m-Ch%C3%A2m-Nh%C3%B4m-Cao-Baor-Hanhf-i.131704252.27520668616?sp_atk=db46102a-eaf0-49c7-a52b-57c31921a6e0&xptdk=db46102a-eaf0-49c7-a52b-57c31921a6e0",
+    "merchant": "shopee",
+    "sku": "may-can-bang-cot-12-tia-xanh-hukan-hk-t97",
+    "image": "/assets/img/products/may-can-bang-cot-12-tia-xanh-hukan-hk-t97.webp",
+    "category": "may-lazer",
+    "brand": "HUKAN",
+    "tags": [
+      "12-tia",
+      "laser-xanh"
+    ],
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-29T17:30:53.604Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-B%25E1%25BA%B1ng-C%25E1%25BB%2591t-12-Tia-Xanh-Hukan-HK-T97-Pin-Dung-L%25C6%25B0%25E1%25A3ng-L%25E1%25BB%259Bn-K%25C3%25A8m-Ch%25C3%25A2m-Nh%25C3%25B4m-Cao-Baor-Hanhf-i.131704252.27520668616%3Fsp_atk%3Ddb46102a-eaf0-49c7-a52b-57c31921a6e0%26xptdk%3Ddb46102a-eaf0-49c7-a52b-57c31921a6e0&sub1=may-can-bang-cot-12-tia-xanh-hukan-hk-t97&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Hukan HK-T97: cân bằng cốt 12 tia xanh, pin dung lượng lớn, kèm chân nhôm — 1.250.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng cốt 12 tia xanh Hukan HK-T97, pin lớn, chính xác — 1.250.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser 12 tia Hukan T97",
+    "price": 1280000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-12-tia-Hukan-T97-cao-c%E1%BA%A5p-m%E1%BA%ABu-m%E1%BB%9Bi-tia-si%C3%AAu-s%C3%A1ng-v%C3%A0-m%E1%BA%A3nh-k%C3%A8m-4-lo%E1%BA%A1i-ch%C3%A2n-%C4%91%E1%BA%BF-v%C3%A0-h%E1%BB%99p-%C4%91%E1%BB%B1ng-i.259706672.23648805851?sp_atk=eaf7a7db-7bd2-4dcf-a671-1b9bb3cc9911&xptdk=eaf7a7db-7bd2-4dcf-a671-1b9bb3cc9911",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-12-tia-hukan-t97",
+    "image": "/assets/img/products/may-can-bang-laser-12-tia-hukan-t97.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:25:24.210Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-12-tia-Hukan-T97-cao-c%25E1%25BA%25A5p-m%25E1%25BB%259Bi-tia-si%25C3%25AAu-s%25C3%25A1ng-v%25C3%25A0-m%25E1%25BA%A3nh-k%25C3%25A8m-4-lo%25E1%25BA%25A1i-ch%25C3%25A2n-%25C4%2591%25E1%25BA%25BF-v%25C3%25A0-h%25E1%25BB%2599p-%25C4%2591%25E1%25BB%25B1ng-i.259706672.23648805851%3Fsp_atk%3Deaf7a7db-7bd2-4dcf-a671-1b9bb3cc9911%26xptdk%3Deaf7a7db-7bd2-4dcf-a671-1b9bb3cc9911&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cân bằng laser Hukan T97, 12 tia siêu sáng, kèm nhiều loại chân & hộp đựng — 1.280.000 đ.",
+    "seo": {
+      "description": "Hukan T97: máy cân bằng laser 12 tia, sáng mạnh, phụ kiện đầy đủ — 1.280.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser 12 tia siêu sáng LAiSAi LSG6650S",
+    "price": 3600000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-12-tia-si%C3%AAu-s%C3%A1ng-LAiSAi-LSG6650S-cao-c%E1%BA%A5p-m%E1%BA%ABu-m%E1%BB%9Bi-%C4%90i%E1%BB%87n-m%C3%A1y-Vi%E1%BB%87t-Nh%E1%BA%ADt-i.259706672.21790928827?sp_atk=63389611-dc59-4e72-a80f-9d4d3c2a7f35&xptdk=63389611-dc59-4e72-a80f-9d4d3c2a7f35",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-12-tia-sieu-sang-laisai-lsg6650s",
+    "image": "/assets/img/products/may-can-bang-laser-12-tia-sieu-sang-laisai-lsg6650s.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:30:33.006Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-12-tia-si%25C3%25AAu-s%25C3%25A1ng-LAiSAi-LSG6650S-cao-c%25E1%25BA%25A5p-m%25C3%25AAb-m%25E1%25BB%259Bi-%25C4%2590i%25E1%25BB%2587n-m%25C3%25A1y-Vi%25E1%25BB%2587t-Nh%25E1%25BA%25ADt-i.259706672.21790928827%3Fsp_atk%3D63389611-dc59-4e72-a80f-9d4d3c2a7f35%26xptdk%3D63389611-dc59-4e72-a80f-9d4d3c2a7f35&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "LAiSAi LSG6650S: máy laser 12 tia siêu sáng, dòng cao cấp cho thi công chuẩn xác — 3.600.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser LAiSAi LSG6650S, 12 tia siêu sáng, cao cấp — 3.600.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Bằng laser 16 tia AKUZA 4D",
+    "price": 1400000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-B%E1%BA%B1ng-laser-16-tia-AKUZA-4D-si%C3%AAu-s%C3%A1ng-i.1156099998.24608552434?sp_atk=ece2b65f-e6e8-434c-a4da-1567d702feb9&xptdk=ece2b65f-e6e8-434c-a4da-1567d702feb9",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-16-tia-akuza-4d",
+    "image": "/assets/img/products/may-can-bang-laser-16-tia-akuza-4d.webp",
+    "category": "may-lazer",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:36:16.780Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-B%25E1%25BA%B1ng-laser-16-tia-AKUZA-4D-si%25C3%25AAu-s%25C3%25A1ng-i.1156099998.24608552434%3Fsp_atk%3Dece2b65f-e6e8-434c-a4da-1567d702feb9%26xptdk%3Dece2b65f-e6e8-434c-a4da-1567d702feb9&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "AKUZA 4D: máy laser 16 tia siêu sáng, phủ kín không gian, thao tác dễ dàng — 1.400.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser AKUZA 4D, 16 tia siêu sáng — giá tham khảo 1.400.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser Akuza AK-X1",
+    "price": 2250000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-Akuza-AK-X1-b%C3%B3ng-Led-si%C3%AAu-s%C3%A1ng-T%E1%BB%B1-%C4%91%E1%BB%99ng-c%C3%A2n-b%E1%BA%B1ng-%C4%91i%E1%BB%81u-khi%E1%BB%83n-t%E1%BB%AB-xa-motor-xoay-360-i.734728154.26089360854?sp_atk=59a6e63f-0e1f-4ef4-bd87-68c502871179&xptdk=59a6e63f-0e1f-4ef4-bd87-68c502871179",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-akuza-ak-x1",
+    "image": "/assets/img/products/may-can-bang-laser-akuza-ak-x1.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:29:59.973Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-Akuza-AK-X1-b%25C3%25B3ng-Led-si%25C3%25AAu-s%25C3%25A1ng-T%25E1%25BB%25B1-%25C4%2591%25E1%25BB%2599ng-c%25C3%25A2n-b%25E1%25BA%B1ng-%25C4%2591i%25E1%25BB%2581u-khi%25E1%25BB%2583n-t%25E1%25BB%25Ab-xa-motor-xoay-360-i.734728154.26089360854%3Fsp_atk%3D59a6e63f-0e1f-4ef4-bd87-68c502871179%26xptdk%3D59a6e63f-0e1f-4ef4-bd87-68c502871179&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Akuza AK-X1: laser siêu sáng, tự động cân bằng, điều khiển từ xa, motor xoay 360° — 2.250.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser Akuza AK-X1, LED siêu sáng, remote, xoay 360° — 2.250.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser Đèn led 5 tia xanh HUKAN HK E63",
+    "price": 1080000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-%C4%90%C3%A8n-led-5-tia-xanh-HUKAN-HK-E63-2-pin-c%C3%B3-%C4%91i%E1%BB%81u-ki%E1%BB%83n-t%E1%BB%AB-xa-Chuy%C3%AAn-d%C3%B9ng-cho-c%C3%B4ng-tr%C3%ACnh-i.51683456.19373317893?sp_atk=d99f8bd8-7f38-4549-bb55-41b740cb32da&xptdk=d99f8bd8-7f38-4549-bb55-41b740cb32da",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-den-led-5-tia-xanh-hukan-hk-e63",
+    "image": "/assets/img/products/may-can-bang-laser-den-led-5-tia-xanh-hukan-hk-e63.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:26:15.528Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-%25C4%2590%25C3%25A8n-led-5-tia-xanh-HUKAN-HK-E63-2-pin-c%25C3%25B3-%25C4%2591i%25E1%25BB%2581u-ki%25E1%25BB%2583n-t%25E1%25BB%25Ab-xa-Chuy%25C3%25AAn-d%25C3%25B9ng-cho-c%25C3%25B4ng-tr%25C3%25ACnh-i.51683456.19373317893%3Fsp_atk%3Dd99f8bd8-7f38-4549-bb55-41b740cb32da%26xptdk%3Dd99f8bd8-7f38-4549-bb55-41b740cb32da&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN HK E63: 5 tia xanh, kèm 2 pin, điều khiển từ xa — 1.080.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser HUKAN HK E63 5 tia xanh, 2 pin, remote — 1.080.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Bằng Laser HUKAN Gen 2 G2-LS300",
+    "price": 1480000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-B%E1%BA%B1ng-Laser-HUKAN-Gen-2-G2-LS300-Si%C3%AAu-S%C3%A1ng-5-Tia-Xanh-Chip-th%C3%B4ng-minh-c%C3%A2n-b%E1%BA%B1ng-t%E1%BB%B1-%C4%91%E1%BB%99ng-i.1175273312.29976656071?sp_atk=f051c466-2377-4096-9ec1-90c454a7c06b&xptdk=f051c466-2377-4096-9ec1-90c454a7c06b",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-hukan-gen-2-g2-ls300",
+    "image": "/assets/img/products/may-can-bang-laser-hukan-gen-2-g2-ls300.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "tags": [
+      "5-tia",
+      "laser-xanh"
+    ],
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:29:27.838Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-B%25E1%25BA%B1ng-Laser-HUKAN-Gen-2-G2-LS300-Si%25C3%25AAu-S%25C3%25A1ng-5-Tia-Xanh-Chip-th%25C3%25B4ng-minh-c%25C3%25A2n-b%25E1%25BA%B1ng-t%25E1%25BB%25B1-%25C4%2591%25E1%25BB%2599ng-i.1175273312.29976656071%3Fsp_atk%3Df051c466-2377-4096-9ec1-90c454a7c06b%26xptdk%3Df051c466-2377-4096-9ec1-90c454a7c06b&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN Gen 2 G2-LS300, 5 tia xanh, cân bằng tự động — 1.480.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser HUKAN G2-LS300 (Gen 2), 5 tia xanh, tự cân bằng — 1.480.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser HUKAN HK-G1-T98",
+    "price": 2120000,
+    "origin": "https://shopee.vn/-C%E1%BA%A3i-ti%E1%BA%BFn-m%E1%BB%9Bi-M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-HUKAN-HK-G1-T97-12-tia-xanh-b%C3%B3ng-LED-c%C3%B3-%C4%91i%E1%BB%81u-khi%E1%BB%83n-T%E1%BA%B7ng-ch%C3%A2n-i.534027677.25863696029?sp_atk=a4a31b66-180d-4dae-865e-627819139105&xptdk=a4a31b66-180d-4dae-865e-627819139105",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-hukan-hk-g1-t98",
+    "image": "/assets/img/products/may-can-bang-laser-hukan-hk-g1-t98.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:28:51.221Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-C%25E1%25BA%25A3i-ti%25E1%25BA%25BFn-m%25E1%25BB%259Bi-M%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-HUKAN-HK-G1-T97-12-tia-xanh-b%25C3%25B3ng-LED-c%25C3%25B3-%25C4%2591i%25E1%25BB%2581u-khi%25E1%25BB%2583n-T%25E1%25BA%B7ng-ch%25C3%25A2n-i.534027677.25863696029%3Fsp_atk%3Da4a31b66-180d-4dae-865e-627819139105%26xptdk%3Da4a31b66-180d-4dae-865e-627819139105&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN HK-G1-T98, LED xanh, 12 tia, kèm chân — 2.120.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser HUKAN HK-G1-T98, LED xanh, 12 tia — 2.120.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laser HUKAN T22 5 tia xanh",
+    "price": 799000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-HUKAN-T22-5-tia-xanh-b%C3%B3ng-LED-si%C3%AAu-s%C3%A1ng-Cu-%C4%90en-DEKTON-i.975320916.43364273469?sp_atk=837c0f26-1bdd-44ab-8655-5c4f8dc93775&xptdk=837c0f26-1bdd-44ab-8655-5c4f8dc93775",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laser-hukan-t22-5-tia-xanh",
+    "image": "/assets/img/products/may-can-bang-laser-hukan-t22-5-tia-xanh.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:26:54.971Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-HUKAN-T22-5-tia-xanh-b%25C3%25B3ng-LED-si%25C3%25AAu-s%25C3%25A1ng-Cu-%25C4%2590en-DEKTON-i.975320916.43364273469%3Fsp_atk%3D837c0f26-1bdd-44ab-8655-5c4f8dc93775%26xptdk%3D837c0f26-1bdd-44ab-8655-5c4f8dc93775&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN T22, 5 tia xanh, LED sáng — 799.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laser HUKAN T22, 5 tia xanh — 799.000 đ."
+    }
+  },
+  {
+    "name": "Máy cân bằng laze 5 tia xanh Hukan G2-LS300",
+    "price": 1490000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laze-5-tia-xanh-Hukan-G2-LS300-m%E1%BA%ABu-m%E1%BB%9Bi-nh%C3%A2t-n%C4%83m-2024-h%C3%A0ng-ch%C3%ADnh-h%C3%A3ng-gi%C3%A1-r%E1%BA%BB-i.259706672.26909138734?sp_atk=3c26c185-b4d9-4447-97e5-3720ed4d0688&xptdk=3c26c185-b4d9-4447-97e5-3720ed4d0688",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laze-5-tia-xanh-hukan-g2-ls300",
+    "image": "/assets/img/products/may-can-bang-laze-5-tia-xanh-hukan-g2-ls300.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:28:15.350Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laze-5-tia-xanh-Hukan-G2-LS300-m%25E1%25BA%25ABu-m%25E1%25BB%259Bi-nh%25C3%25A2t-n%25C4%2583m-2024-h%25C3%25A0ng-ch%25C3%25ADnh-h%25C3%25A3ng-gi%25C3%25A1-r%25E1%25BA%25BB-i.259706672.26909138734%3Fsp_atk%3D3c26c185-b4d9-4447-97e5-3720ed4d0688%26xptdk%3D3c26c185-b4d9-4447-97e5-3720ed4d0688&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN G2-LS300, 5 tia xanh, bản laze — 1.490.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laze Hukan G2-LS300, 5 tia xanh — 1.490.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Bằng Laze HUKAN G1-T85",
+    "price": 699000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-B%E1%BA%B1ng-Laze-HUKAN-G1-T85-5-tia-xanh-b%C3%B3ng-LED-si%C3%AAu-s%C3%A1ng-%C4%91%E1%BB%99-ch%C3%ADnh-x%C3%A1c-cao-Ch%C3%ADnh-H%C3%A3ng-i.319001815.22250719656?sp_atk=a1952bc8-9056-4b83-9251-4eb4c987f8bf&xptdk=a1952bc8-9056-4b83-9251-4eb4c987f8bf",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laze-hukan-g1-t85",
+    "image": "/assets/img/products/may-can-bang-laze-hukan-g1-t85.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "tags": [
+      "5-tia",
+      "laser-xanh"
+    ],
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-09-27T11:58:57.393Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-B%25E1%25BA%B1ng-Laze-HUKAN-G1-T85-5-tia-xanh-b%25C3%25B3ng-LED-si%25C3%25AAu-s%25C3%25A1ng-%25C4%2591%25E1%25BB%2599-ch%25C3%25ADnh-x%25C3%25A1c-cao-Ch%25C3%25ADnh-H%25C3%25A3ng-i.319001815.22250719656%3Fsp_atk%3Da1952bc8-9056-4b83-9251-4eb4c987f8bf%26xptdk%3Da1952bc8-9056-4b83-9251-4eb4c987f8bf&sub1=may-can-bang-laze-hukan-g1-t85&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN G1-T85, 5 tia xanh, LED siêu sáng — 699.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laze HUKAN G1-T85, 5 tia xanh — 699.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Bằng Laze HUKAN HK-E63",
+    "price": 999000,
+    "origin": "https://shopee.vn/product/727253302/22983388549?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkUm9yWVZMbGw0Q214S0d1TzNEZmUwNVdFd0kxcnRaWk9Uai9OQWt3bU1XcjYrTHczalhMMUFjWVVXZWcwRDVBTnkvS0lLU2pWTDNrRlRqSnoycHV3emc2bjdaaDVmbzVsd1BMU0h6RDBCb2s&gad_source=1&gad_campaignid=22496085537&gbraid=0AAAAADPpQE5mKwIf15Y-93jKuVbx-BnCT&gclid=CjwKCAjwuePGBhBZEiwAIGCVS-HMzCZpCfSgTkV7zS6Nhwcu8RH57jB8_cV9hpb2MYwr0--YDdci1xoCZj4QAvD_BwE",
+    "merchant": "shopee",
+    "sku": "may-can-bang-laze-hukan-hk-e63",
+    "image": "/assets/img/products/may-can-bang-laze-hukan-hk-e63.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "tags": [],
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-29T17:32:49.280Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2Fproduct%2F727253302%2F22983388549%3Fgads_t_sig%3DVTJGc2RHVmtYMTlxTFVSVVRrdENkUm9yWVZMbGw0Q214S0d1TzNEZmUwNVdFd0kxcnRaWk9Uai9OQWt3bU1XcjYrTHczalhMMUFjWVVXZWcwRDVBTnkvS0lLU2pWTDNrRlRqSnoycHV3emc2bjdaaDVmbzVsd1BMU0h6RDBCb2s%26gad_source%3D1%26gad_campaignid%3D22496085537%26gbraid%3D0AAAAADPpQE5mKwIf15Y-93jKuVbx-BnCT%26gclid%3DCjwKCAjwuePGBhBZEiwAIGCVS-HMzCZpCfSgTkV7zS6Nhwcu8RH57jB8_cV9hpb2MYwr0--YDdci1xoCZj4QAvD_BwE&sub1=may-can-bang-laze-hukan-hk-e63&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN HK-E63, 5 tia xanh, LED — 999.000 đ.",
+    "seo": {
+      "description": "Máy cân bằng laze HUKAN HK-E63, 5 tia xanh — 999.000 đ."
+    }
+  },
+  {
+    "name": "máy cân mực KHAISON 16 tia 4 màu",
+    "price": 1299000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%C3%A2n-b%E1%BA%B1ng-laser-m%C3%A1y-c%C3%A2n-m%E1%BB%B1c-KHAISON-16-tia-4-m%C3%A0u-si%C3%AAu-n%C3%A9t-b%E1%BB%99-d%E1%BB%A5ng-c%E1%BB%A5-cao-c%E1%BA%A5p-i.340941343.28430911624?sp_atk=8212431c-18e2-4397-82a1-ec685f055fe8&xptdk=8212431c-18e2-4397-82a1-ec685f055fe8",
+    "merchant": "shopee",
+    "sku": "may-can-muc-khaison-16-tia-4-mau",
+    "image": "/assets/img/products/may-can-muc-khaison-16-tia-4-mau.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:32:04.377Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25C3%25A2n-b%25E1%25BA%B1ng-laser-m%25C3%25A1y-c%25C3%25A2n-m%25E1%25BB%25B1c-KHAISON-16-tia-4-m%25C3%25A0u-si%25C3%25AAu-n%25C3%25A9t-b%25E1%25BB%2599-d%25E1%25BB%25A5ng-c%25E1%25BB%25A5-cao-c%25E1%25BA%25A5p-i.340941343.28430911624%3Fsp_atk%3D8212431c-18e2-4397-82a1-ec685f055fe8%26xptdk%3D8212431c-18e2-4397-82a1-ec685f055fe8&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "KHAISON 16 tia, 4 màu, siêu nét — 1.299.000 đ.",
+    "seo": {
+      "description": "Máy cân mực KHAISON 16 tia 4 màu — 1.299.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cân Mực Laser 5 Tia Xanh Yamasu",
+    "price": 2370000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%C3%A2n-M%E1%BB%B1c-Laser-5-Tia-Xanh-Yamasu-%E2%80%93-LED-Si%C3%AAu-S%C3%A1ng-%E2%80%93-%C4%90i%E1%BB%81u-Khi%E1%BB%83n-T%E1%BB%AB-Xa-%E2%80%93-Full-Ph%E1%BB%A5-Ki%E1%BB%87n-%E2%80%93-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-C%C3%B3-VAT-i.361963356.44257445874?sp_atk=1ed6ffa0-5032-42f8-98d2-d0b7a2a98a50&xptdk=1ed6ffa0-5032-42f8-98d2-d0b7a2a98a50",
+    "merchant": "shopee",
+    "sku": "may-can-muc-laser-5-tia-xanh-yamasu",
+    "image": "/assets/img/products/may-can-muc-laser-5-tia-xanh-yamasu.webp",
+    "category": "may-lazer",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:31:01.759Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25C3%25A2n-M%25E1%25BB%25B1c-Laser-5-Tia-Xanh-Yamasu-%25E2%2580%2593-LED-Si%25C3%25AAu-S%25C3%25A1ng-%25E2%2580%2593-%25C4%2590i%25E1%25BB%2581u-Khi%25E1%25BB%2583n-T%25E1%25BB%25AB-Xa-%25E2%2580%2593-Full-Ph%25E1%25BB%25A5-Ki%25E1%25BB%2587n-%25E2%2580%2593-H%25C3%25A0ng-Ch%25C3%25ADnh-H%25C3%25A3ng-C%25C3%25B3-VAT-i.361963356.44257445874%3Fsp_atk%3D1ed6ffa0-5032-42f8-98d2-d0b7a2a98a50%26xptdk%3D1ed6ffa0-5032-42f8-98d2-d0b7a2a98a50&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Yamasu 5 tia xanh, LED siêu sáng, full phụ kiện — 2.370.000 đ.",
+    "seo": {
+      "description": "Máy cân mực laser 5 tia xanh Yamasu — 2.370.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cắt Cành Pin HK-PRB 2025S",
+    "price": 780000,
+    "origin": "https://shopee.vn/Hukan-M%C3%A1y-C%E1%BA%AFt-C%C3%A0nh-Pin-HK-PRB-2025S-HM21-G1-PR2025S-%C4%90%E1%BB%99ng-C%C6%A1-Kh%C3%B4ng-Ch%E1%BB%95i-Than-21V-L%C6%B0%E1%BB%A1i-Th%C3%A9p-SK5-Hi%E1%BB%87u-Su%E1%BA%A5t-Cao-B%E1%BA%A3o-H%C3%A0nh-6-T-i.131704252.29302745773?sp_atk=807310ec-99dc-4689-89d8-f051e7e9e45a&xptdk=807310ec-99dc-4689-89d8-f051e7e9e45a",
+    "merchant": "shopee",
+    "sku": "may-cat-canh-pin-hk-prb-2025s",
+    "image": "/assets/img/products/may-cat-canh-pin-hk-prb-2025s.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-09-30T02:46:05.841Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FHukan-M%25C3%25A1y-C%25E1%25BA%25AFt-C%25C3%25A0nh-Pin-HK-PRB-2025S-HM21-G1-PR2025S-%25C4%2590%25E1%25BB%2599ng-C%25C6%25A1-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-21V-L%25C6%25B0%25E1%25BB%25A1i-Th%25C3%25A9p-SK5-Hi%25E1%25BB%2587u-Su%25E1%25BA%25A5t-Cao-B%25E1%25BA%25A3o-H%25C3%25A0nh-6-T-i.131704252.29302745773%3Fsp_atk%3D807310ec-99dc-4689-89d8-f051e7e9e45a%26xptdk%3D807310ec-99dc-4689-89d8-f051e7e9e45a&sub1=may-cat-canh-pin-hk-prb-2025s&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt cành pin HK-PRB 2025S, lưỡi SK5, động cơ không chổi than — 780.000 đ.",
+    "seo": {
+      "description": "Máy cắt cành pin HK-PRB 2025S (SK5, BLDC) — 780.000 đ."
+    }
+  },
+  {
+    "name": "Máy cắt gạch cầm tay HUKAN HG2",
+    "price": 950000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%E1%BA%AFt-g%E1%BA%A1ch-c%E1%BA%A7m-tay-HUKAN-HG2-MC8888-C%C3%B4ng-su%E1%BA%A5t-1600W-%C4%90%C6%B0%E1%BB%9Dng-k%C3%ADnh-l%C6%B0%E1%BB%A1i-110-125mm-i.166287331.18391201967?sp_atk=4f35d8ee-7b4b-4620-b82f-98643c746a34&xptdk=4f35d8ee-7b4b-4620-b82f-98643c746a34",
+    "merchant": "shopee",
+    "sku": "may-cat-gach-cam-tay-hukan-hg2",
+    "image": "/assets/img/products/may-cat-gach-cam-tay-hukan-hg2.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T12:06:25.771Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25E1%25BA%25AFt-g%25E1%25BA%A1ch-c%25E1%25BA%A7m-tay-HUKAN-HG2-MC8888-C%25C3%25B4ng-su%25E1%25BA%25A5t-1600W-%25C4%2590%25C6%25B0%25E1%25BB%259Dng-k%25C3%25ADnh-l%25C6%25B0%25E1%25BB%25A1i-110-125mm-i.166287331.18391201967%3Fsp_atk%3D4f35d8ee-7b4b-4620-b82f-98643c746a34%26xptdk%3D4f35d8ee-7b4b-4620-b82f-98643c746a34&sub1=may-cat-gach-cam-tay-hukan-hg2&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN HG2, 1600W, lưỡi 110–125mm — 950.000 đ.",
+    "seo": {
+      "description": "Máy cắt gạch cầm tay HUKAN HG2 (1600W) — 950.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cắt Nhôm HUKAN G2-MS90255 1700W",
+    "price": 1989000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%E1%BA%AFt-Nh%C3%B4m-HUKAN-G2-MS90255-1700W-C%C3%B4ng-Su%E1%BA%A5t-Chu%E1%BA%A9n-255mm-%C4%90%E1%BB%99-C%E1%BA%AFt-Si%C3%AAu-Chu%E1%BA%A9n-4800-V%C3%B2ng-ph%C3%BAt-D%C3%A2y-%C4%90i%E1%BB%87n-3M-Ch%C3%ADnh-H%C3%A3ng-i.1106347163.41615115038?sp_atk=ee6ee551-3758-44dd-b9c6-def946162ea0&xptdk=ee6ee551-3758-44dd-b9c6-def946162ea0",
+    "merchant": "shopee",
+    "sku": "may-cat-nhom-hukan-g2-ms90255-1700w",
+    "image": "/assets/img/products/may-cat-nhom-hukan-g2-ms90255-1700w.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-28T22:21:50.390Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25E1%25BA%25AFt-Nh%25C3%25B4m-HUKAN-G2-MS90255-1700W-C%25C3%25B4ng-Su%25E1%25BA%25A5t-Chu%25E1%25BA%A9n-255mm-%25C4%2590%25E1%25BB%2599-C%25E1%25BA%25AFt-Si%25C3%25AAu-Chu%25E1%25A9n-4800-V%25C3%25B2ng-ph%25C3%25BAt-D%25C3%25A2y-%25C4%2590i%25E1%25BB%2587n-3M-Ch%25C3%25ADnh-H%25C3%25A3ng-i.1106347163.41615115038%3Fsp_atk%3Dee6ee551-3758-44dd-b9c6-def946162ea0%26xptdk%3Dee6ee551-3758-44dd-b9c6-def946162ea0&sub1=may-cat-nhom-hukan-g2-ms90255-1700w&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt nhôm HUKAN G2-MS90255, 1700W, đĩa 255mm — 1.989.000 đ.",
+    "seo": {
+      "description": "Máy cắt nhôm HUKAN G2-MS90255 (1700W, 255mm) — 1.989.000 đ."
+    }
+  },
+  {
+    "name": "Máy Cắt Rung Pin Đa Năng Hukan MCR 3121",
+    "price": 1590000,
+    "origin": "https://shopee.vn/M%C3%A1y-C%E1%BA%AFt-Rung-Pin-%C4%90a-N%C4%83ng-Hukan-MCR-3121-6-C%E1%BA%A5p-Ch%E1%BB%89nh-T%E1%BB%91c-Ch%C3%A2n-Pin-Ph%E1%BB%95-Th%C3%B4ng-i.131704252.6918892144?sp_atk=a1ae6064-7fef-40c5-ab60-b20c4c5507ba&xptdk=a1ae6064-7fef-40c5-ab60-b20c4c5507ba",
+    "merchant": "shopee",
+    "sku": "may-cat-rung-pin-da-nang-hukan-mcr-3121",
+    "image": "/assets/img/products/may-cat-rung-pin-da-nang-hukan-mcr-3121.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-09-29T17:45:42.105Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-C%25E1%25BA%25AFt-Rung-Pin-%25C4%2590a-N%25C4%2583ng-Hukan-MCR-3121-6-C%25E1%25BA%25A5p-Ch%25E1%25BB%2589nh-T%25E1%25BB%2591c-Ch%25C3%25A2n-Pin-Ph%25E1%25BB%2595-Th%25C3%25B4ng-i.131704252.6918892144%3Fsp_atk%3Da1ae6064-7fef-40c5-ab60-b20c4c5507ba%26xptdk%3Da1ae6064-7fef-40c5-ab60-b20c4c5507ba&sub1=may-cat-rung-pin-da-nang-hukan-mcr-3121&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt rung pin đa năng Hukan MCR-3121 — 1.590.000 đ.",
+    "seo": {
+      "description": "Máy cắt rung pin Hukan MCR-3121 — 1.590.000 đ."
+    }
+  },
+  {
+    "name": "Máy cắt sắt bàn HUKAN G1-MCS2400S",
+    "price": 1590000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%E1%BA%AFt-s%E1%BA%AFt-b%C3%A0n-HUKAN-G1-MCS2400S-C%C3%B4ng-su%E1%BA%A5t-2400w-G%C3%B3c-c%E1%BA%AFt-0-45-%C4%91%E1%BB%99-%C4%90%C4%A9a-355mm-K%C3%A8m-1-%C4%91%C4%A9a-c%E1%BA%AFt-i.1308044692.24783533643?sp_atk=44e36a19-336c-4b6c-b82b-9f48b6b7e209&xptdk=44e36a19-336c-4b6c-b82b-9f48b6b7e209",
+    "merchant": "shopee",
+    "sku": "may-cat-sat-ban-hukan-g1-mcs2400s",
+    "image": "/assets/img/products/may-cat-sat-ban-hukan-g1-mcs2400s.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-28T21:58:27.195Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25E1%25BA%25AFt-s%25E1%25BA%AFt-b%25C3%25A0n-HUKAN-G1-MCS2400S-C%25C3%25B4ng-su%25E1%25BA%25A5t-2400w-G%25C3%25B3c-c%25E1%25BA%25AFt-0-45-%25C4%2591%25E1%25BB%2599-%25C4%25%90%25C4%25A9a-355mm-K%25C3%25A8m-1-%25C4%25%91%25C4%25A9a-c%25E1%25BA%25AFt-i.1308044692.24783533643%3Fsp_atk%3D44e36a19-336c-4b6c-b82b-9f48b6b7e209%26xptdk%3D44e36a19-336c-4b6c-b82b-9f48b6b7e209&sub1=may-cat-sat-ban-hukan-g1-mcs2400s&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt sắt bàn HUKAN G1-MCS2400S, 2400W, đĩa 355mm — 1.590.000 đ.",
+    "seo": {
+      "description": "Máy cắt sắt bàn HUKAN G1-MCS2400S (2400W, 355mm) — 1.590.000 đ."
+    }
+  },
+  {
+    "name": "Máy cắt sắt bàn HUKAN G2-MCS1800",
+    "price": 1260000,
+    "origin": "https://shopee.vn/M%C3%A1y-c%E1%BA%AFt-s%E1%BA%AFt-b%C3%A0n-HUKAN-G2-MCS1800-C%C3%B4ng-su%E1%BA%A5t-1800W-L%C6%B0%E1%BB%A1i-c%E1%BA%AFt-180mm-G%C3%B3c-c%E1%BA%AFt-45-%C4%91%E1%BB%99-T%E1%BB%91c-%C4%91%E1%BB%99-7700v-p-i.529612464.28440444925?sp_atk=0f8bbc5a-8586-427b-bc5a-25ccebff3e38&xptdk=0f8bbc5a-8586-427b-bc5a-25ccebff3e38",
+    "merchant": "shopee",
+    "sku": "may-cat-sat-ban-hukan-g2-mcs1800",
+    "image": "/assets/img/products/may-cat-sat-ban-hukan-g2-mcs1800.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:41:51.426Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-c%25E1%25BA%25AFt-s%25E1%25BA%AFt-b%25C3%25A0n-HUKAN-G2-MCS1800-C%25C3%25B4ng-su%25E1%25BA%A5t-1800W-L%25C6%25B0%25E1%25BB%25A1i-c%25E1%25BA%25AFt-180mm-G%25C3%25B3c-c%25E1%25BA%25AFt-45-%25C4%2591%25E1%25BB%2599-T%25E1%25BB%2591c-%25C4%2591%25E1%25BB%2599-7700v-p-i.529612464.28440444925%3Fsp_atk%3D0f8bbc5a-8586-427b-bc5a-25ccebff3e38%26xptdk%3D0f8bbc5a-8586-427b-bc5a-25ccebff3e38&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy cắt sắt bàn HUKAN G2-MCS1800, 1800W, lưỡi 180mm — 1.260.000 đ.",
+    "seo": {
+      "description": "Máy cắt sắt bàn HUKAN G2-MCS1800 (1800W, 180mm) — 1.260.000 đ."
+    }
+  },
+  {
+    "name": "Máy Chuyên Vít Hukan 250N Gen 2 HM21 - CV250BL",
+    "price": 1090000,
+    "origin": "https://shopee.vn/M%C3%A1y-Chuy%C3%AAn-V%C3%ADt-Hukan-250N-Gen-2-HM21-CV250BL-L%E1%BB%B1c-Si%E1%BA%BFt-250N-Kh%C3%B4ng-Ch%E1%BB%95i-Than-Ch%C3%A2n-Pin-Ph%E1%BB%95-Th%C3%B4ng-i.131704252.24131429786?sp_atk=4fd03ca4-6562-49e9-bac4-f430088e6dfd&xptdk=4fd03ca4-6562-49e9-bac4-f430088e6dfd",
+    "merchant": "shopee",
+    "sku": "may-chuyen-vit-hukan-250n-gen-2-hm21-cv250bl",
+    "image": "/assets/img/products/may-chuyen-vit-hukan-250n-gen-2-hm21-cv250bl.webp",
+    "category": "may-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:19:29.253Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Chuy%25C3%25AAn-V%25C3%25ADt-Hukan-250N-Gen-2-HM21-CV250BL-L%25E1%25BB%25B1c-Si%25E1%25BA%25BFt-250N-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-Ch%25C3%25A2n-Pin-Ph%25E1%25BB%2595-Th%25C3%25B4ng-i.131704252.24131429786%3Fsp_atk%3D4fd03ca4-6562-49e9-bac4-f430088e6dfd%26xptdk%3D4fd03ca4-6562-49e9-bac4-f430088e6dfd&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy chuyên vít Hukan 250N Gen 2 HM21-CV250BL, lực siết 250N — 1.090.000 đ.",
+    "seo": {
+      "description": "Máy chuyên vít Hukan 250N Gen 2 HM21-CV250BL — 1.090.000 đ."
+    }
+  },
+  {
+    "name": "Máy Chuyên Vít Hukan HM21 - G2CVT 555",
+    "price": 899000,
+    "origin": "https://shopee.vn/Th%C3%A2n-M%C3%A1y-Chuy%C3%AAn-V%C3%ADt-Hukan-HM21-G2CVT-555-Kh%C3%B4ng-Ch%E1%BB%95i-Than-L%E1%BB%B1c-Si%E1%BA%BFt-55N.m-Ch%C3%A2n-Pin-Ph%E1%BB%95-Th%C3%B4ng-%C4%90i%E1%BB%87n-M%C3%A1y-Quy%E1%BA%BFt-Trang-i.131704252.24313571623?sp_atk=c945325f-c656-4cc9-bab8-e52b145e7adc&xptdk=c945325f-c656-4cc9-bab8-e52b145e7adc",
+    "merchant": "shopee",
+    "sku": "may-chuyen-vit-hukan-hm21-g2cvt-555",
+    "image": "/assets/img/products/may-chuyen-vit-hukan-hm21-g2cvt-555.webp",
+    "category": "may-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-29T17:43:16.397Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FTh%25C3%25A2n-M%25C3%25A1y-Chuy%25C3%25AAn-V%25C3%25ADt-Hukan-HM21-G2CVT-555-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-L%25E1%25BB%25B1c-Si%25E1%25BA%25BFt-55N.m-Ch%25C3%25A2n-Pin-Ph%25E1%25BB%2595-Th%25C3%25B4ng-%25C4%2590i%25E1%25BB%2587n-M%25C3%25A1y-Quy%25E1%25BA%25BFt-Trang-i.131704252.24313571623%3Fsp_atk%3Dc945325f-c656-4cc9-bab8-e52b145e7adc%26xptdk%3Dc945325f-c656-4cc9-bab8-e52b145e7adc&sub1=may-chuyen-vit-hukan-hm21-g2cvt-555&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy chuyên vít Hukan HM21-G2CVT-555, không chổi than — 899.000 đ.",
+    "seo": {
+      "description": "Máy chuyên vít Hukan HM21-G2CVT-555 (BLDC) — 899.000 đ."
+    }
+  },
+  {
+    "name": "máy đầm rung dùng pin Makita 18-21V",
+    "price": 499000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%91p-l%C3%A1t-g%E1%BA%A1ch-men-m%C3%A1y-%C4%91%E1%BA%A7m-rung-d%C3%B9ng-pin-Makita-18-21V-ch%C3%A2n-ph%E1%BB%95-th%C3%B4ng-n%C3%BAt-c%E1%BA%A3m-%E1%BB%A9ng-5-c%E1%BA%A5p-t%E1%BB%91c-rung-%C4%91%E1%BB%99ng-c%C6%A1-kh%C3%B4ng-than-i.750843606.25883750845?sp_atk=3d82c5d9-d053-48d4-accf-12be3ed6e059&xptdk=3d82c5d9-d053-48d4-accf-12be3ed6e059",
+    "merchant": "shopee",
+    "sku": "may-dam-rung-dung-pin-makita-18-21v",
+    "image": "/assets/img/products/may-dam-rung-dung-pin-makita-18-21v.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:46:43.476Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2591p-l%25C3%25A1t-g%25E1%25BA%A1ch-men-m%25C3%25A1y-%25C4%2591%25E1%25BA%25A7m-rung-d%25C3%25B9ng-pin-Makita-18-21V-ch%25C3%25A2n-ph%25E1%25BB%2595-th%25C3%25B4ng-n%25C3%25BAt-c%25E1%25BA%25A3m-%25E1%25BB%25A9ng-5-c%25E1%25BA%25A5p-t%25E1%25BB%2591c-rung-%25C4%2591%25E1%25BB%2599ng-c%25C6%25A1-kh%25C3%25B4ng-than-i.750843606.25883750845%3Fsp_atk%3D3d82c5d9-d053-48d4-accf-12be3ed6e059%26xptdk%3D3d82c5d9-d053-48d4-accf-12be3ed6e059&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy đầm rung dùng pin Makita 18–21V, 5 cấp tốc độ — 499.000 đ.",
+    "seo": {
+      "description": "Máy đầm rung dùng pin Makita 18–21V — 499.000 đ."
+    }
+  },
+  {
+    "name": "máy đầm rung dùng pin MAKITEC 18-21V",
+    "price": 598000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%91p-l%C3%A1t-g%E1%BA%A1ch-men-m%C3%A1y-%C4%91%E1%BA%A7m-rung-d%C3%B9ng-pin-MAKITEC-18-21V-ch%C3%A2n-ph%25E1%25BB%2595-th%25C3%25B4ng-n%25C3%25BAt-c%25E1%25BA%25A3m-%25E1%25BB%25A9ng-5-c%25E1%25BA%25A5p-t%25E1%25BB%2591c-rung-i.415907608.10369169134?sp_atk=357a1e90-0252-43fd-ac6a-c9862977c212&xptdk=357a1e90-0252-43fd-ac6a-c9862977c212",
+    "merchant": "shopee",
+    "sku": "may-dam-rung-dung-pin-makitec-18-21v",
+    "image": "/assets/img/products/may-dam-rung-dung-pin-makitec-18-21v.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:48:36.557Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2591p-l%25C3%25A1t-g%25E1%25BA%25A1ch-men-m%25C3%25A1y-%25C4%2591%25E1%25BA%25A7m-rung-d%25C3%25B9ng-pin-MAKITEC-18-21V-ch%25C3%25A2n-ph%25E1%25BB%2595-th%25C3%25B4ng-n%25C3%25BAt-c%25E1%25BA%25A3m-%25E1%25BB%25A9ng-5-c%25E1%25BA%25A5p-t%25E1%25BB%2591c-rung-i.415907608.10369169134%3Fsp_atk%3D357a1e90-0252-43fd-ac6a-c9862977c212%26xptdk%3D357a1e90-0252-43fd-ac6a-c9862977c212&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy đầm rung dùng pin MAKITEC 18–21V, 5 cấp tốc độ — 598.000 đ.",
+    "seo": {
+      "description": "Máy đầm rung pin MAKITEC 18–21V — 598.000 đ."
+    }
+  },
+  {
+    "name": "Máy khoan bê tông 3in1 3.6J",
+    "price": 699000,
+    "origin": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-%25C4%2590%25E1%25BB%25A5c-B%25C3%25AA-T%25C3%25B4ng-%25C4%2590i%25E1%25BB%2587n-2-Ch%25E1%25BB%25A9c-N%25C4%2583ng-Sanpuline-RH-3100-C%25C3%25B4ng-Su%25E1%25BA%25A5t-1050W-Chu%25E1%25BA%25A9n-D%25C3%25A2y-%25C4%2590%25E1%25BB%2593ng-T%25E1%25BA%B7ng-2-M%25C5%25A9i-%25C4%2590%25E1%25BB%25A5c-3-M%25C5%25A9i-Khoan-i.131704252.3910078759%3Fsp_atk%3D7df00376-7976-458d-84ca-df72db0d2b93%26xptdk%3D7df00376-7976-458d-84ca-df72db0d2b93&sub1=may-khoan-be-tong-3in1-3-6j&sub2=shopee&sub3=tool&sub4=mxd210",
+    "merchant": "shopee",
+    "sku": "may-khoan-be-tong-3in1-3-6j",
+    "image": "/assets/img/products/may-khoan-be-tong-3in1-3-6j.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T05:05:38.301Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fgo.isclix.com%2Fdeep_link%2F6803097511817356947%2F4751584435713464237%3Furl%3Dhttps%253A%252F%252Fshopee.vn%252FM%2525C3%2525A1y-Khoan-%2525C4%252590%2525E1%2525BB%2525A5c-B%2525C3%2525AA-T%2525C3%2525B4ng-%2525C4%252590i%2525E1%2525BB%252587n-2-Ch%2525E1%2525BB%2525A9c-N%2525C4%252583ng-Sanpuline-RH-3100-C%2525C3%2525B4ng-Su%2525E1%2525BA%2525A5t-1050W-Chu%2525E1%2525BA%2525A9n-D%2523%25E1%2525BB%252593ng-T%2525E1%2525BA%2525B7ng-2-M%2525C5%2525A9i-%252590%2525E1%2525BB%2525A5c-3-M%2525C5%2525A9i-Khoan-i.131704252.3910078759%253Fsp_atk%253D7df00376-7976-458d-84ca-df72db0d2b93%2526xptdk%253D7df00376-7976-458d-84ca-df72db0d2b93%26sub1%3Dmay-khoan-be-tong-3in1-3-6j%26sub2%3Dshopee%26sub3%3Dtool%26sub4%3Dmxd210",
+    "desc": "Máy khoan/đục bê tông 3in1, lực 3.6J — 699.000 đ.",
+    "seo": {
+      "description": "Máy khoan bê tông 3in1 (3.6J) — 699.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Bê Tông HUKAN G3- K98",
+    "price": 1650000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khoan-B%C3%AA-T%C3%B4ng-HUKAN-G3-K98-GEN3-%E2%80%93-3-Ch%E1%BB%A9c-N%C4%83ng-%E2%80%93-C%C3%B4ng-Su%E1%BA%A5t-1100W-%E2%80%93-L%E1%BB%B1c-%C4%90%E1%BA%ADp-3.6J-%E2%80%93-C%C3%B3-M%C5%A9i-Khoan-M%C5%A9i-%C4%90%E1%BB%A5c-i.131704252.14023039875?sp_atk=4dae7302-c614-4c06-9967-ce84b2ec4597&xptdk=4dae7302-c614-4c06-9967-ce84b2ec4597",
+    "merchant": "shopee",
+    "sku": "may-khoan-be-tong-hukan-g3-k98",
+    "image": "/assets/img/products/may-khoan-be-tong-hukan-g3-k98.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:41:10.473Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-B%25C3%25AA-T%25C3%25B4ng-HUKAN-G3-K98-GEN3-%25E2%2580%2593-3-Ch%25E1%25BB%25A9c-N%25C4%2583ng-%25E2%2580%2593-C%25C3%25B4ng-Su%25E1%25BA%25A5t-1100W-%25E2%2580%2593-L%25E1%25BB%25B1c-%25C4%2590%25E1%25BA%25ADp-3.6J-%25E2%2580%2593-C%25C3%25B3-M%25C5%25A9i-Khoan-M%25C5%25A9i-%25C4%2590%25E1%25BB%25A5c-i.131704252.14023039875%3Fsp_atk%3D4dae7302-c614-4c06-9967-ce84b2ec4597%26xptdk%3D4dae7302-c614-4c06-9967-ce84b2ec4597&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "HUKAN G3-K98, 3 chức năng, 3.6J — 1.650.000 đ.",
+    "seo": {
+      "description": "Máy khoan bê tông HUKAN G3-K98 (3.6J) — 1.650.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Bê Tông Pin Mulinsen",
+    "price": 499000,
+    "origin": "https://shopee.vn/....",
+    "merchant": "shopee",
+    "sku": "may-khoan-be-tong-pin-mulinsen",
+    "image": "/assets/img/products/may-khoan-be-tong-pin-mulinsen.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T04:12:15.439Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FMa%25CC%2581y-Khoan-B%25C3%25AA-T%25C3%25B4ng-Pin-Mulinsen-3-Ch%25E1%25BB%25A9c-N%25C4%2583ng-%25C4%2590%25C3%25B4%25CC%25A3ng-C%25C6%25A1-Kh%25C3%25B4ng-Ch%25C3%25B4%25CC%2589i-Than-B%25E1%25BA%25A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.131704252.40105822049%3Fsp_atk%3Dda81a36d-6b61-4eee-b4f0-1872cdcbd5b4%26xptdk%3Dda81a36d-6b61-4eee-b4f0-1872cdcbd5b4%2522&sub1=may-khoan-be-tong-pin-mulinsen&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy khoan bê tông pin Mulinsen (BLDC) — 499.000 đ.",
+    "seo": {
+      "description": "Máy khoan bê tông pin Mulinsen — 499.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Bê Tông Workfix WF RH 2230 Pro",
+    "price": 999000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khoan-B%C3%AA-T%C3%B4ng-Workfix-WF-RH-2230-Pro-3-Ch%E1%BB%A9c-N%C4%83ng-Kh%C3%B4ng-Ch%E1%BB%95i-Than-Ch%C3%A2n-Pin-Ph%E1%BB%95-Th%C3%B4ng-M21-B%E1%BA%A3o-H%C3%A0nh-6-Th%25C3%25A9ng-i.131704252.23185223490?sp_atk=3ebe02ca-524b-4818-9c29-2d8faf47ec77&xptdk=3ebe02ca-524b-4818-9c29-2d8faf47ec77",
+    "merchant": "shopee",
+    "sku": "may-khoan-be-tong-workfix-wf-rh-2230-pro",
+    "image": "/assets/img/products/may-khoan-be-tong-workfix-wf-rh-2230-pro.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T04:11:35.032Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-B%25C3%25AA-T%25C3%25B4ng-Workfix-WF-RH-2230-Pro-3-Ch%25E1%25BB%25A9c-N%25C4%2583ng-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-Ch%25C3%25A2n-Pin-Ph%25E1%25BB%2595-Th%25C3%25B4ng-M21-B%25E1%25BA%25A3o-H%25C3%25A0nh-6-Th%25C3%25A9ng-i.131704252.23185223490%3Fsp_atk%3D3ebe02ca-524b-4818-9c29-2d8faf47ec77%26xptdk%3D3ebe02ca-524b-4818-9c29-2d8faf47ec77&sub1=may-khoan-be-tong-workfix-wf-rh-2230-pro&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Workfix WF RH 2230 Pro, 3 chức năng, BLDC — 999.000 đ.",
+    "seo": {
+      "description": "Máy khoan bê tông Workfix WF RH 2230 Pro — 999.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Điện Daewoo 550W",
+    "price": 390000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khoan-%C4%90i%E1%BB%87n-Daewoo-550W-13Mm-D%C3%A2y-%C4%90%E1%BB%93ng-B%E1%BB%81n-B%E1%BB%89-C%C3%B3-B%C3%BAa-Ch%E1%BB%89nh-T%E1%BB%91c-%C4%90a-N%C4%83ng-B%E1%BA%A3o-H%C3%A0nh-6-Th%C3%A1ng-i.131704252.2775240156?sp_atk=4bf7b8c9-e4f2-4ea7-93f5-7b7502369a82&xptdk=4bf7b8c9-e4f2-4ea7-93f5-7b7502369a82",
+    "merchant": "shopee",
+    "sku": "may-khoan-dien-daewoo-550w",
+    "image": "/assets/img/products/may-khoan-dien-daewoo-550w.webp",
+    "category": "may-khoan",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:18:53.284Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-%25C4%2590i%25E1%25BB%2587n-Daewoo-550W-13Mm-D%25C3%25A2y-%25C4%2590%25E1%25BB%2593ng-B%25E1%25BB%2581n-B%25E1%25BB%2589-C%25C3%25B3-B%25C3%25BAa-Ch%25E1%25BB%2589nh-T%25E1%25BB%2591c-%25C4%2590a-N%25C4%2583ng-B%25E1%25BA%A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.131704252.2775240156%3Fsp_atk%3D4bf7b8c9-e4f2-4ea7-93f5-7b7502369a82%26xptdk%3D4bf7b8c9-e4f2-4ea7-93f5-7b7502369a82&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy khoan điện Daewoo 550W, 13mm, có búa — 390.000 đ.",
+    "seo": {
+      "description": "Máy khoan điện Daewoo 550W (13mm, có búa) — 390.000 đ."
+    }
+  },
+  {
+    "name": "Máy khoan đục bê tông TOTAL",
+    "price": 1300000,
+    "origin": "https://shopee.vn/M%C3%A1y-khoan-%C4%91%E1%BB%A5c-b%C3%AA-t%C3%B4ng-TOTAL-khoan-b%C3%AA-t%C3%B4ng-c%E1%BA%A7m-tay-650W-800W-n%C4%83ng-l%C6%B0%E1%BB%A3ng-t%C3%A1c-%C4%91%E1%BB%99ng-1-7J-2-5J-ch%C3%ADnh-h%C3%A3ng-Thinksafe-i.7239997.24214816160?sp_atk=a422027f-47c5-4a1a-bdf4-02f3a570c5ec&xptdk=a422027f-47c5-4a1a-bdf4-02f3a570c5ec",
+    "merchant": "shopee",
+    "sku": "may-khoan-duc-be-tong-total",
+    "image": "/assets/img/products/may-khoan-duc-be-tong-total.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:37:46.058Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-khoan-%25C4%2591%25E1%25BB%25A5c-b%25C3%25AA-t%25C3%25B4ng-TOTAL-khoan-b%25C3%25AA-t%25C3%25B4ng-c%25E1%25BA%25A7m-tay-650W-800W-n%25C4%2583ng-l%25C6%25B0%25E1%25BB%25A3ng-t%25C3%25A1c-%25C4%2591%25E1%25BB%2599ng-1-7J-2-5J-ch%25C3%25ADnh-h%25C3%25A3ng-Thinksafe-i.7239997.24214816160%3Fsp_atk%3Da422027f-47c5-4a1a-bdf4-02f3a570c5ec%26xptdk%3Da422027f-47c5-4a1a-bdf4-02f3a570c5ec&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy khoan đục bê tông TOTAL (650–800W), 1.7–2.5J — 1.300.000 đ.",
+    "seo": {
+      "description": "Máy khoan đục bê tông TOTAL — 1.300.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Đục Sanpuline RH - 3100",
+    "price": 850000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khoan-%C4%90%E1%BB%A5c-B%C3%AA-T%C3%B4ng-%C4%90i%E1%BB%87n-2-Ch%E1%BB%A9c-N%C4%83ng-Sanpuline-RH-3100-C%C3%B4ng-Su%E1%BA%A5t-1050W-Chu%25E1%25BA%25A9n-D%25C3%25A2y-%25C4%2590%25E1%25BB%2593ng-T%25E1%25BA%B7ng-2-M%25C5%25A9i-%25C4%2590%25E1%25BB%25A5c-3-M%25C5%25A9i-Khoan-i.131704252.3910078759?sp_atk=7df00376-7976-458d-84ca-df72db0d2b93&xptdk=7df00376-7976-458d-84ca-df72db0d2b93",
+    "merchant": "shopee",
+    "sku": "may-khoan-duc-sanpuline-rh-3100",
+    "image": "/assets/img/products/may-khoan-duc-sanpuline-rh-3100.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T04:59:57.427Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-%25C4%2590%25E1%25BB%25A5c-B%25C3%25AA-T%25C3%25B4ng-%25C4%2590i%25E1%25BB%2587n-2-Ch%25E1%25BB%25A9c-N%25C4%2583ng-Sanpuline-RH-3100-C%25C3%25B4ng-Su%25E1%25BA%25A5t-1050W-Chu%25E1%25BA%25A9n-D%25C3%25A2y-%25C4%2590%25E1%25BB%2593ng-T%25E1%25BA%B7ng-2-M%25C5%25A9i-%25C4%2590%25E1%25BB%25A5c-3-M%25C5%25A9i-Khoan-i.131704252.3910078759%3Fsp_atk%3D7df00376-7976-458d-84ca-df72db0d2b93%26xptdk%3D7df00376-7976-458d-84ca-df72db0d2b93&sub1=may-khoan-duc-sanpuline-rh-3100&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Sanpuline RH-3100, điện 2 chức năng, 1050W — 850.000 đ.",
+    "seo": {
+      "description": "Máy khoan đục Sanpuline RH-3100 (1050W) — 850.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khoan Rút Lõi Hukan G3 - KRL 178 BL",
+    "price": 3040000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khoan-R%C3%BAt-L%C3%B5i-Hukan-G3-KRL-178-BL-Kh%C3%B4ng-Ch%E1%BB%95i-Than-Ch%E1%BA%BF-%C4%90%E1%BB%99-Ch%E1%BB%91ng-V%E1%BA%A3-Anti-kickback-C%C3%B4ng-Su%E1%BA%A5t-Cao-3900W-i.131704252.2671026893?sp_atk=e1b5f986-671f-475d-918f-846c932338d4&xptdk=e1b5f986-671f-475d-918f-846c932338d4",
+    "merchant": "shopee",
+    "sku": "may-khoan-rut-loi-hukan-g3-krl-178-bl",
+    "image": "/assets/img/products/may-khoan-rut-loi-hukan-g3-krl-178-bl.webp",
+    "category": "may-khoan-duc-vit",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-30T02:52:01.524Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khoan-R%25C3%25BAt-L%25C3%25B5i-Hukan-G3-KRL-178-BL-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-Ch%25E1%25BA%25BF-%25C4%2590%25E1%25BB%2599-Ch%25E1%25BB%2591ng-V%25E1%25BA%A3-Anti-kickback-C%25C3%25B4ng-Su%25E1%25BA%A5t-Cao-3900W-i.131704252.2671026893%3Fsp_atk%3De1b5f986-671f-475d-918f-846c932338d4%26xptdk%3De1b5f986-671f-475d-918f-846c932338d4&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Hukan G3-KRL 178 BL, khoan rút lõi, BLDC — 3.040.000 đ.",
+    "seo": {
+      "description": "Máy khoan rút lõi Hukan G3-KRL 178 BL — 3.040.000 đ."
+    }
+  },
+  {
+    "name": "Máy Khuấy Sơn 2 Tay Cầm Hukan G2 MKS 444",
+    "price": 920000,
+    "origin": "https://shopee.vn/M%C3%A1y-Khu%E1%BA%A5y-S%C6%A1n-2-Tay-C%E1%BA%A7m-Hukan-G2-MKS-444-C%C3%B4ng-Su%E1%BA%A5t-1200W-6-C%E1%BA%A5p-Ch%E1%BB%89nh-T%E1%BB%91c-B%E1%BA%A3o-H%C3%A0nh-6-Th%25C3%25A1ng-i.131704252.25741624333?sp_atk=d73f19fa-378b-4cb9-a3a4-bd3f30966013&xptdk=d73f19fa-378b-4cb9-a3a4-bd3f30966013",
+    "merchant": "shopee",
+    "sku": "may-khuay-son-2-tay-cam-hukan-g2-mks-444",
+    "image": "/assets/img/products/may-khuay-son-2-tay-cam-hukan-g2-mks-444.webp",
+    "category": "may-khoan",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-29T17:40:54.509Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Khu%25E1%25BA%25A5y-S%25C6%25A1n-2-Tay-C%25E1%25BA%25A7m-Hukan-G2-MKS-444-C%25C3%25B4ng-Su%25E1%25BA%25A5t-1200W-6-C%25E1%25BA%25A5p-Ch%25E1%25BB%2589nh-T%25E1%25BB%2591c-B%25E1%25BA%25A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.131704252.25741624333%3Fsp_atk%3Dd73f19fa-378b-4cb9-a3a4-bd3f30966013%26xptdk%3Dd73f19fa-378b-4cb9-a3a4-bd3f30966013&sub1=may-khuay-son-2-tay-cam-hukan-g2-mks-444&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Khuấy sơn 2 tay Hukan G2-MKS 444, 1200W, 6 cấp tốc — 920.000 đ.",
+    "seo": {
+      "description": "Máy khuấy sơn 2 tay Hukan G2-MKS 444 (1200W) — 920.000 đ."
+    }
+  },
+  {
+    "name": "máy mài cầm tay HUKAN HK-AGK14",
+    "price": 449000,
+    "origin": "https://shopee.vn/M%C3%A1y-m%C3%A0i-c%C3%A2%CC%80m-tay-HUKAN-HK-AGK14-C%C3%B4ng-t%E1%BA%AFc-%C4%91u%C3%B4i-C%C3%B4ng-su%E1%BA%A5t-800w-i.166287331.22549355669?sp_atk=4cfde6cb-deaf-4bc7-bb37-64a9ef7e4f2e&xptdk=4cfde6cb-deaf-4bc7-bb37-64a9ef7e4f2e",
+    "merchant": "shopee",
+    "sku": "may-mai-cam-tay-hukan-hk-agk14",
+    "image": "/assets/img/products/may-mai-cam-tay-hukan-hk-agk14.webp",
+    "category": "may-mai",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T12:05:01.727Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-m%25C3%25A0i-c%25C3%25A2%25CC%2580m-tay-HUKAN-HK-AGK14-C%25C3%25B4ng-t%25E1%25BA%25AFc-%25C4%2591u%25C3%25B4i-C%25C3%25B4ng-su%25E1%25BA%25A5t-800w-i.166287331.22549355669%3Fsp_atk%3D4cfde6cb-deaf-4bc7-bb37-64a9ef7e4f2e%26xptdk%3D4cfde6cb-deaf-4bc7-bb37-64a9ef7e4f2e&sub1=may-mai-cam-tay-hukan-hk-agk14&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài cầm tay HUKAN HK-AGK14, công tắc đuôi, 800W — 449.000 đ.",
+    "seo": {
+      "description": "Máy mài cầm tay HUKAN HK-AGK14 (800W) — 449.000 đ."
+    }
+  },
+  {
+    "name": "Máy Mài Cắt Pin Hukan AG 6000J",
+    "price": 980000,
+    "origin": "https://shopee.vn/M%C3%A1y-M%C3%A0i-C%E1%BA%AFt-Pin-Hukan-AG-6000J-Kh%C3%B4ng-Ch%E1%BB%95i-Than-Ch%C3%A2n-Pin-Ph%E1%BB%95-Th%C3%B4ng-Ch%C3%ADnh-H%C3%A3ng-H%25C3%25A9an-Quy%25E1%25BA%25BFt-Trang-i.131704252.25150555744?sp_atk=d1166618-3e97-40f2-bf0e-b91a1cae4db5&xptdk=d1166618-3e97-40f2-bf0e-b91a1cae4db5",
+    "merchant": "shopee",
+    "sku": "may-mai-cat-pin-hukan-ag-6000j",
+    "image": "/assets/img/products/may-mai-cat-pin-hukan-ag-6000j.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-29T17:34:19.403Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-M%25C3%25A0i-C%25E1%25BA%25AFt-Pin-Hukan-AG-6000J-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-Ch%25C3%25A2n-Pin-Ph%25E1%25BB%2595-Th%25C3%25B4ng-Ch%25C3%25ADnh-H%25C3%25A3ng-Hukan-%25C4%2590i%25E1%25BB%2587n-M%25C3%25A1y-Quy%25E1%25BA%25BFt-Trang-i.131704252.25150555744%3Fsp_atk%3Dd1166618-3e97-40f2-bf0e-b91a1cae4db5%26xptdk%3Dd1166618-3e97-40f2-bf0e-b91a1cae4db5&sub1=may-mai-cat-pin-hukan-ag-6000j&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài cắt pin Hukan AG-6000J, BLDC, chân pin phổ thông — 980.000 đ.",
+    "seo": {
+      "description": "Máy mài cắt pin Hukan AG-6000J — 980.000 đ."
+    }
+  },
+  {
+    "name": "Máy Mài Điện Chỉnh Tốc Hukan HKG2 - AG 50550",
+    "price": 570000,
+    "origin": "https://shopee.vn/M%C3%A1y-M%C3%A0i-%C4%90i%E1%BB%87n-Ch%E1%BB%89nh-T%E1%BB%91c-Hukan-HKG2-AG-50550-CT-C%C3%B4ng-Su%E1%BA%A5t-900W-%C4%90%C3%A1-100-Chu%25E1%25BA%25A9n-%25C4%2590%E1%BB%2591ng-%25C4%2590i%25E1%25BB%2587n-M%25C3%25A1y-Quy%25E1%25BA%25BFt-Trang-i.131704252.25713573782?sp_atk=0eecfe2e-e00e-4fd0-83c6-6453f46d20fe&xptdk=0eecfe2e-e00e-4fd0-83c6-6453f46d20fe",
+    "merchant": "shopee",
+    "sku": "may-mai-dien-chinh-toc-hukan-hkg2-ag-50550",
+    "image": "/assets/img/products/may-mai-dien-chinh-toc-hukan-hkg2-ag-50550.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-30T02:56:14.678Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-M%25C3%25A0i-%25C4%2590i%25E1%25BB%2587n-Ch%25E1%25BB%2589nh-T%25E1%25BB%2591c-Hukan-HKG2-AG-50550-CT-C%25C3%25B4ng-Su%25E1%25BA%25A5t-900W-%25C4%2590%25C3%25A1-100-Chu%25E1%25BA%25A9n-%25C4%2590%25E1%25BB%2591ng-%25C4%2590i%25E1%25BB%2587n-M%25C3%25A1y-Quy%25E1%25BA%25BFt-Trang-i.131704252.25713573782%3Fsp_atk%3D0eecfe2e-e00e-4fd0-83c6-6453f46d20fe%26xptdk%3D0eecfe2e-e00e-4fd0-83c6-6453f46d20fe&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài điện chỉnh tốc Hukan HKG2-AG 50550, 900W — 570.000 đ.",
+    "seo": {
+      "description": "Máy mài điện chỉnh tốc Hukan HKG2-AG 50550 (900W) — 570.000 đ."
+    }
+  },
+  {
+    "name": "MÁY MÀI ĐIỆN HUKAN G3-A1",
+    "price": 1300000,
+    "origin": "https://shopee.vn/M%C3%81Y-M%C3%80I-%C4%90I%E1%BB%86N-HUKAN-G3-A1-NH%E1%BB%8E-G%E1%BB%8CN-C%E1%BB%B0C-TI%E1%BB%86N-L%E1%BB%A2I-CH%C3%8DNH-H%C3%83NG-i.68854195.28729736476?sp_atk=f6457fb2-bc6c-4ff5-ac78-5a20def966a6&xptdk=f6457fb2-bc6c-4ff5-ac78-5a20def966a6",
+    "merchant": "shopee",
+    "sku": "may-mai-dien-hukan-g3-a1",
+    "image": "/assets/img/products/may-mai-dien-hukan-g3-a1.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:36:56.347Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%2581Y-M%25C3%2580I-%25C4%2590I%25E1%25BB%2586N-HUKAN-G3-A1-NH%25E1%25BB%258E-G%25E1%25BB%258CN-C%25E1%25BB%25B0C-TI%25E1%25BB%2586N-L%25E1%25BB%25A2I-CH%25C3%258DNH-H%25C3%2583NG-i.68854195.28729736476%3Fsp_atk%3Df6457fb2-bc6c-4ff5-ac78-5a20def966a6%26xptdk%3Df6457fb2-bc6c-4ff5-ac78-5a20def966a6&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài điện HUKAN G3-A1, 1600W, công tắc đuôi — 1.300.000 đ.",
+    "seo": {
+      "description": "Máy mài điện HUKAN G3-A1 — 1.300.000 đ."
+    }
+  },
+  {
+    "name": "Máy Mài Góc Điện Hukan G3 - A1",
+    "price": 1490000,
+    "origin": "https://shopee.vn/M%C3%A1y-M%C3%A0i-G%C3%B3c-%C4%90i%E1%BB%87n-Hukan-G3-A1-Kh%C3%B4ng-Ch%25E1%25BB%2595i-Than-100mm-1600W-Ch%25E1%25BB%2591ng-Kh%25E1%25BB%259F-%25C4%2590%25E1%25BB%2599ng-L%25E1%25BA%25A1i-T%25E1%25BA%B7ng-Th%25C3%25A2n-Bulong-Hukan-320N-i.131704252.29271998526?sp_atk=43026c1b-af46-443b-86a3-3ca84f7f9b68&xptdk=43026c1b-af46-443b-86a3-3ca84f7f9b68",
+    "merchant": "shopee",
+    "sku": "may-mai-goc-dien-hukan-g3-a1",
+    "image": "/assets/img/products/may-mai-goc-dien-hukan-g3-a1.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:17:52.727Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-M%25C3%25A0i-G%25C3%25B3c-%25C4%2590i%25E1%25BB%2587n-Hukan-G3-A1-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-100mm-1600W-Ch%25E1%25BB%2591ng-Kh%25E1%25BB%259F-%25C4%2590%25E1%25BB%2599ng-L%25E1%25BA%25A1i-T%25E1%25BA%B7ng-Th%25C3%25A2n-Bulong-Hukan-320N-i.131704252.29271998526%3Fsp_atk%3D43026c1b-af46-443b-86a3-3ca84f7f9b68%26xptdk%3D43026c1b-af46-443b-86a3-3ca84f7f9b68&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài góc điện Hukan G3-A1, 1600W, 100mm — 1.490.000 đ.",
+    "seo": {
+      "description": "Máy mài góc điện Hukan G3-A1 (1600W) — 1.490.000 đ."
+    }
+  },
+  {
+    "name": "Máy mài góc HUKAN G2-M100TD",
+    "price": 950000,
+    "origin": "https://shopee.vn/-Ch%C3%ADnh-H%C3%A3ng-M%C3%A1y-m%C3%A0i-g%C3%B3c-HUKAN-G2-M100TD-7-c%E1%BA%A5p-t%E1%BB%91c-%C4%91%E1%BB%99-C%C3%B4ng-su%E1%BA%A5t-950w-T%E1%BB%91c-%C4%91%E1%BB%99-cao-11.000v-p-i.319001815.23176211873?sp_atk=de89f3e5-e32a-4e8f-9b36-2068da4b720b&xptdk=de89f3e5-e32a-4e8f-9b36-2068da4b720b",
+    "merchant": "shopee",
+    "sku": "may-mai-goc-hukan-g2-m100td",
+    "image": "/assets/img/products/may-mai-goc-hukan-g2-m100td.webp",
+    "category": "may-mai",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T12:07:27.355Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-Ch%25C3%25ADnh-H%25C3%25A3ng-M%25C3%25A1y-m%25C3%25A0i-g%25C3%25B3c-HUKAN-G2-M100TD-7-c%25E1%25BA%25A5p-t%25E1%25BB%2591c-%25C4%2591%25E1%25BB%2599-C%25C3%25B4ng-su%25E1%25BA%25A5t-950w-T%25E1%25BB%2591c-%25C4%2591%25E1%25BB%2599-cao-11.000v-p-i.319001815.23176211873%3Fsp_atk%3Dde89f3e5-e32a-4e8f-9b36-2068da4b720b%26xptdk%3Dde89f3e5-e32a-4e8f-9b36-2068da4b720b&sub1=may-mai-goc-hukan-g2-m100td&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài góc HUKAN G2-M100TD, 7 cấp tốc độ, 950W — 950.000 đ.",
+    "seo": {
+      "description": "Máy mài góc HUKAN G2-M100TD (950W) — 950.000 đ."
+    }
+  },
+  {
+    "name": "Máy Mài HUKAN G3-A1",
+    "price": 1500000,
+    "origin": "https://shopee.vn/-T%E1%BA%B7ng-Th%C3%A2n-G1-BL320N-M%C3%A1y-M%C3%A0i-HUKAN-G3-A1-C%C3%B4ng-T%E1%BA%AFc-%C4%90u%C3%B4i-1600W-Kh%C3%B4ng-Ch%E1%BB%95i-Than-i.81556078.43154334151?sp_atk=327a01b4-09c2-46a8-98ad-6917b254774e&xptdk=327a01b4-09c2-46a8-98ad-6917b254774e",
+    "merchant": "shopee",
+    "sku": "may-mai-hukan-g3-a1",
+    "image": "/assets/img/products/may-mai-hukan-g3-a1.webp",
+    "category": "may-cat",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:40:25.840Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-T%25E1%25BA%25B7ng-Th%25C3%25A2n-G1-BL320N-M%25C3%25A1y-M%25C3%25A0i-HUKAN-G3-A1-C%25C3%25B4ng-T%25E1%25BA%25AFc-%25C4%2590u%25C3%25B4i-1600W-Kh%25C3%25B4ng-Ch%25E1%25BB%2595i-Than-i.81556078.43154334151%3Fsp_atk%3D327a01b4-09c2-46a8-98ad-6917b254774e%26xptdk%3D327a01b4-09c2-46a8-98ad-6917b254774e&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài HUKAN G3-A1, BLDC, công tắc đuôi — 1.500.000 đ.",
+    "seo": {
+      "description": "Máy mài HUKAN G3-A1 — 1.500.000 đ."
+    }
+  },
+  {
+    "name": "Máy mài pin HUKAN HK-AGS6400",
+    "price": 550000,
+    "origin": "https://shopee.vn/M%C3%A1y-m%C3%A0i-pin-HUKAN-HK-AGS6400-3-t%E1%BB%91c-%C4%91%E1%BB%99-%C4%90%E1%BB%99ng-c%C6%A1-Kh%25C3%25B4ng-ch%25E1%25BB%2595i-than-i.166287331.23074847569?sp_atk=aea5a40e-8ca0-4784-860c-d8d16922465a&xptdk=aea5a40e-8ca0-4784-860c-d8d16922465a",
+    "merchant": "shopee",
+    "sku": "may-mai-pin-hukan-hk-ags6400",
+    "image": "/assets/img/products/may-mai-pin-hukan-hk-ags6400.webp",
+    "category": "may-mai",
+    "cat": "may-moc-xay-dung",
+    "brand": "HUKAN",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-09-27T12:04:00.957Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-m%25C3%25A0i-pin-HUKAN-HK-AGS6400-3-t%25E1%25BB%2591c-%25C4%2591%E1%25BB%2599-%25C4%2590%25E1%25BB%2599ng-c%25C6%25A1-Kh%25C3%25B4ng-ch%25E1%25BB%2595i-than-i.166287331.23074847569%3Fsp_atk%3Daea5a40e-8ca0-4784-860c-d8d16922465a%26xptdk%3Daea5a40e-8ca0-4784-860c-d8d16922465a&sub1=may-mai-pin-hukan-hk-ags6400&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy mài pin HUKAN HK-AGS6400, 3 tốc độ, BLDC — 550.000 đ.",
+    "seo": {
+      "description": "Máy mài pin HUKAN HK-AGS6400 — 550.000 đ."
+    }
+  },
+  {
+    "name": "Máy Ốp Lát Gạch Boshun HM - RG63",
+    "price": 580000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%90p-L%C3%A1t-G%E1%BA%A1ch-Boshun-HM-RG63-Si%C3%AAu-Kh%E1%BB%8Fe-M%C3%A1y-L%C3%A1t-G%E1%BA%A1ch-Men-L%E1%BB%B1c-H%C3%BAt-90KG-%C4%90%E1%BA%A7m-Rung-H%C3%BAt-G%E1%BA%A1ch-i.131704252.5632191924?sp_atk=ce69da0c-bd07-4c12-b2d4-1f8e7a8c75cf&xptdk=ce69da0c-bd07-4c12-b2d4-1f8e7a8c75cf",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-boshun-hm-rg63",
+    "image": "/assets/img/products/may-op-lat-gach-boshun-hm-rg63.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:47:45.440Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2590p-L%25C3%25A1t-G%25E1%25BA%A1ch-Boshun-HM-RG63-Si%25C3%25AAu-Kh%25E1%25BB%258Fe-M%25C3%25A1y-L%25C3%25A1t-G%25E1%25BA%A1ch-Men-L%25E1%25BB%B1c-H%25C3%25BAt-90KG-%25C4%2590%25E1%25BA%25A7m-Rung-H%25C3%25BAt-G%25E1%25BA%A1ch-i.131704252.5632191924%3Fsp_atk%3Dce69da0c-bd07-4c12-b2d4-1f8e7a8c75cf%26xptdk%3Dce69da0c-bd07-4c12-b2d4-1f8e7a8c75cf&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát Boshun HM-RG63, lực hút 90kg, đầm rung — 580.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch Boshun HM-RG63 — 580.000 đ."
+    }
+  },
+  {
+    "name": "Máy Ốp Lát Gạch BS-RG63 Boshun",
+    "price": 520000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%90p-L%C3%A1t-G%E1%BA%A1ch-BS-RG63-Boshun-Si%C3%AAu-Kh%E1%BB%8Fe-M%C3%A1y-L%C3%A1t-G%E1%BA%A1ch-Men-M%C3%A1y-H%C3%BAt-G%E1%BA%A1ch-%C4%90%E1%BA%A7m-Rung-H%C3%BAt-G%E1%BA%A1ch-i.951605724.29003847747?sp_atk=7a195b54-527a-44ec-9fd2-1c96dd8358bc&xptdk=7a195b54-527a-44ec-9fd2-1c96dd8358bc",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-bs-rg63-boshun",
+    "image": "/assets/img/products/may-op-lat-gach-bs-rg63-boshun.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:47:19.741Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2590p-L%25C3%25A1t-G%25E1%25BA%A1ch-BS-RG63-Boshun-Si%25C3%25AAu-Kh%25E1%25BB%258Fe-M%25C3%25A1y-L%25C3%25A1t-G%25E1%25BA%A1ch-Men-M%25C3%25A1y-H%25C3%25%BAt-G%25E1%25BA%A1ch-%25C4%2590%25E1%25BA%25A7m-Rung-H%25C3%25%BAt-G%25E1%25BA%A1ch-i.951605724.29003847747%3Fsp_atk%3D7a195b54-527a-44ec-9fd2-1c96dd8358bc%26xptdk%3D7a195b54-527a-44ec-9fd2-1c96dd8358bc&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát gạch BS-RG63 Boshun, đầm rung/hút gạch — 520.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch BS-RG63 Boshun — 520.000 đ."
+    }
+  },
+  {
+    "name": "Máy ốp lát gạch hai chức năng TOPVEL V7",
+    "price": 880000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%91p-l%C3%A1t-g%E1%BA%A1ch-hai-ch%E1%BB%A9c-n%C4%83ng-TOPVEL-V7-d%C3%B9ng-pin-H%C3%ADt-g%E1%BA%A1ch-v%C3%A0-%C4%91%E1%BA%A7m-rung-i.109816675.11061626170?sp_atk=b2290fe7-9f7c-4d8b-84a8-9284e164e89c&xptdk=b2290fe7-9f7c-4d8b-84a8-9284e164e89c",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-hai-chuc-nang-topvel-v7",
+    "image": "/assets/img/products/may-op-lat-gach-hai-chuc-nang-topvel-v7.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:49:26.660Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2591p-l%25C3%25A1t-g%25E1%25BA%A1ch-hai-ch%25E1%25BB%25A9c-n%25C4%2583ng-TOPVEL-V7-d%25C3%25B9ng-pin-H%25C3%25ADt-g%25E1%25BA%A1ch-v%25C3%25A0-%25C4%2591%25E1%25BA%25A7m-rung-i.109816675.11061626170%3Fsp_atk%3Db2290fe7-9f7c-4d8b-84a8-9284e164e89c%26xptdk%3Db2290fe7-9f7c-4d8b-84a8-9284e164e89c&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát gạch TOPVEL V7, hút gạch + đầm rung (pin) — 880.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch hai chức năng TOPVEL V7 — 880.000 đ."
+    }
+  },
+  {
+    "name": "Máy Ốp Lát Gạch Hai Chức Năng TOPVEL V71",
+    "price": 965000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%90p-L%C3%A1t-G%E1%BA%A1ch-Hai-Ch%E1%BB%A9c-N%C4%83ng-TOPVEL-V7-H%C3%ADt-G%E1%BA%A1ch-V%C3%A0-%C4%90%E1%BA%A7m-Rung-B%E1%BA%A3o-H%C3%A0nh-6-Th%C3%A1ng-i.158856619.14804904281?sp_atk=134981a4-23dc-4a69-9c48-8db85fa639cf&xptdk=134981a4-23dc-4a69-9c48-8db85fa639cf",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-hai-chuc-nang-topvel-v71",
+    "image": "/assets/img/products/may-op-lat-gach-hai-chuc-nang-topvel-v71.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:53:17.784Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2590p-L%25C3%25A1t-G%25E1%25BA%A1ch-Hai-Ch%25E1%25BB%25A9c-N%25C4%2583ng-TOPVEL-V7-H%25C3%25ADt-G%25E1%25BA%A1ch-V%25C3%25A0-%25C4%2590%25E1%25BA%25A7m-Rung-B%25E1%25BA%25A3o-H%25C3%25A0nh-6-Th%25C3%25A1ng-i.158856619.14804904281%3Fsp_atk%3D134981a4-23dc-4a69-9c48-8db85fa639cf%26xptdk%3D134981a4-23dc-4a69-9c48-8db85fa639cf&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát gạch TOPVEL V71 (hai chức năng), bảo hành 6T — 965.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch TOPVEL V71 — 965.000 đ."
+    }
+  },
+  {
+    "name": "Máy ốp lát gạch Hàng Chính Hãng LAISAI 16.8V",
+    "price": 990000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%91p-l%C3%A1t-g%E1%BA%A1ch-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-LAISAI-16.8V-2-ch%E1%BB%A9c-n%C4%83ng-%C4%91%E1%BA%A7m-rung-h%C3%ADt-g%E1%BA%A1ch-(-M%C3%A1y-1-pin-)-i.225199562.11049457560?sp_atk=d463c4cb-555b-4a13-8594-a138bce33a7b&xptdk=d463c4cb-555b-4a13-8594-a138bce33a7b",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-hang-chinh-hang-laisai-16-8v",
+    "image": "/assets/img/products/may-op-lat-gach-hang-chinh-hang-laisai-16-8v.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:50:36.487Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2591p-l%25C3%25A1t-g%25E1%25BA%A1ch-H%25C3%25A0ng-Ch%25C3%25%ADnh-H%25C3%25A3ng-LAISAI-16.8V-2-ch%25E1%25BB%25A9c-n%25C4%2583ng-%25C4%2591%25E1%25BA%25A7m-rung-h%25C3%25ADt-g%25E1%25BA%A1ch-%28-M%25C3%25A1y-1-pin-%29-i.225199562.11049457560%3Fsp_atk%3Dd463c4cb-555b-4a13-8594-a138bce33a7b%26xptdk%3Dd463c4cb-555b-4a13-8594-a138bce33a7b&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát LAISAI 16.8V, 2 chức năng (đầm rung + hút) — 990.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch LAISAI 16.8V (2 chức năng) — 990.000 đ."
+    }
+  },
+  {
+    "name": "Máy Ốp Lát Gạch Sàn Siêu Khỏe BOSHUN BS-RG63",
+    "price": 520000,
+    "origin": "https://shopee.vn/M%C3%A1y-%E1%BB%90p-L%C3%A1t-G%E1%BA%A1ch-S%C3%A0n-Si%C3%AAu-Kh%E1%BB%8Fe-BOSHUN-BS-RG63-%E2%80%93-2-Ch%E1%BB%A9c-N%C4%83ng-Rung-H%C3%BAt-%E2%80%93-L%C3%A1t-G%E1%BA%A1ch-Men-Nhanh-Chu%E1%BA%A9n-i.1325689360.41709399808?sp_atk=b05bc5a1-4870-4c6c-b3aa-eb0964c6bc01&xptdk=b05bc5a1-4870-4c6c-b3aa-eb0964c6bc01",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-san-sieu-khoe-boshun-bs-rg63",
+    "image": "/assets/img/products/may-op-lat-gach-san-sieu-khoe-boshun-bs-rg63.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:43:51.057Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-%25E1%25BB%2590p-L%25C3%25A1t-G%25E1%25BA%A1ch-S%25C3%25A0n-Si%25C3%25AAu-Kh%25E1%25BB%258Fe-BOSHUN-BS-RG63-%25E2%2580%2593-2-Ch%25E1%25BB%25A9c-N%25C4%2583ng-Rung-H%25C3%25%BAt-%25E2%2580%2593-L%25C3%25A1t-G%25E1%25BA%A1ch-Men-Nhanh-Chu%25E1%25BA%25A9n-i.1325689360.41709399808%3Fsp_atk%3Db05bc5a1-4870-4c6c-b3aa-eb0964c6bc01%26xptdk%3Db05bc5a1-4870-4c6c-b3aa-eb0964c6bc01&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "BOSHUN BS-RG63, siêu khỏe, 2 chức năng rung + hút — 520.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch sàn BOSHUN BS-RG63 — 520.000 đ."
+    }
+  },
+  {
+    "name": "Máy Ốp Lát Gạch SUABU",
+    "price": 795000,
+    "origin": "https://shopee.vn/-X%E1%BA%A2-L%E1%BB%96-M%C3%A1y-%E1%BB%90p-L%C3%A1t-G%E1%BA%A1ch-SUABU-2-Ch%E1%BB%A9c-N%C4%83ng-%C4%90%E1%BA%A7m-Rung-H%C3%ADt-G%E1%BA%A1ch-B%E1%BA%A3o-h%C3%A0nh-6-th%C3%A1ng-i.383857357.7180840938?sp_atk=dc3642da-93f1-4b64-a593-7a3626b3610a&xptdk=dc3642da-93f1-4b64-a593-7a3626b3610a",
+    "merchant": "shopee",
+    "sku": "may-op-lat-gach-suabu",
+    "image": "/assets/img/products/may-op-lat-gach-suabu.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-01T08:48:58.636Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-X%25E1%25BA%25A2-L%25E1%25BB%2596-M%25C3%25A1y-%25E1%25BB%2590p-L%25C3%25A1t-G%25E1%25BA%A1ch-SUABU-2-Ch%25E1%25BB%25A9c-N%25C4%2583ng-%25C4%2590%25E1%25BA%25A7m-Rung-H%25C3%25ADt-G%25E1%25BA%A1ch-B%25E1%25BA%25A3o-h%25C3%25A0nh-6-th%25C3%25A1ng-i.383857357.7180840938%3Fsp_atk%3Ddc3642da-93f1-4b64-a593-7a3626b3610a%26xptdk%3Ddc3642da-93f1-4b64-a593-7a3626b3610a&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy ốp lát gạch SUABU, 2 chức năng, BH 6T — 795.000 đ.",
+    "seo": {
+      "description": "Máy ốp lát gạch SUABU — 795.000 đ."
+    }
+  },
+  {
+    "name": "Máy rung dán ốp lát gạch men huapai",
+    "price": 1350000,
+    "origin": "https://shopee.vn/M%C3%A1y-rung-d%C3%A1n-%E1%BB%91p-l%C3%A1t-g%E1%BA%A1ch-men-cao-c%E1%BA%A5p-i.1408814460.43564327757?sp_atk=8d972edc-cc68-4113-8c63-1c0ee8a42e45&xptdk=8d972edc-cc68-4113-8c63-1c0ee8a42e45",
+    "merchant": "shopee",
+    "sku": "may-rung-dan-op-lat-gach-men-huapai",
+    "image": "/assets/img/products/may-rung-dan-op-lat-gach-men-huapai.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:52:49.917Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-rung-d%25C3%25A1n-%25E1%25BB%2591p-l%25C3%25A1t-g%25E1%25BA%A1ch-men-cao-c%25E1%25BA%25A5p-i.1408814460.43564327757%3Fsp_atk%3D8d972edc-cc68-4113-8c63-1c0ee8a42e45%26xptdk%3D8d972edc-cc68-4113-8c63-1c0ee8a42e45&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "Máy rung dán ốp lát gạch men Huapai — 1.350.000 đ.",
+    "seo": {
+      "description": "Máy rung dán ốp lát gạch men Huapai — 1.350.000 đ."
+    }
+  },
+  {
+    "name": "Máy Rung Gạch Không Dây BOSHUN BS-RG63",
+    "price": 649000,
+    "origin": "https://shopee.vn/M%C3%A1y-Rung-G%E1%BA%A1ch-Kh%C3%B4ng-D%C3%A2y-BOSHUN-BS-RG63-L%E1%BB%B1c-h%C3%BAt-90kg-M%C3%A1y-L%C3%A1t-G%E1%BA%A1ch-Men-%E1%BB%90p-G%E1%BA%A1ch-Ti%E1%BB%87n-D%E1%BB%A5ng-i.718585685.28303963932?sp_atk=c48bfa4e-e0ff-44f0-8a6d-1c62b094a999&xptdk=c48bfa4e-e0ff-44f0-8a6d-1c62b094a999",
+    "merchant": "shopee",
+    "sku": "may-rung-gach-khong-day-boshun-bs-rg63",
+    "image": "/assets/img/products/may-rung-gach-khong-day-boshun-bs-rg63.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:42:17.079Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-Rung-G%25E1%25BA%25A1ch-Kh%25C3%25B4ng-D%25C3%25A2y-BOSHUN-BS-RG63-L%25E1%25BB%25B1c-h%25C3%25BAt-90kg-M%25C3%25A1y-L%25C3%25A1t-G%25E1%25BA%25A1ch-Men-%25E1%25BB%2590p-G%25E1%25BA%25A1ch-Ti%25E1%25BB%2587n-D%25E1%25BB%25A5ng-i.718585685.28303963932%3Fsp_atk%3Dc48bfa4e-e0ff-44f0-8a6d-1c62b094a999%26xptdk%3Dc48bfa4e-e0ff-44f0-8a6d-1c62b094a999&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "BOSHUN BS-RG63 không dây, lực hút 90kg — 649.000 đ.",
+    "seo": {
+      "description": "Máy rung gạch không dây BOSHUN BS-RG63 — 649.000 đ."
+    }
+  },
+  {
+    "name": "Máy rung gạch lát sàn chạy pin BOSHUN BS-RG63",
+    "price": 520000,
+    "origin": "https://shopee.vn/M%C3%A1y-rung-g%E1%BA%A1ch-l%C3%A1t-s%C3%A0n-ch%E1%BA%A1y-pin-BOSHUN-BS-RG63-L%E1%BB%B1c-h%C3%BAt-90kg-i.619286264.23875841040?sp_atk=7ed8c168-a5b0-43c5-a65d-c63fd10d2b39&xptdk=7ed8c168-a5b0-43c5-a65d-c63fd10d2b39",
+    "merchant": "shopee",
+    "sku": "may-rung-gach-lat-san-chay-pin-boshun-bs-rg63",
+    "image": "/assets/img/products/may-rung-gach-lat-san-chay-pin-boshun-bs-rg63.webp",
+    "category": "may-rung",
+    "cat": "may-moc-xay-dung",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-01T08:44:17.941Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FM%25C3%25A1y-rung-g%25E1%25BA%25A1ch-l%25C3%25A1t-s%25C3%25A0n-ch%25E1%25BA%25A1y-pin-BOSHUN-BS-RG63-L%25E1%25BB%25B1c-h%25C3%25BAt-90kg-i.619286264.23875841040%3Fsp_atk%3D7ed8c168-a5b0-43c5-a65d-c63fd10d2b39%26xptdk%3D7ed8c168-a5b0-43c5-a65d-c63fd10d2b39&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210",
+    "desc": "BOSHUN BS-RG63 chạy pin, lực hút 90kg — 520.000 đ.",
+    "seo": {
+      "description": "Máy rung gạch lát sàn chạy pin BOSHUN BS-RG63 — 520.000 đ."
+    }
+  },
+  {
+    "name": "Set 3 món Bigsize nữ áo sơ mi sọc dài tay phối áo thun hai dây",
+    "price": 44000,
+    "origin": "https://shopee.vn/Set-3-m%C3%B3n-Bigsize-n%E1%BB%AF-%C3%A1o-s%C6%A1-mi-s%E1%BB%8Dc-d%C3%A0i-tay-ph%E1%BB%91i-%C3%A1o-thun-hai-d%C3%A2y-co-gi%C3%A3n-k%C3%A8m-qu%E1%BA%A7n-%C4%91%C3%B9i-d%C3%A1ng-A-n%C4%83ng-%C4%91%E1%BB%99ng-c%C3%A1-t%C3%ADnh-i.409338962.28032531056",
+    "merchant": "shopee",
+    "sku": "set-3-mon-bigsize-nu-ao-so-mi-soc-dai-tay-phoi-ao-thun-hai-day",
+    "image": "/assets/img/products/set-3-mon-bigsize-nu-ao-so-mi-soc-dai-tay-phoi-ao-thun-hai-day.webp",
+    "category": "thoi-trang-nu",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-14T16:39:50.676Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FSet-3-m%25C3%25B3n-Bigsize-n%25E1%25BB%25AF-%25C3%25A1o-s%25C6%25A1-mi-s%25E1%25BB%258Dc-d%25C3%25A0i-tay-ph%25E1%25BB%2591i-%25C3%25A1o-thun-hai-d%25C3%25A2y-co-gi%25C3%25A3n-k%25C3%25A8m-qu%25E1%25BA%25A7n-%25C4%2591%25C3%25B9i-d%25C3%25A1ng-A-n%25C4%2583ng-%25C4%2591%25E1%25BB%2599ng-c%25C3%25A1-t%25C3%25ADnh-i.409338962.28032531056&sub1=set-3-mon-bigsize-nu-ao-so-mi-soc-dai-tay-phoi-ao-thun-hai-day&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Smoothie Tẩy Tế Bào Chết Body Dove Chăm Da Sáng Mịn 298g",
+    "price": 159000,
+    "origin": "https://shopee.vn/-CH%C3%8DNH-H%C3%83NG-%C4%90%E1%BB%98C-QUY%E1%BB%80N-Smoothie-T%E1%BA%A9y-T%E1%BA%BF-B%C3%A0o-Ch%E1%BA%BFt-Body-Dove-Ch%C4%83m-Da-S%C3%A1ng-M%E1%BB%8Bn-298g-i.111138057.20567055749",
+    "merchant": "shopee",
+    "sku": "smoothie-tay-te-bao-chet-body-dove-cham-da-sang-min-298g",
+    "image": "/assets/img/categories/smoothie-tay-te-bao-chet-body-dove-cham-da-sang-min-298g.webp",
+    "category": "my-pham",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T04:44:31.775Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F-CH%25C3%258DNH-H%25C3%2583NG-%25C4%2590%25E1%25BB%2598C-QUY%25E1%25BB%2580N-Smoothie-T%25E1%25BA%25A9y-T%25E1%25BA%25BF-B%25C3%25A0o-Ch%25E1%25BA%25BFt-Body-Dove-Ch%25C4%2583m-Da-S%25C3%25A1ng-M%25E1%25BB%258Bn-298g-i.111138057.20567055749&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Sports Shorts 6' Quần Short Thể Thao Nam",
+    "price": 1899000,
+    "origin": "shopee.vn/Wilson-Daily-Sports-Shorts-6'-Quần-Short-Thể-Thao-Nam-WM20036412-i.1362431986.42952098158?extraParams=%7B\"display_model_id\"%3A218531106646%7D",
+    "merchant": "shopee",
+    "sku": "sports-shorts-6-quan-short-the-thao-nam",
+    "image": "/assets/img/products/sports-shorts-6-quan-short-the-thao-nam.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:31:49.176Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2FWilson-Daily-Sports-Shorts-6'-Qu%E1%BA%A7n-Short-Th%E1%BB%83-Thao-Nam-WM20036412-i.1362431986.42952098158%3FextraParams%3D%257B%22display_model_id%22%253A218531106646%257D&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Sục Cross Đế Cao 3cm Nữ Hình JD 3D",
+    "price": 109000,
+    "origin": "https://shopee.vn/Sục-Cross-Đế-Cao-3cm-Nữ-Hình-JD-3D-Dép-Sục-Tông-Dáng-3-Màu-Size-36-41-Bách-Hóa-GiayDep.-Store-i.1071797056.23760425338?extraParams=%7B\"display_model_id\"%3A295148155729%2C\"model_selection_logic\"%3A3%7D&sp_atk=4cb25c80-7916-4292-a505-f7b757788434&xptdk=4cb25c80-7916-4292-a505-f7b757788434",
+    "merchant": "shopee",
+    "sku": "suc-cross-de-cao-3cm-nu-hinh-jd-3d",
+    "image": "/assets/img/products/suc-cross-de-cao-3cm-nu-hinh-jd-3d.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-27T15:11:04.826Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2FS%E1%BB%A5c-Cross-%C4%90%E1%BA%BF-Cao-3cm-N%E1%BB%AF-H%C3%ACnh-JD-3D-D%C3%A9p-S%E1%BB%A5c-T%C3%B4ng-D%C3%A1ng-3-M%C3%A0u-Size-36-41-B%C3%A1ch-H%C3%B3a-GiayDep.-Store-i.1071797056.23760425338%3FextraParams%3D%257B%22display_model_id%22%253A295148155729%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3D4cb25c80-7916-4292-a505-f7b757788434%26xptdk%3D4cb25c80-7916-4292-a505-f7b757788434&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Túi canvas dove cao cấp",
+    "price": 150000,
+    "origin": "shopee.vn/-PC-gift-Túi-canvas-dove-cao-cấp-i.111138057.40773519364",
+    "merchant": "shopee",
+    "sku": "tui-canvas-dove-cao-cap",
+    "image": "/assets/img/products/tui-canvas-dove-cao-cap.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-22T15:37:50.466Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=shopee.vn%2F-PC-gift-T%C3%BAi-canvas-dove-cao-c%E1%BA%A5p-i.111138057.40773519364&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
+  },
+  {
+    "name": "Váy dáng xòe cài hoa trà, cổ sen, chất liệu dạ text mềm mịn",
+    "price": 795000,
+    "origin": "https://shopee.vn/(Silent-Sound)-Váy-dáng-xòe-cài-hoa-trà-cổ-sen-chất-liệu-dạ-text-mềm-mịn-thời-trang-nữ-Calie-VX309-i.932349652.25547254306?extraParams=%7B\"display_model_id\"%3A301798749786%2C\"model_selection_logic\"%3A3%7D&sp_atk=3ab8c6c8-de32-48a2-80c9-58c00b173914&xptdk=3ab8c6c8-de32-48a2-80c9-58c00b173914",
+    "merchant": "shopee",
+    "sku": "vay-dang-xoe-cai-hoa-tra-co-sen-chat-lieu-da-text-mem-min",
+    "image": "/assets/img/products/vay-dang-xoe-cai-hoa-tra-co-sen-chat-lieu-da-text-mem-min.webp",
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": true,
+    "status": true,
+    "updated_at": "2025-10-27T15:16:42.934Z",
+    "deeplink": "https://go.isclix.com/deep_link/6803097511817356947/4751584435713464237?url=https%3A%2F%2Fshopee.vn%2F(Silent-Sound)-V%C3%A1y-d%C3%A1ng-x%C3%B2e-c%C3%A0i-hoa-tr%C3%A0-c%E1%BB%95-sen-ch%E1%BA%A5t-li%E1%BB%87u-d%E1%BA%A1-text-m%E1%BB%81m-m%E1%BB%8Bn-th%E1%BB%9Di-trang-n%E1%BB%AF-Calie-VX309-i.932349652.25547254306%3FextraParams%3D%257B%22display_model_id%22%253A301798749786%252C%22model_selection_logic%22%253A3%257D%26sp_atk%3D3ab8c6c8-de32-48a2-80c9-58c00b173914%26xptdk%3D3ab8c6c8-de32-48a2-80c9-58c00b173914&sub1=sku&sub2=shopee&sub3=tool&sub4=mxd210"
   }
 ]
