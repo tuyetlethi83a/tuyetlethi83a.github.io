@@ -1,64 +1,97 @@
 // /assets/mxd-affiliate.js
-document.addEventListener('DOMContentLoaded', () => {
-  // BASES theo tuyetlethi83a (đã xác nhận)
+(() => {
+  // BASES của tuyetlethi83a (đã xác nhận)
   const BASES = {
     shopee: "https://go.isclix.com/deep_link/6837055118319564314/4751584435713464237",
     tiktok: "https://go.isclix.com/deep_link/6837055118319564314/6648523843406889655",
-    lazada: "https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421"
+    lazada: "https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421",
   };
 
   const isIsclix = (u) => {
     try { return new URL(u).hostname.endsWith('isclix.com'); } catch { return false; }
   };
 
-  const buildDeepLink = (base, origin, meta) => {
-    if (!base) return origin;
-    // Giữ nguyên nếu origin đã là isclix
-    if (isIsclix(origin)) return origin;
+  const deepLinkFor = (meta) => {
+    let origin = meta.getAttribute('href') || '#';
+    const merchant = (meta.dataset.merchant || '').toLowerCase();
+    const base = BASES[merchant];
 
-    // Chuẩn hoá absolute URL cho origin (kể cả khi meta dùng đường dẫn tương đối)
-    try { origin = new URL(origin, location.origin).href; } catch { /* noop */ }
+    // Chuẩn hoá absolute
+    try { origin = new URL(origin, location.origin).href; } catch {}
+
+    // Nếu đã là isclix hoặc không có base → giữ nguyên
+    if (!base || isIsclix(origin)) return origin;
 
     const glue = base.includes('?') ? '&' : '?';
     let url = `${base}${glue}url=${encodeURIComponent(origin)}`;
 
-    // Optional: sub1..sub4 (nếu cần, set data-sub1..data-sub4 trên a.product-meta)
+    // Optional sub1..sub4
     ['sub1','sub2','sub3','sub4'].forEach(k => {
-      const v = meta?.dataset?.[k];
+      const v = meta.dataset[k];
       if (v) url += `&${k}=${encodeURIComponent(v)}`;
     });
 
     return url;
   };
 
-  const sendGA = (merchant, sku, price) => {
+  const sendGA = (meta) => {
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'aff_click', {
         event_category: 'affiliate',
-        event_label: merchant || '',
-        value: Number(price) || undefined,
-        merchant, sku
+        event_label: meta.dataset.merchant || '',
+        value: Number(meta.dataset.price) || undefined,
+        merchant: meta.dataset.merchant || '',
+        sku: meta.dataset.sku || ''
       });
     }
   };
 
-  document.querySelectorAll('.product-card').forEach(card => {
+  const rewriteCard = (card) => {
     const meta = card.querySelector('a.product-meta');
     if (!meta) return;
-
-    const origin = meta.getAttribute('href') || '#';
-    const merchant = (meta.dataset.merchant || '').toLowerCase();
-    const base = BASES[merchant];
-
-    const finalUrl = buildDeepLink(base, origin, meta);
-
+    const finalUrl = deepLinkFor(meta);
     card.querySelectorAll('a.buy').forEach(a => {
-      // Giữ nguyên nếu buộc giữ link gốc
       if (a.dataset.origin === 'keep') return;
-      a.href = finalUrl;
+      a.href = finalUrl; // để user có thể copy link
       a.rel = 'nofollow noopener noreferrer';
-      // Gửi GA4 khi click
-      a.addEventListener('click', () => sendGA(merchant, meta.dataset.sku, meta.dataset.price));
     });
+  };
+
+  const rewriteAll = () =>
+    document.querySelectorAll('.product-card').forEach(rewriteCard);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1) Rewrite lần đầu
+    rewriteAll();
+
+    // 2) Uỷ quyền click: luôn điều hướng dù href đang là "#"
+    document.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('a.buy');
+      if (!btn) return;
+      if (btn.dataset.origin === 'keep') return;
+
+      const card = btn.closest('.product-card');
+      const meta = card && card.querySelector('a.product-meta');
+      if (!meta) return;
+
+      const finalUrl = deepLinkFor(meta);
+      btn.href = finalUrl; // cập nhật thực tế
+      sendGA(meta);
+
+      ev.preventDefault();           // chặn "#" giữ nguyên trang
+      window.location.assign(finalUrl); // điều hướng chắc chắn
+    });
+
+    // 3) Theo dõi DOM để xử lý các card thêm sau fetch
+    const mo = new MutationObserver((muts) => {
+      for (const m of muts) {
+        m.addedNodes && m.addedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return;
+          if (node.matches?.('.product-card')) rewriteCard(node);
+          node.querySelectorAll?.('.product-card').forEach(rewriteCard);
+        });
+      }
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
   });
-});
+})();
