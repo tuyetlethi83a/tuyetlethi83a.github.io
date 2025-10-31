@@ -102,7 +102,9 @@
 </div>
 
 <script>
+  /* FIND: index loader v2025-10-31 — tries /assets/data/affiliates.json then /affiliates.json */
   function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
+  function imgPath(p){ return p.image || ('/assets/img/products/'+p.sku+'.webp'); }
   function card(p){
     const origin = p.origin_url ?? p.origin ?? '#';
     const priceRaw = p.price_vnd ?? p.price;
@@ -110,18 +112,31 @@
     return `
       <div class="card product-card">
         <a class="product-meta" href="${origin}"
-           data-merchant="${p.merchant||''}" data-sku="${p.sku}"
-           data-img="${p.image||''}" ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}>${p.name}</a>
-        <img src="${p.image}" alt="${p.name}"/>
+           data-merchant="${(p.merchant||'')}"
+           data-sku="${p.sku}"
+           data-img="${imgPath(p)}"
+           ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}>${p.name}</a>
+        <img src="${imgPath(p)}" alt="${p.name}"/>
         ${price?`<p><strong>${price}</strong></p>`:''}
         <p><span class="badge">${p.merchant||''}</span></p>
         <p><a class="btn buy" href="#">Mua ngay</a></p>
       </div>`;
   }
+
+  async function loadAffiliates(){
+    const candidates = ['/assets/data/affiliates.json','/affiliates.json'];
+    for(const url of candidates){
+      try{
+        const r = await fetch(url,{cache:'no-store'});
+        if(r.ok) return await r.json();
+      }catch(e){}
+    }
+    return [];
+  }
+
   (async () => {
     try{
-      const res = await fetch('/affiliates.json',{cache:'no-store'});
-      const list = await res.json();
+      const list = await loadAffiliates();
       const preferred = ['thoi-trang','my-pham','me-va-be'];
       const scored = list.map(p=>{
         const c=(p.category||'').toLowerCase();
@@ -130,10 +145,19 @@
       }).sort((a,b)=>a.score-b.score);
       const items = scored.slice(0,12).map(x=>x.p);
       document.getElementById('featured').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm.</p>';
+
       // ItemList JSON-LD
-      const itemList = {"@context":"https://schema.org","@type":"ItemList","itemListElement":items.map((p,i)=>({"@type":"ListItem","position":i+1,"url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}))};
+      const itemList = {
+        "@context":"https://schema.org","@type":"ItemList",
+        "itemListElement":items.map((p,i)=>({
+          "@type":"ListItem","position":i+1,
+          "url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href
+        }))
+      };
       const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(itemList); document.head.appendChild(s);
-    }catch(e){ document.getElementById('featured').innerHTML = '<p>Lỗi tải dữ liệu.</p>'; }
+    }catch(e){
+      document.getElementById('featured').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+    }
   })();
 </script>
 </body>
