@@ -1,3 +1,4 @@
+<!-- REPLACE WHOLE FILE: /index.html -->
 <!doctype html>
 <html lang="vi">
 <head>
@@ -14,45 +15,45 @@
   <meta property="og:url" content="https://tuyetlethi83a.github.io/"/>
   <meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
 
-  <!-- Palette (bảng màu) — có thể đổi nhanh các biến dưới đây -->
+  <!-- Palette nhẹ (override site.css nếu cần) -->
   <style>
     :root{
-      --brand:#0b3b5b;      /* navy đậm */
-      --accent:#00bfa6;     /* teal */
-      --text:#111827;       /* gần đen */
-      --muted:#6b7280;      /* xám */
-      --bg:#ffffff;
-      --hero-text:#ffffff;
+      --brand:#0b3b5b; --accent:#00bfa6; --cta:#ff6b00;
+      --text:#111827; --muted:#6b7280; --bg:#fff;
+      --hero-text:#fff;
     }
     .hero{background:var(--brand); color:var(--hero-text);}
-    .hero .muted{opacity:.9}
-    .chip{display:inline-block; padding:.4rem .7rem; border-radius:999px; border:1px solid #e5e7eb; margin:.25rem .35rem 0 0; text-decoration:none}
-    .floating-contacts{position:fixed; right:1rem; bottom:1rem; display:flex; flex-direction:column; gap:.5rem}
-    .floating-contacts .btn{border-radius:999px}
-    h1,h2,h3{color:var(--text)}
     .badge{background:var(--accent); color:#fff; border-radius:999px; padding:.15rem .5rem; display:inline-block}
   </style>
 
-  <!-- Styles + Scripts (GA4 trước affiliate) -->
   <link rel="stylesheet" href="/assets/site.css"/>
+  <!-- GA4 trước affiliate -->
   <script defer src="/assets/analytics.js"></script>
   <script defer src="/assets/mxd-affiliate.js"></script>
 
   <!-- JSON-LD Organization -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"MXD",
-    "url":"https://tuyetlethi83a.github.io/",
-    "logo":"https://tuyetlethi83a.github.io/assets/og/default-og.webp",
-    "sameAs":["https://facebook.com/lethituyet.le.3"]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"MXD","url":"https://tuyetlethi83a.github.io/","logo":"https://tuyetlethi83a.github.io/assets/og/default-og.webp","sameAs":["https://facebook.com/lethituyet.le.3"]}
   </script>
 </head>
 <body>
 
-<header class="hero">
+<!-- NAV -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="/">Cửa hàng liên kết</a>
+    <nav>
+      <a href="/">Trang chủ</a>
+      <a href="/store.html">Cửa hàng</a>
+      <a href="/store/thoi-trang.html">Thời trang</a>
+      <a href="/store/my-pham.html">Mỹ phẩm</a>
+      <a href="/store/me-va-be.html">Mẹ & Bé</a>
+      <a href="/lien-he.html">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
   <div class="container">
     <h1>Cửa hàng liên kết</h1>
     <p class="muted">GA4 trước affiliate • Canonical tuyệt đối • SW bật sẵn</p>
@@ -61,31 +62,22 @@
       <a class="btn outline" href="/g.html?sku=ao-croptop-ba-lo-nu-toptify">Xem trang sản phẩm (demo)</a>
     </div>
   </div>
-</header>
+</section>
 
 <main>
   <!-- Danh mục nổi bật -->
   <section class="container">
     <h2>Danh mục nổi bật</h2>
     <ul class="category-grid">
-      <li>
-        <a class="category-tile" href="/store/thoi-trang.html">
-          <img src="/assets/img/categories/thoi-trang.webp" alt="Thời trang — MXD" width="400" height="240"/>
-          <span>Thời trang</span>
-        </a>
-      </li>
-      <li>
-        <a class="category-tile" href="/store/my-pham.html">
-          <img src="/assets/img/categories/my-pham.webp" alt="Mỹ phẩm — MXD" width="400" height="240"/>
-          <span>Mỹ phẩm</span>
-        </a>
-      </li>
-      <li>
-        <a class="category-tile" href="/store/me-va-be.html">
-          <img src="/assets/img/categories/me-va-be.webp" alt="Mẹ & Bé — MXD" width="400" height="240"/>
-          <span>Mẹ & Bé</span>
-        </a>
-      </li>
+      <li><a class="category-tile" href="/store/thoi-trang.html">
+        <img src="/assets/img/categories/thoi-trang.webp" alt="Thời trang — MXD" width="400" height="240"/>
+        <span>Thời trang</span></a></li>
+      <li><a class="category-tile" href="/store/my-pham.html">
+        <img src="/assets/img/categories/my-pham.webp" alt="Mỹ phẩm — MXD" width="400" height="240"/>
+        <span>Mỹ phẩm</span></a></li>
+      <li><a class="category-tile" href="/store/me-va-be.html">
+        <img src="/assets/img/categories/me-va-be.webp" alt="Mẹ & Bé — MXD" width="400" height="240"/>
+        <span>Mẹ & Bé</span></a></li>
     </ul>
     <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem tất cả danh mục</a></p>
   </section>
@@ -96,34 +88,13 @@
     <div id="featured" class="product-grid"><p>Đang tải…</p></div>
     <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem thêm sản phẩm</a></p>
   </section>
-
-  <!-- Quick-Nav -->
-  <section class="container">
-    <h3>Đi nhanh</h3>
-    <div class="quick-nav">
-      <a class="chip" href="/store.html">Cửa hàng</a>
-      <a class="chip" href="/store/thoi-trang.html">Thời trang</a>
-      <a class="chip" href="/store/my-pham.html">Mỹ phẩm</a>
-      <a class="chip" href="/store/me-va-be.html">Mẹ & Bé</a>
-    </div>
-  </section>
-
-  <!-- Ghi chú chuyển dữ liệu -->
-  <section class="container">
-    <h3>Ghi chú chuyển dữ liệu</h3>
-    <ul>
-      <li><code>affiliates.json</code> ở <strong>root</strong> (đã đúng).</li>
-      <li>Ảnh sản phẩm tại <code>/assets/img/products/&lt;sku&gt;.webp</code>.</li>
-      <li>Danh mục mới: tạo <code>/store/&lt;slug&gt;.html</code> rồi chèn tile trong <code>store.html</code>.</li>
-    </ul>
-  </section>
 </main>
 
 <footer>
   <div class="container"><small class="muted">© 2025 — MXD Canonical.</small></div>
 </footer>
 
-<!-- Floating contacts -->
+<!-- Nút nổi liên hệ -->
 <div class="floating-contacts">
   <a class="btn" href="https://zalo.me/0979527398">Zalo</a>
   <a class="btn" href="https://facebook.com/lethituyet.le.3" target="_blank" rel="noopener">Facebook</a>
@@ -131,7 +102,6 @@
 </div>
 
 <script>
-  // Render "Sản phẩm nổi bật": ưu tiên 3 danh mục chính, lấy tối đa 12 item
   function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
   function card(p){
     const origin = p.origin_url ?? p.origin ?? '#';
@@ -140,35 +110,31 @@
     return `
       <div class="card product-card">
         <a class="product-meta" href="${origin}"
-           data-merchant="${p.merchant||''}"
-           data-sku="${p.sku}"
-           data-img="${p.image||''}"
-           ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}
-        >${p.name}</a>
+           data-merchant="${p.merchant||''}" data-sku="${p.sku}"
+           data-img="${p.image||''}" ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}>${p.name}</a>
         <img src="${p.image}" alt="${p.name}"/>
         ${price?`<p><strong>${price}</strong></p>`:''}
         <p><span class="badge">${p.merchant||''}</span></p>
-        <p><a class="btn buy" href="#">Mua tại nơi gốc</a></p>
+        <p><a class="btn buy" href="#">Mua ngay</a></p>
       </div>`;
   }
-
   (async () => {
     try{
       const res = await fetch('/affiliates.json',{cache:'no-store'});
       const list = await res.json();
       const preferred = ['thoi-trang','my-pham','me-va-be'];
       const scored = list.map(p=>{
-        const c = (p.category||'').toLowerCase();
+        const c=(p.category||'').toLowerCase();
         const score = preferred.findIndex(x=>c.startsWith(x));
         return {p, score: score===-1? 9 : score};
       }).sort((a,b)=>a.score-b.score);
       const items = scored.slice(0,12).map(x=>x.p);
       document.getElementById('featured').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm.</p>';
-    }catch(e){
-      document.getElementById('featured').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
-    }
+      // ItemList JSON-LD
+      const itemList = {"@context":"https://schema.org","@type":"ItemList","itemListElement":items.map((p,i)=>({"@type":"ListItem","position":i+1,"url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}))};
+      const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(itemList); document.head.appendChild(s);
+    }catch(e){ document.getElementById('featured').innerHTML = '<p>Lỗi tải dữ liệu.</p>'; }
   })();
 </script>
-
 </body>
 </html>
