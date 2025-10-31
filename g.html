@@ -1,58 +1,111 @@
 <!-- REPLACE WHOLE FILE: /g.html -->
 <!doctype html><html lang="vi"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Sản phẩm | MXD</title>
-<meta id="desc" name="description" content="Trang sản phẩm MXD. Vui lòng bật JavaScript."/>
-<link id="canonical" rel="canonical" href="https://tuyetlethi83a.github.io/g.html"/>
-<meta id="robots" name="robots" content="index,follow"/>
-<meta property="og:title" content="Sản phẩm | MXD"/>
-<meta id="ogdesc" property="og:description" content="Trang sản phẩm theo SKU từ affiliates.json"/>
-<meta id="ogurl" property="og:url" content="https://tuyetlethi83a.github.io/g.html"/>
-<meta id="ogimg" property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
-<link rel="stylesheet" href="/assets/site.css"/>
-<script defer src="/assets/analytics.js"></script>
-<script defer src="/assets/mxd-affiliate.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sản phẩm | MXD</title>
+  <meta id="desc" name="description" content="Trang sản phẩm MXD. Vui lòng bật JavaScript."/>
+  <link id="canonical" rel="canonical" href="https://tuyetlethi83a.github.io/g.html"/>
+  <meta id="robots" name="robots" content="index,follow"/>
+  <meta property="og:title" content="Sản phẩm | MXD"/>
+  <meta id="ogdesc" property="og:description" content="Trang sản phẩm theo SKU từ affiliates.json"/>
+  <meta id="ogurl" property="og:url" content="https://tuyetlethi83a.github.io/g.html"/>
+  <meta id="ogimg" property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
+  <link rel="stylesheet" href="/assets/site.css"/>
+  <script defer src="/assets/analytics.js"></script>
+  <script defer src="/assets/mxd-affiliate.js"></script>
 </head>
 <body>
-<header class="topbar"><div class="container nav">
-  <a class="brand" href="/">Cửa hàng liên kết</a>
-  <nav><a href="/">Trang chủ</a><a href="/store.html">Cửa hàng</a><a href="/store/thoi-trang.html">Thời trang</a><a href="/store/my-pham.html">Mỹ phẩm</a><a href="/store/me-va-be.html">Mẹ & Bé</a><a href="/lien-he.html">Liên hệ</a></nav>
-</div></header>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="/">Cửa hàng liên kết</a>
+    <nav>
+      <a href="/">Trang chủ</a>
+      <a href="/store.html">Cửa hàng</a>
+      <a href="/store/thoi-trang.html">Thời trang</a>
+      <a href="/store/my-pham.html">Mỹ phẩm</a>
+      <a href="/store/me-va-be.html">Mẹ & Bé</a>
+      <a href="/lien-he.html">Liên hệ</a>
+    </nav>
+  </div>
+</header>
 
 <header class="container"><h1 id="title">Sản phẩm</h1></header>
 <div class="container" id="content"><p>Đang tải…</p></div>
 <footer><div class="container"><small class="muted">Lấy dữ liệu từ affiliates.json qua ?sku=</small></div></footer>
 
 <script>
-function setMeta(p){
-  const u = 'https://tuyetlethi83a.github.io/g.html?sku=' + encodeURIComponent(p.sku);
-  canonical.href = u; ogurl.setAttribute('content', u);
-  ogimg.setAttribute('content', new URL(p.image, location.origin).href);
-  desc.setAttribute('content', p.name); ogdesc.setAttribute('content', p.name);
-  document.title = p.name + ' | MXD';
-}
+/* FIND: g.html loader v2025-10-31 — tries /assets/data/affiliates.json then /affiliates.json */
 const qs = n => new URL(location.href).searchParams.get(n);
 const canonical = document.getElementById('canonical');
 const ogurl = document.getElementById('ogurl');
 const ogimg = document.getElementById('ogimg');
 const ogdesc = document.getElementById('ogdesc');
 const desc = document.getElementById('desc');
+const robotsMeta = document.getElementById('robots');
+
+function setMeta(p, imgAbs){
+  const u = new URL('/g.html?sku='+encodeURIComponent(p.sku), location.origin).href;
+  canonical.href = u; ogurl.setAttribute('content', u);
+  ogimg.setAttribute('content', imgAbs);
+  desc.setAttribute('content', p.name);
+  ogdesc.setAttribute('content', p.name);
+  document.title = p.name + ' | MXD';
+}
+
+async function loadAffiliates(){
+  const candidates = ['/assets/data/affiliates.json', '/affiliates.json'];
+  for (const url of candidates){
+    try{
+      const res = await fetch(url, {cache:'no-store'});
+      if(res.ok) return await res.json();
+    }catch(e){}
+  }
+  return [];
+}
+
 document.addEventListener('DOMContentLoaded', async ()=>{
   const sku = qs('sku'), wrap = document.getElementById('content'), h1 = document.getElementById('title');
   if(!sku){ wrap.innerHTML = '<p>Thiếu ?sku=</p>'; return; }
-  const data = await (await fetch('/affiliates.json',{cache:'no-store'})).json();
-  const p = data.find(x=> x.sku === sku);
-  if(!p){ robots.setAttribute('content','noindex,follow'); wrap.innerHTML='<p>Không tìm thấy SKU.</p>'; return; }
-  setMeta(p); h1.textContent = p.name;
-  const priceRaw = p.price_vnd ?? p.price;
-  const price = Number.isFinite(Number(priceRaw)) ? Number(priceRaw).toLocaleString('vi-VN') + ' ₫' : '';
-  const ld = {"@context":"https://schema.org","@type":"Product","name":p.name,"sku":p.sku,"image":[new URL(p.image,location.origin).href],"description":p.name,"offers":{"@type":"Offer","priceCurrency":"VND","price":String(priceRaw??''),"availability":"https://schema.org/InStock","url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}};
+
+  const data = await loadAffiliates();
+  const p = data.find(x=> String(x.sku) === String(sku));
+
+  if(!p){
+    robotsMeta?.setAttribute('content','noindex,follow');
+    wrap.innerHTML = '<p>Không tìm thấy SKU.</p>';
+    return;
+  }
+
+  const imgAbs = new URL(p.image || ('/assets/img/products/'+p.sku+'.webp'), location.origin).href;
+  setMeta(p, imgAbs);
+  h1.textContent = p.name;
+
+  const priceRaw = (p.price_vnd ?? p.price);
+  const priceNum = Number(priceRaw);
+  const price = Number.isFinite(priceNum) ? priceNum.toLocaleString('vi-VN') + ' ₫' : '';
+
+  const ld = {
+    "@context":"https://schema.org","@type":"Product",
+    "name":p.name,"sku":p.sku,
+    "image":[imgAbs],
+    "description":p.name,
+    "offers":{"@type":"Offer","priceCurrency":"VND","price":String(priceRaw??''),"availability":"https://schema.org/InStock","url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}
+  };
   const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(ld); document.head.appendChild(s);
-  wrap.innerHTML = `<div class="card product-card">
-    <a class="product-meta" href="${p.origin_url ?? p.origin ?? '#'}" data-merchant="${p.merchant||''}" data-sku="${p.sku}" data-img="${p.image||''}" ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}>${p.name}</a>
-    <img src="${p.image}" alt="${p.name}"/>${price?`<p><strong>${price}</strong></p>`:''}
+
+  wrap.innerHTML = `
+  <div class="card product-card">
+    <a class="product-meta"
+       href="${p.origin_url ?? p.origin ?? '#'}"
+       data-merchant="${p.merchant||''}"
+       data-sku="${p.sku}"
+       data-img="${p.image||('/assets/img/products/'+p.sku+'.webp')}"
+       ${Number.isFinite(priceNum)?`data-price="${priceNum}"`:''}>${p.name}</a>
+    <img src="${p.image || ('/assets/img/products/'+p.sku+'.webp')}" alt="${p.name}"/>
+    ${price?`<p><strong>${price}</strong></p>`:''}
     <p><span class="badge">${p.merchant||''}</span></p>
-    <p><a class="btn buy" href="#">Mua ngay</a></p></div>`;
+    <p><a class="btn buy" href="#">Mua ngay</a></p>
+  </div>`;
 });
 </script>
 </body></html>
