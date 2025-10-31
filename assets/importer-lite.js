@@ -1,8 +1,9 @@
+// FILE: /assets/importer-lite.js (REPLACE WHOLE FILE)
 (function(){
   const $ = (s)=>document.querySelector(s);
   const log = (m)=>{ const el=$("#log"); el.textContent += (m+"\n"); el.scrollTop = el.scrollHeight; };
 
-  // ===== Utils =====
+  // ---------- Utils ----------
   const guessMerchant = (u)=>{
     try{ const h=new URL(u).hostname;
       if(/shopee/i.test(h)) return 'shopee';
@@ -42,11 +43,11 @@
     return {headers, rows};
   };
 
-  // ===== State =====
+  // ---------- State ----------
   let parsed = {headers:[], rows:[]};
-  let mappedRows = [];   // rows sau khi map từ CSV
-  let merged = [];       // affiliates.json sau khi gộp
-  let currentList = [];  // danh sách mới thêm thủ công (hiển thị nhanh)
+  let mappedRows = [];   // từ CSV
+  let merged = [];       // affiliates.json sau upsert
+  let currentList = [];  // mục thêm thủ công / dán hàng loạt
 
   // Map mặc định từ CSV header → field đích
   const defaultMap = {
@@ -58,13 +59,13 @@
     "Tỉ lệ hoa hồng":"", "Hoa hồng":"", "Link ưu đãi":"", "Doanh thu":""
   };
 
-  // ===== DOM refs =====
+  // ---------- DOM refs ----------
   const csvFile = $("#csvFile");
   const mapBox  = $("#mapBox");
   const merchantDefault = $("#merchantDefault");
   const skuPrefix = $("#skuPrefix");
 
-  // ===== CSV → preview/map =====
+  // ---------- CSV → preview/map ----------
   $("#btnParse").addEventListener("click", async ()=>{
     const f = csvFile.files && csvFile.files[0];
     if(!f){ alert("Chọn file CSV trước."); return; }
@@ -94,7 +95,56 @@
     log("Đã đọc CSV. Kiểm tra map và bấm “Gộp…” để tiếp.");
   });
 
-  // ===== Gộp vào affiliates.json (preview) =====
+  // ---------- Helper thêm 1 item vào currentList ----------
+  const renderManualList = ()=>{
+    $("#manualList").textContent =
+      currentList.map(p=>`${p.sku} | ${p.name} | ${p.price_vnd??''} | ${p.merchant} | ${p.origin_url}`).join("\n");
+  };
+  const addManualItem = ({name, origin, price, merchant, sku})=>{
+    if(!name || !origin){ return; }
+    if(!sku) sku = slugify(name);
+    if(skuPrefix.value) sku = (skuPrefix.value + sku).replace(/--+/g,'-');
+    const item = {
+      name,
+      sku,
+      origin_url: origin,
+      merchant: merchant || guessMerchant(origin) || '',
+      image: `/assets/img/products/${sku}.webp`,
+      price_vnd: parsePrice(price) ?? undefined,
+      brand:'', status:true, updated_at:new Date().toISOString()
+    };
+    currentList.push(item);
+    renderManualList();
+    log(`Đã thêm: ${item.sku}`);
+  };
+
+  // ---------- Thêm nhanh 1 sản phẩm ----------
+  $("#btnAddManual").addEventListener("click", ()=>{
+    addManualItem({
+      name: $("#mName").value.trim(),
+      origin: $("#mUrl").value.trim(),
+      price: $("#mPrice").value.trim(),
+      merchant: $("#mMerchant").value,
+      sku: $("#mSku").value.trim()
+    });
+    $("#mName").value = $("#mUrl").value = $("#mPrice").value = $("#mSku").value = "";
+    $("#mMerchant").value = "";
+  });
+
+  // ---------- Dán hàng loạt ----------
+  $("#btnBulk").addEventListener("click", ()=>{
+    const box = document.querySelector('#bulkBox');
+    const lines = (box.value||'').split(/\n+/).map(s=>s.trim()).filter(Boolean);
+    if(!lines.length){ alert("Chưa có dòng nào."); return; }
+    lines.forEach(line=>{
+      const parts = line.split(/\s*\|\s*|\t|,\s*/); // | hoặc Tab hoặc ,
+      const [name, origin, price, merchant='', sku=''] = parts;
+      addManualItem({name, origin, price, merchant, sku});
+    });
+    box.value='';
+  });
+
+  // ---------- Gộp vào affiliates.json ----------
   $("#btnMerge").addEventListener("click", async ()=>{
     let m;
     try{ m = JSON.parse(mapBox.value||'{}'); }catch{ alert("Map không hợp lệ JSON."); return; }
@@ -131,7 +181,7 @@
       };
     });
 
-    // dedupe SKU (đổi hậu tố -2, -3… nếu trùng)
+    // dedupe SKU
     const seen=new Set();
     mappedRows.forEach(it=>{
       let s=it.sku, i=2;
@@ -140,14 +190,8 @@
       seen.add(s);
     });
 
-    // upsert
-    mappedRows.forEach(it=>{
-      if(bySku.has(it.sku)){ bySku.set(it.sku, {...bySku.get(it.sku), ...it}); }
-      else{ bySku.set(it.sku, it); }
-    });
-
-    // cộng thêm hàng tự thêm thủ công (currentList)
-    currentList.forEach(it=>{
+    // upsert CSV + thủ công
+    [...mappedRows, ...currentList].forEach(it=>{
       if(bySku.has(it.sku)){ bySku.set(it.sku, {...bySku.get(it.sku), ...it}); }
       else{ bySku.set(it.sku, it); }
     });
@@ -157,7 +201,9 @@
     // preview
     const tbl = document.createElement('table');
     tbl.innerHTML = `<tr><th>sku</th><th>name</th><th>price_vnd</th><th>merchant</th><th>origin_url</th><th>image</th></tr>` +
-      [...mappedRows, ...currentList].slice(0,30).map(p=>`<tr><td>${p.sku}</td><td>${p.name}</td><td>${p.price_vnd??''}</td><td>${p.merchant}</td><td>${p.origin_url}</td><td>${p.image}</td></tr>`).join('');
+      [...mappedRows, ...currentList].slice(0,30).map(p=>
+        `<tr><td>${p.sku}</td><td>${p.name}</td><td>${p.price_vnd??''}</td><td>${p.merchant}</td><td>${p.origin_url}</td><td>${p.image}</td></tr>`
+      ).join('');
     $("#mergePreview").innerHTML=''; $("#mergePreview").appendChild(tbl);
     log(`Gộp xong. Tổng mục: ${merged.length} (mới/cập nhật: ${mappedRows.length + currentList.length}).`);
   });
@@ -170,35 +216,9 @@
     log("Đã tải affiliates.json (mới). Lên GitHub → Upload file để ghi đè.");
   });
 
-  // ===== Thêm thủ công 1 sản phẩm =====
-  const renderManualList = ()=>{
-    $("#manualList").textContent = currentList.map(p=>`${p.sku} | ${p.name} | ${p.price_vnd??''} | ${p.merchant} | ${p.origin_url}`).join("\n");
-  };
-  $("#btnAddManual").addEventListener("click", ()=>{
-    const name = $("#mName").value.trim();
-    const origin = $("#mUrl").value.trim();
-    const merchantSel = $("#mMerchant").value;
-    const price = parsePrice($("#mPrice").value.trim());
-    let sku = $("#mSku").value.trim();
-    if(!name || !origin){ alert("Điền tối thiểu Tên và Link gốc."); return; }
-    if(!sku) sku = slugify(name);
-    if (skuPrefix.value) sku = (skuPrefix.value + sku).replace(/--+/g,'-');
-    const merchant = merchantSel || guessMerchant(origin) || '';
-    const item = {
-      name, sku, origin_url: origin, merchant,
-      image: `/assets/img/products/${sku}.webp`,
-      price_vnd: price ?? undefined, brand:'', status:true, updated_at:new Date().toISOString()
-    };
-    currentList.push(item);
-    renderManualList();
-    $("#mName").value=$("#mUrl").value=$("#mPrice").value=$("#mSku").value="";
-    $("#mMerchant").value="";
-    log(`Đã thêm: ${item.sku}`);
-  });
-
-  // ===== Ảnh: kéo-thả, map theo SKU, convert → webp, ZIP =====
+  // ---------- Ảnh: kéo-thả, convert → webp, ZIP ----------
   const drop = $("#drop"), imgInput=$("#imgFiles"), imgTable=$("#imgTable");
-  const imagesMap = new Map(); // sku -> {name, blob, size}
+  const imagesMap = new Map(); // sku -> {blob, size}
 
   const readAsImage = (file)=> new Promise((resolve,reject)=>{
     const url = URL.createObjectURL(file);
@@ -222,7 +242,7 @@
     const rows = [...imagesMap.entries()]
       .map(([sku,info])=>`<tr><td><input data-sku="${sku}" class="sku-edit" value="${sku}"/></td><td>${(info.size/1024).toFixed(1)} KB</td><td><a class="btn small" href="${URL.createObjectURL(info.blob)}" download="${sku}.webp">Tải ảnh</a></td></tr>`)
       .join('');
-    imgTable.innerHTML = `<table><tr><th>SKU</th><th>Kích thước</th><th>Tải</th></tr>${rows||''}</table>` || '<p>Chưa có ảnh.</p>';
+    imgTable.innerHTML = rows ? `<table><tr><th>SKU</th><th>Kích thước</th><th>Tải</th></tr>${rows}</table>` : '<p>Chưa có ảnh.</p>';
 
     // cho phép sửa SKU gán ảnh
     imgTable.querySelectorAll('.sku-edit').forEach(inp=>{
@@ -239,33 +259,31 @@
   };
 
   const handleFiles = async (files)=>{
-    const want = new Set((merged.length? merged : [...mappedRows, ...currentList]).map(p=>p.sku));
     for(const f of files){
       const base = f.name.replace(/\.[^.]+$/,''); // tên file không đuôi
       const guessSku = slugify(base);
       const {img,url} = await readAsImage(f);
       try{
         const blob = await toWebpBlob(img);
-        const sku = want.has(guessSku) ? guessSku : guessSku; // vẫn nhận kể cả chưa có trong list
-        imagesMap.set(sku, {name:`${sku}.webp`, blob, size: blob.size});
-        log(`Ảnh nhận: ${f.name} → ${sku}.webp (${(blob.size/1024).toFixed(1)} KB)`);
+        imagesMap.set(guessSku, {blob, size: blob.size});
+        log(`Ảnh nhận: ${f.name} → ${guessSku}.webp (${(blob.size/1024).toFixed(1)} KB)`);
       }finally{ URL.revokeObjectURL(url); }
     }
     refreshImgTable();
   };
 
-  ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.add('drag');}));
-  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.remove('drag');}));
-  drop.addEventListener("drop", (e)=> handleFiles(e.dataTransfer.files));
-  imgInput.addEventListener("change", ()=> handleFiles(imgInput.files));
+  ["dragenter","dragover"].forEach(ev=>drop?.addEventListener(ev,e=>{e.preventDefault(); drop.classList.add('drag');}));
+  ["dragleave","drop"].forEach(ev=>drop?.addEventListener(ev,e=>{e.preventDefault(); drop.classList.remove('drag');}));
+  drop?.addEventListener("drop", (e)=> handleFiles(e.dataTransfer.files));
+  imgInput?.addEventListener("change", ()=> handleFiles(imgInput.files));
 
-  $("#btnNeedList").addEventListener("click", ()=>{
+  $("#btnNeedList")?.addEventListener("click", ()=>{
     const list = (merged.length? merged : [...mappedRows, ...currentList]).map(p=>p.sku).join("\n");
     const a = Object.assign(document.createElement('a'), {href:URL.createObjectURL(new Blob([list],{type:'text/plain'})), download:'images-needed.txt'});
     a.click(); URL.revokeObjectURL(a.href);
   });
 
-  $("#btnZip").addEventListener("click", async ()=>{
+  $("#btnZip")?.addEventListener("click", async ()=>{
     if(!imagesMap.size){ alert("Chưa có ảnh."); return; }
     if(typeof JSZip==='undefined'){ alert("Không tải được JSZip CDN."); return; }
     const zip = new JSZip();
