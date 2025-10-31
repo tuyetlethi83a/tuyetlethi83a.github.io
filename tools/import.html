@@ -1,0 +1,84 @@
+<!-- CREATE WHOLE FILE: /tools/import.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MXD Importer-Lite</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="canonical" href="https://tuyetlethi83a.github.io/tools/import.html"/>
+  <link rel="stylesheet" href="/assets/site.css"/>
+  <style>
+    header.topbar{position:sticky;top:0;background:#fff;z-index:10}
+    .tool-wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+    textarea{width:100%;min-height:120px}
+    table{width:100%;border-collapse:collapse} th,td{border:1px solid #e5e7eb;padding:6px;vertical-align:top}
+    .ok{color:#047857}.warn{color:#b45309}.err{color:#b91c1c}
+    .btn.small{padding:.4rem .65rem;border-radius:8px;font-size:14px}
+    .hint{color:#6b7280;font-size:13px}
+  </style>
+  <script defer src="/assets/analytics.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="/">Cửa hàng liên kết</a>
+    <nav>
+      <a href="/">Trang chủ</a>
+      <a href="/store.html">Cửa hàng</a>
+      <a href="/lien-he.html">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-wrap">
+  <h1>MXD Importer-Lite</h1>
+  <p class="muted">Nhập CSV → map → gộp vào <code>affiliates.json</code> (tải về file mới để up lên repo). Không dùng token.</p>
+
+  <div class="grid">
+    <div>
+      <h3>1) Tải CSV</h3>
+      <input type="file" id="csvFile" accept=".csv,.txt"/>
+      <p class="hint">CSV mẫu (Shopee xuất Excel): cột có thể là <em>Mã sản phẩm, Tên sản phẩm, Giá, Link sản phẩm, …</em></p>
+
+      <h3>2) Tuỳ chọn</h3>
+      <label>Merchant mặc định:
+        <select id="merchantDefault">
+          <option value="">Tự nhận diện từ URL</option>
+          <option value="shopee">shopee</option>
+          <option value="lazada">lazada</option>
+          <option value="tiktok">tiktok</option>
+        </select>
+      </label>
+      <br/>
+      <label>Tiền tố SKU (tuỳ chọn): <input id="skuPrefix" placeholder="vd: tt-"/></label>
+      <p class="hint">Ảnh sẽ dùng đường dẫn chuẩn: <code>/assets/img/products/&lt;sku&gt;.webp</code></p>
+
+      <h3>3) Hành động</h3>
+      <button class="btn small" id="btnParse">Đọc CSV</button>
+      <button class="btn small" id="btnMerge">Gộp vào affiliates.json (preview)</button>
+      <button class="btn small" id="btnDownload">Tải affiliates.json (mới)</button>
+      <button class="btn small" id="btnImagesList">Tải danh sách ảnh cần up</button>
+    </div>
+
+    <div>
+      <h3>Log</h3>
+      <pre id="log" class="mono" style="background:#f8fafc;padding:10px;min-height:120px"></pre>
+      <h3>Thiết lập map cột</h3>
+      <p class="hint">Tool sẽ cố tự map. Có thể sửa tên cột đích bên dưới: <code>name, price_vnd, origin_url, merchant, sku</code></p>
+      <textarea id="mapBox" class="mono" spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <h3>Kết quả đọc CSV</h3>
+  <div id="preview"></div>
+
+  <h3>Kết quả gộp (affiliates.json mới)</h3>
+  <div id="mergePreview"></div>
+</div>
+
+<script defer src="/assets/importer-lite.js"></script>
+</body>
+</html>
