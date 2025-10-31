@@ -1,4 +1,3 @@
-<!-- CREATE WHOLE FILE: /tools/import.html -->
 <!doctype html>
 <html lang="vi">
 <head>
@@ -10,7 +9,7 @@
   <link rel="stylesheet" href="/assets/site.css"/>
   <style>
     header.topbar{position:sticky;top:0;background:#fff;z-index:10}
-    .tool-wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .tool-wrap{max-width:1100px;margin:0 auto;padding:16px}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
     textarea{width:100%;min-height:120px}
@@ -18,8 +17,12 @@
     .ok{color:#047857}.warn{color:#b45309}.err{color:#b91c1c}
     .btn.small{padding:.4rem .65rem;border-radius:8px;font-size:14px}
     .hint{color:#6b7280;font-size:13px}
+    .drop{border:2px dashed #cbd5e1;border-radius:12px;padding:16px;text-align:center;background:#f8fafc}
+    .drop.drag{background:#eef2ff;border-color:#818cf8}
   </style>
   <script defer src="/assets/analytics.js"></script>
+  <!-- ZIP client-side cho ảnh đã chuẩn tên -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 </head>
 <body>
 <header class="topbar">
@@ -35,13 +38,13 @@
 
 <div class="tool-wrap">
   <h1>MXD Importer-Lite</h1>
-  <p class="muted">Nhập CSV → map → gộp vào <code>affiliates.json</code> (tải về file mới để up lên repo). Không dùng token.</p>
+  <p class="muted">Nhập CSV / thêm sản phẩm thủ công / kéo-thả ảnh → gộp <code>affiliates.json</code> + ZIP ảnh <code>.webp</code> để up vào <code>/assets/img/products/</code>. (Không dùng token.)</p>
 
   <div class="grid">
     <div>
       <h3>1) Tải CSV</h3>
       <input type="file" id="csvFile" accept=".csv,.txt"/>
-      <p class="hint">CSV mẫu (Shopee xuất Excel): cột có thể là <em>Mã sản phẩm, Tên sản phẩm, Giá, Link sản phẩm, …</em></p>
+      <p class="hint">CSV Shopee/Excel: có cột như <em>Mã sản phẩm, Tên sản phẩm, Giá, Link sản phẩm…</em></p>
 
       <h3>2) Tuỳ chọn</h3>
       <label>Merchant mặc định:
@@ -54,21 +57,61 @@
       </label>
       <br/>
       <label>Tiền tố SKU (tuỳ chọn): <input id="skuPrefix" placeholder="vd: tt-"/></label>
-      <p class="hint">Ảnh sẽ dùng đường dẫn chuẩn: <code>/assets/img/products/&lt;sku&gt;.webp</code></p>
+      <p class="hint">Ảnh luôn theo chuẩn MXD: <code>/assets/img/products/&lt;sku&gt;.webp</code>.</p>
 
-      <h3>3) Hành động</h3>
+      <h3>3) Hành động dữ liệu</h3>
       <button class="btn small" id="btnParse">Đọc CSV</button>
       <button class="btn small" id="btnMerge">Gộp vào affiliates.json (preview)</button>
       <button class="btn small" id="btnDownload">Tải affiliates.json (mới)</button>
-      <button class="btn small" id="btnImagesList">Tải danh sách ảnh cần up</button>
     </div>
 
     <div>
       <h3>Log</h3>
       <pre id="log" class="mono" style="background:#f8fafc;padding:10px;min-height:120px"></pre>
+
       <h3>Thiết lập map cột</h3>
-      <p class="hint">Tool sẽ cố tự map. Có thể sửa tên cột đích bên dưới: <code>name, price_vnd, origin_url, merchant, sku</code></p>
+      <p class="hint">Có thể sửa tên cột đích: <code>name, price_vnd, origin_url, merchant, sku</code></p>
       <textarea id="mapBox" class="mono" spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <h3>4) Thêm nhanh 1 sản phẩm</h3>
+  <div class="grid">
+    <div>
+      <label>Tên: <input id="mName" placeholder="Tên sản phẩm"/></label><br/>
+      <label>Link gốc: <input id="mUrl" placeholder="https://shopee.vn/..."/></label><br/>
+      <label>Giá (VND): <input id="mPrice" placeholder="99000"/></label><br/>
+      <label>Merchant:
+        <select id="mMerchant">
+          <option value="">Tự nhận diện</option>
+          <option value="shopee">shopee</option>
+          <option value="lazada">lazada</option>
+          <option value="tiktok">tiktok</option>
+        </select>
+      </label><br/>
+      <label>SKU (để trống sẽ tự tạo): <input id="mSku" placeholder="auto từ tên"/></label><br/>
+      <button class="btn small" id="btnAddManual">Thêm vào danh sách</button>
+      <p class="hint">Sau khi thêm, nhớ bấm “Gộp…” để đưa vào <code>affiliates.json</code>.</p>
+    </div>
+    <div>
+      <h3>Danh sách hiện tại</h3>
+      <div id="manualList" class="mono" style="background:#f8fafc;padding:10px;min-height:120px"></div>
+    </div>
+  </div>
+
+  <h3>5) Ảnh sản phẩm (.webp theo SKU)</h3>
+  <div class="grid">
+    <div>
+      <div id="drop" class="drop">Kéo-thả ảnh vào đây (hoặc chọn) — tên file nên **trùng SKU**<br/><br/>
+        <input type="file" id="imgFiles" accept="image/*" multiple/>
+      </div>
+      <p class="hint">Tool sẽ cố gắng ghép ảnh ↔ SKU theo tên file. Nếu không khớp, bạn có thể sửa SKU ngay trong bảng.</p>
+      <button class="btn small" id="btnZip">Tạo ZIP ảnh chuẩn tên</button>
+      <button class="btn small" id="btnNeedList">Tải danh sách SKU cần ảnh</button>
+    </div>
+    <div>
+      <h3>Ảnh đã nhận</h3>
+      <div id="imgTable"></div>
     </div>
   </div>
 
