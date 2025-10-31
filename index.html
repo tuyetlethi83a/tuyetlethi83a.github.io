@@ -5,21 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
   <title>Cửa hàng liên kết</title>
-  <meta name="description" content="Cửa hàng liên kết chuẩn MXD: GA4 trước affiliate, canonical tuyệt đối, SW tối ưu cache. Vào Cửa hàng hoặc xem sản phẩm nổi bật."/>
+  <meta name="description" content="Cửa hàng liên kết chuẩn MXD: Danh mục nổi bật và Sản phẩm nổi bật, GA4 trước affiliate, canonical tuyệt đối, SW tối ưu cache."/>
   <link rel="canonical" href="https://tuyetlethi83a.github.io/"/>
   <meta name="robots" content="index,follow"/>
 
   <meta property="og:title" content="Cửa hàng liên kết"/>
-  <meta property="og:description" content="Cửa hàng liên kết chuẩn MXD: GA4 trước affiliate, canonical tuyệt đối, SW tối ưu cache."/>
+  <meta property="og:description" content="Danh mục nổi bật + Sản phẩm nổi bật từ affiliates.json"/>
   <meta property="og:url" content="https://tuyetlethi83a.github.io/"/>
   <meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
+
+  <!-- Palette (bảng màu) — có thể đổi nhanh các biến dưới đây -->
+  <style>
+    :root{
+      --brand:#0b3b5b;      /* navy đậm */
+      --accent:#00bfa6;     /* teal */
+      --text:#111827;       /* gần đen */
+      --muted:#6b7280;      /* xám */
+      --bg:#ffffff;
+      --hero-text:#ffffff;
+    }
+    .hero{background:var(--brand); color:var(--hero-text);}
+    .hero .muted{opacity:.9}
+    .chip{display:inline-block; padding:.4rem .7rem; border-radius:999px; border:1px solid #e5e7eb; margin:.25rem .35rem 0 0; text-decoration:none}
+    .floating-contacts{position:fixed; right:1rem; bottom:1rem; display:flex; flex-direction:column; gap:.5rem}
+    .floating-contacts .btn{border-radius:999px}
+    h1,h2,h3{color:var(--text)}
+    .badge{background:var(--accent); color:#fff; border-radius:999px; padding:.15rem .5rem; display:inline-block}
+  </style>
 
   <!-- Styles + Scripts (GA4 trước affiliate) -->
   <link rel="stylesheet" href="/assets/site.css"/>
   <script defer src="/assets/analytics.js"></script>
   <script defer src="/assets/mxd-affiliate.js"></script>
 
-  <!-- JSON-LD Organization (chuẩn MXD) -->
+  <!-- JSON-LD Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -45,9 +64,42 @@
 </header>
 
 <main>
-  <!-- Quick-Nav theo MXD Canonical -->
+  <!-- Danh mục nổi bật -->
   <section class="container">
-    <h2>Đi nhanh</h2>
+    <h2>Danh mục nổi bật</h2>
+    <ul class="category-grid">
+      <li>
+        <a class="category-tile" href="/store/thoi-trang.html">
+          <img src="/assets/img/categories/thoi-trang.webp" alt="Thời trang — MXD" width="400" height="240"/>
+          <span>Thời trang</span>
+        </a>
+      </li>
+      <li>
+        <a class="category-tile" href="/store/my-pham.html">
+          <img src="/assets/img/categories/my-pham.webp" alt="Mỹ phẩm — MXD" width="400" height="240"/>
+          <span>Mỹ phẩm</span>
+        </a>
+      </li>
+      <li>
+        <a class="category-tile" href="/store/me-va-be.html">
+          <img src="/assets/img/categories/me-va-be.webp" alt="Mẹ & Bé — MXD" width="400" height="240"/>
+          <span>Mẹ & Bé</span>
+        </a>
+      </li>
+    </ul>
+    <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem tất cả danh mục</a></p>
+  </section>
+
+  <!-- Sản phẩm nổi bật -->
+  <section class="container">
+    <h2>Sản phẩm nổi bật</h2>
+    <div id="featured" class="product-grid"><p>Đang tải…</p></div>
+    <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem thêm sản phẩm</a></p>
+  </section>
+
+  <!-- Quick-Nav -->
+  <section class="container">
+    <h3>Đi nhanh</h3>
     <div class="quick-nav">
       <a class="chip" href="/store.html">Cửa hàng</a>
       <a class="chip" href="/store/thoi-trang.html">Thời trang</a>
@@ -56,20 +108,13 @@
     </div>
   </section>
 
-  <!-- Sản phẩm nổi bật: đọc từ affiliates.json (chuẩn card MXD) -->
-  <section class="container">
-    <h2>Sản phẩm nổi bật</h2>
-    <div id="featured" class="product-grid"><p>Đang tải…</p></div>
-    <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem thêm sản phẩm</a></p>
-  </section>
-
   <!-- Ghi chú chuyển dữ liệu -->
   <section class="container">
     <h3>Ghi chú chuyển dữ liệu</h3>
     <ul>
-      <li>Copy <code>affiliates.json</code> vào <strong>root</strong> (đã có).</li>
-      <li>Ảnh sản phẩm tại <code>/assets/img/products/</code> (tên file = <code>sku.webp</code>).</li>
-      <li>Nếu thêm danh mục mới: tạo <code>/store/&lt;slug&gt;.html</code> rồi chèn tile vào <code>store.html</code>.</li>
+      <li><code>affiliates.json</code> ở <strong>root</strong> (đã đúng).</li>
+      <li>Ảnh sản phẩm tại <code>/assets/img/products/&lt;sku&gt;.webp</code>.</li>
+      <li>Danh mục mới: tạo <code>/store/&lt;slug&gt;.html</code> rồi chèn tile trong <code>store.html</code>.</li>
     </ul>
   </section>
 </main>
@@ -86,7 +131,7 @@
 </div>
 
 <script>
-  // Render "Sản phẩm nổi bật": lấy 12 item đầu (ưu tiên 3 danh mục chính)
+  // Render "Sản phẩm nổi bật": ưu tiên 3 danh mục chính, lấy tối đa 12 item
   function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
   function card(p){
     const origin = p.origin_url ?? p.origin ?? '#';
@@ -111,7 +156,6 @@
     try{
       const res = await fetch('/affiliates.json',{cache:'no-store'});
       const list = await res.json();
-      // Ưu tiên danh mục chính, rồi lấy tối đa 12 item
       const preferred = ['thoi-trang','my-pham','me-va-be'];
       const scored = list.map(p=>{
         const c = (p.category||'').toLowerCase();
@@ -121,4 +165,10 @@
       const items = scored.slice(0,12).map(x=>x.p);
       document.getElementById('featured').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm.</p>';
     }catch(e){
-      document.getElement
+      document.getElementById('featured').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+    }
+  })();
+</script>
+
+</body>
+</html>
