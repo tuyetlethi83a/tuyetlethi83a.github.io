@@ -26,8 +26,9 @@
 <footer><div class="container"><small class="muted">MXD — category hub</small></div></footer>
 
 <script>
-/* FIND: category hub loader v2025-10-31 — slug=my-pham */
+/* FIND: category hub loader v2025-10-31-b01 — slug=my-pham (await r.json()) */
 const SLUG = 'my-pham';
+const $ = (id)=>document.getElementById(id);
 function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
 function imgPath(p){ return p.image || ('/assets/img/products/'+p.sku+'.webp'); }
 function card(p){
@@ -48,19 +49,29 @@ function card(p){
 async function loadAffiliates(){
   const candidates=['/assets/data/affiliates.json','/affiliates.json'];
   for(const url of candidates){
-    try{ const r=await fetch(url,{cache:'no-store'}); if(r.ok) return r.json(); }catch(e){}
+    try{
+      const r=await fetch(url,{cache:'no-store'});
+      if(r.ok){
+        const j = await r.json();               // <-- FIX
+        if(Array.isArray(j)) return j;
+      }
+    }catch(e){}
   }
   return [];
 }
 (async()=>{
-  const list = await loadAffiliates();
-  const items = list.filter(p => (p.category||'').toLowerCase().startsWith(SLUG))
-                    .slice(0,60);
-  const grid = document.getElementById('grid');
-  grid.innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm trong danh mục này.</p>';
+  try{
+    const list = await loadAffiliates();
+    const items = list.filter(p => ((p.category||'').toLowerCase().startsWith(SLUG)) && (p.status !== false))
+                      .slice(0,60);
+    $('grid').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm trong danh mục này.</p>';
 
-  const itemList = {"@context":"https://schema.org","@type":"ItemList","itemListElement":items.map((p,i)=>({"@type":"ListItem","position":i+1,"url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}))};
-  const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(itemList); document.head.appendChild(s);
+    const itemList = {"@context":"https://schema.org","@type":"ItemList","itemListElement":items.map((p,i)=>({"@type":"ListItem","position":i+1,"url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}))};
+    const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(itemList); document.head.appendChild(s);
+  }catch(e){
+    $('grid').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+    console.error(e);
+  }
 })();
 </script>
 </body></html>
