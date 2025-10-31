@@ -1,9 +1,0 @@
-{
-  "name": "MXD Starter",
-  "short_name": "MXD",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0b203a",
-  "theme_color": "#0b203a",
-  "icons": []
-}
