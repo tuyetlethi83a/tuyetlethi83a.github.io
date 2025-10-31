@@ -1,0 +1,11 @@
+[
+  {
+    "sku": "mxd-sample",
+    "name": "(Sample) Sản phẩm mẫu để test luồng",
+    "image": "/assets/img/products/mxd-sample.webp",
+    "price_vnd": 123000,
+    "origin_url": "https://shopee.vn/",
+    "merchant": "shopee",
+    "category": "demo"
+  }
+]
