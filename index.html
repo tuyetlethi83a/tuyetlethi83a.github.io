@@ -1,33 +1,124 @@
-<!doctype html><html lang="vi"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title> Cửa hàng liên kết</title>
-<meta name="description" content="Skeleton theo chuẩn MXD210: GA4 trước affiliate, canonical tuyệt đối, JSON-LD, SW."/>
-<link rel="canonical" href="https://tuyetlethi83a.github.io/"/><meta name="robots" content="index,follow"/>
-<meta property="og:title" content="MXD — Cửa hàng liên kết"/>
-<meta property="og:description" content="Skeleton theo chuẩn MXD210: GA4 trước affiliate, canonical tuyệt đối, JSON-LD, SW."/>
-<meta property="og:url" content="https://tuyetlethi83a.github.io/"/><meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
-<link rel="stylesheet" href="/assets/site.css"/><link rel="manifest" href="/manifest.webmanifest"/>
-<script defer src="/assets/analytics.js"></script><script defer src="/assets/mxd-affiliate.js"></script></head>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+  <title>Cửa hàng liên kết</title>
+  <meta name="description" content="Cửa hàng liên kết chuẩn MXD: GA4 trước affiliate, canonical tuyệt đối, SW tối ưu cache. Vào Cửa hàng hoặc xem sản phẩm nổi bật."/>
+  <link rel="canonical" href="https://tuyetlethi83a.github.io/"/>
+  <meta name="robots" content="index,follow"/>
+
+  <meta property="og:title" content="Cửa hàng liên kết"/>
+  <meta property="og:description" content="Cửa hàng liên kết chuẩn MXD: GA4 trước affiliate, canonical tuyệt đối, SW tối ưu cache."/>
+  <meta property="og:url" content="https://tuyetlethi83a.github.io/"/>
+  <meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
+
+  <!-- Styles + Scripts (GA4 trước affiliate) -->
+  <link rel="stylesheet" href="/assets/site.css"/>
+  <script defer src="/assets/analytics.js"></script>
+  <script defer src="/assets/mxd-affiliate.js"></script>
+
+  <!-- JSON-LD Organization (chuẩn MXD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"MXD",
+    "url":"https://tuyetlethi83a.github.io/",
+    "logo":"https://tuyetlethi83a.github.io/assets/og/default-og.webp",
+    "sameAs":["https://facebook.com/lethituyet.le.3"]
+  }
+  </script>
+</head>
 <body>
-<header><h1> Cửa hàng liên kết</h1><small class="muted">GA4 trước affiliate • Canonical tuyệt đối • SW bật sẵn</small></header>
-<div class="container">
-  <h2>Đi nhanh</h2>
-  <p>
-    <a class="btn primary" href="/store.html">Vào Cửa hàng</a>
-    <a class="btn" href="/g.html?sku=mxd-sample">Xem trang sản phẩm (demo)</a>
-  </p>
-  <h2>Ghi chú chuyển dữ liệu</h2>
-  <ul>
-    <li>Copy <code>affiliates.json</code> từ <strong>mxd210</strong> → đè file hiện tại.</li>
-    <li>Copy tất cả ảnh sản phẩm vào <code>/assets/img/products/</code> (tên file = <code>sku.webp</code>).</li>
-    <li>(Tùy chọn) tạo thêm hub <code>/store/&lt;slug&gt;.html</code> rồi chèn tile vào <code>store.html</code>.</li>
-  </ul>
+
+<header class="hero">
+  <div class="container">
+    <h1>Cửa hàng liên kết</h1>
+    <p class="muted">GA4 trước affiliate • Canonical tuyệt đối • SW bật sẵn</p>
+    <div class="actions">
+      <a class="btn" href="/store.html">Vào Cửa hàng</a>
+      <a class="btn outline" href="/g.html?sku=ao-croptop-ba-lo-nu-toptify">Xem trang sản phẩm (demo)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Quick-Nav theo MXD Canonical -->
+  <section class="container">
+    <h2>Đi nhanh</h2>
+    <div class="quick-nav">
+      <a class="chip" href="/store.html">Cửa hàng</a>
+      <a class="chip" href="/store/thoi-trang.html">Thời trang</a>
+      <a class="chip" href="/store/my-pham.html">Mỹ phẩm</a>
+      <a class="chip" href="/store/me-va-be.html">Mẹ & Bé</a>
+    </div>
+  </section>
+
+  <!-- Sản phẩm nổi bật: đọc từ affiliates.json (chuẩn card MXD) -->
+  <section class="container">
+    <h2>Sản phẩm nổi bật</h2>
+    <div id="featured" class="product-grid"><p>Đang tải…</p></div>
+    <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem thêm sản phẩm</a></p>
+  </section>
+
+  <!-- Ghi chú chuyển dữ liệu -->
+  <section class="container">
+    <h3>Ghi chú chuyển dữ liệu</h3>
+    <ul>
+      <li>Copy <code>affiliates.json</code> vào <strong>root</strong> (đã có).</li>
+      <li>Ảnh sản phẩm tại <code>/assets/img/products/</code> (tên file = <code>sku.webp</code>).</li>
+      <li>Nếu thêm danh mục mới: tạo <code>/store/&lt;slug&gt;.html</code> rồi chèn tile vào <code>store.html</code>.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container"><small class="muted">© 2025 — MXD Canonical.</small></div>
+</footer>
+
+<!-- Floating contacts -->
+<div class="floating-contacts">
+  <a class="btn" href="https://zalo.me/0979527398">Zalo</a>
+  <a class="btn" href="https://facebook.com/lethituyet.le.3" target="_blank" rel="noopener">Facebook</a>
+  <a class="btn" href="tel:0979527398">Gọi 0979527398</a>
 </div>
-<div class="float-contacts">
-  <a href="https://zalo.me/0979527398" aria-label="Zalo">Zalo</a>
-  <a href="https://facebook.com/lethituyet.le.3" aria-label="Facebook">Facebook</a>
-  <a href="tel:0979527398" aria-label="Call">Gọi 0979527398</a>
-</div>
-<footer><div class="container"><small>© 2025 — MXD Canonical.</small></div></footer>
-<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js');}</script>
-</body></html>
+
+<script>
+  // Render "Sản phẩm nổi bật": lấy 12 item đầu (ưu tiên 3 danh mục chính)
+  function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
+  function card(p){
+    const origin = p.origin_url ?? p.origin ?? '#';
+    const priceRaw = p.price_vnd ?? p.price;
+    const price = priceText(priceRaw);
+    return `
+      <div class="card product-card">
+        <a class="product-meta" href="${origin}"
+           data-merchant="${p.merchant||''}"
+           data-sku="${p.sku}"
+           data-img="${p.image||''}"
+           ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}
+        >${p.name}</a>
+        <img src="${p.image}" alt="${p.name}"/>
+        ${price?`<p><strong>${price}</strong></p>`:''}
+        <p><span class="badge">${p.merchant||''}</span></p>
+        <p><a class="btn buy" href="#">Mua tại nơi gốc</a></p>
+      </div>`;
+  }
+
+  (async () => {
+    try{
+      const res = await fetch('/affiliates.json',{cache:'no-store'});
+      const list = await res.json();
+      // Ưu tiên danh mục chính, rồi lấy tối đa 12 item
+      const preferred = ['thoi-trang','my-pham','me-va-be'];
+      const scored = list.map(p=>{
+        const c = (p.category||'').toLowerCase();
+        const score = preferred.findIndex(x=>c.startsWith(x));
+        return {p, score: score===-1? 9 : score};
+      }).sort((a,b)=>a.score-b.score);
+      const items = scored.slice(0,12).map(x=>x.p);
+      document.getElementById('featured').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm.</p>';
+    }catch(e){
+      document.getElement
