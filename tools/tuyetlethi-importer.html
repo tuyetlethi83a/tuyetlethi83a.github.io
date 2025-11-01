@@ -1,11 +1,11 @@
 <!-- REPLACE WHOLE FILE: /tools/tuyetlethi-importer.html -->
-<!-- FIND: TUYETLETHI-TOOL v4.3.8 -->
+<!-- FIND: TUYETLETHI-TOOL v4.3.9 -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Tuyetlethi Importer v4.3.8 — PRO + Batch + Clear(always) + Debug + Dual Upload</title>
+  <title>Tuyetlethi Importer v4.3.9 — PRO + Batch + Clear(always) + Debug + Dual Upload</title>
   <meta name="robots" content="noindex,follow"/>
   <style>
     :root{
@@ -23,7 +23,7 @@
     .g2{grid-template-columns:1fr 1fr}
     .card{background:var(--b);border:1px solid #223348;border-radius:12px;padding:14px}
     label{display:block;font-weight:700;margin:8px 0 6px;color:#cfe5ff}
-    input,select,textarea,button{width:100%;padding:10px;border-radius:10px;border:1px solid #2b3b52;background:#0f1622;color:var(--fg)}
+    input,select,textarea,button{width:100%;padding:10px;border-radius:10px;border:1px solid #2b3b52;background:#0f1622;color:var(--fg')}
     textarea{min-height:70px;resize:vertical}
     .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
     .row>*{flex:1}
@@ -74,13 +74,13 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Tuyetlethi Importer v4.3.8 <span class="pill">PRO</span> <span class="pill">Batch</span> <span class="pill">Clear(always)</span> <span class="pill">Debug</span></h1>
-  <div class="small">Clear button luôn hiển thị. Upload có <b>dual-mode</b>: DataURL → nếu lỗi sẽ tự thử <b>base64+mimetype</b>.</div>
+  <h1>Tuyetlethi Importer v4.3.9 <span class="pill">PRO</span> <span class="pill">Batch</span> <span class="pill">Clear(always)</span> <span class="pill">Debug</span></h1>
+  <div class="small">Upload có <b>3 tầng tương thích</b>: FormData → Lite (URL-encoded) → Legacy JSON. Tất cả đều kèm <code class="inline">x-key</code>.</div>
 
   <div class="card">
     <h2>1) Cài đặt (lưu vào trình duyệt)</h2>
     <div class="grid g2">
-      <div><label>Worker Base URL</label><input id="workerUrl" placeholder="https://tuyetlethi.mxd6686.workers.dev"/></div>
+      <div><label>Worker Base URL</label><input id="workerUrl" placeholder="https://tuyetlethi83a.mxd6686.workers.dev"/></div>
       <div><label>X-Key (header bảo vệ Worker)</label><input id="xKey" placeholder="Ví dụ: tuyetlethi-secret-key"/></div>
       <div><label>Shopee template</label><input id="tplShopee" placeholder="https://go.isclix.com/deep_link/6837055118319564314/4751584435713464237?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}"/></div>
       <div><label>Lazada template</label><input id="tplLazada" placeholder="https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}"/></div>
@@ -147,7 +147,7 @@
         <button class="btn primary" id="btnUploadImg">Upload ảnh → /assets/img/products/&lt;sku&gt;.webp</button>
         <button class="btn" id="btnQueueCurrent">➕ Thêm ảnh hiện tại vào hàng đợi</button>
       </div>
-      <div class="small">Chuẩn: cạnh dài ~1200px, WebP q=0.82. Nút ➕ sẽ đẩy ảnh hiện tại (đã đặt tên) vào HÀNG ĐỢI.</div>
+      <div class="small">Chuẩn: cạnh dài ~1200px, WebP q=0.82.</div>
     </div>
 
     <div class="card">
@@ -243,7 +243,7 @@
   <div class="card">
     <h2>6) Worker Debug</h2>
     <div class="row">
-      <button class="btn" id="btnProbeOptions">Probe OPTIONS /upload-image</button>
+      <button class="btn" id="btnProbeOptions">Probe OPTIONS /ops/upload</button>
       <button class="btn" id="btnProbePublish">Probe OPTIONS /publish</button>
       <span class="small muted">Log dưới đây giúp phân biệt: CORS / Auth / Payload.</span>
     </div>
@@ -264,7 +264,7 @@
 <script>
 const $ = s => document.querySelector(s);
 /* LS key tách biệt cho tuyetlethi */
-const LS_KEY = 'TUYETLETHI_IMPORTER_SETTINGS_V438';
+const LS_KEY = 'TUYETLETHI_IMPORTER_SETTINGS_V439';
 const slugify = s => s.toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 
 /* Default deeplink templates — tuyetlethi */
@@ -273,16 +273,16 @@ const DEFAULT_TPL_SHOPEE =
 const DEFAULT_TPL_LAZADA =
   'https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}';
 
-/* Gắn sub mặc định về brand này */
+/* subs */
 function computeSubs(sku, merchant){ return { sub1: sku||'sku', sub2:(merchant||'merchant').toLowerCase(), sub3:'tool', sub4:'tuyetlethi' }; }
 function ensureSubsInUrl(u, subs){ const has = k => new RegExp(`[?&]${k}=`,`i`).test(u); const qs=[]; for(const k of ['sub1','sub2','sub3','sub4']) if(!has(k)) qs.push(`${k}=${encodeURIComponent(subs[k])}`); return qs.length?(u+(u.includes('?')?'&':'?')+qs.join('&')):u; }
 function cleanUrl(u){ return (u||'').trim().replace(/^["']+|["',]+$/g,''); }
 function vn(s){ return (s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase(); }
 
-/* Chuẩn hoá + Auto-category cho site thời trang/mỹ phẩm/mẹ&bé/trang sức */
+/* auto category */
 function normCategory(raw){
   const base = vn(raw).replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-').replace(/^-|-$/g,'');
-  if (/^(thoi-trang|ao|quan|vay|hoodie|giay|dep|chup-anh|set-do)$/.test(base)) return 'thoi-trang';
+  if (/^(thoi-trang|ao|quan|vay|hoodie|giay|dep|set-do)$/.test(base)) return 'thoi-trang';
   if (/^(my-pham|serum|kem|mask|mat-na|srm|toner|bha|aha|chong-nang|duong-the|duong-da)$/.test(base)) return 'my-pham';
   if (/^(me-va-be|ta|bim|sua|binh-sua|xe-day|noi|yen|do-so-sinh)$/.test(base)) return 'me-va-be';
   if (/^(trang-suc|nhan|vong|day-chuyen|lac|khuyen-tai|bong-tai|charm)$/.test(base)) return 'trang-suc';
@@ -290,26 +290,10 @@ function normCategory(raw){
 }
 
 window.CATEGORY_KEYWORDS = {
-  "thoi-trang": {
-    include:[/\b(áo|ao|quần|quan|váy|vay|hoodie|khoác|khoac|sweater|tshirt|áo\s*thun|ao\s*thun|short|dép|dep|giày|giay)\b/i],
-    exclude:[/\bserum|kem|mask|mặt\s*nạ|mat\s*na|tã|bỉm|binh\s*sua|sữa|sua\b/i],
-    set:{category:"thoi-trang"}
-  },
-  "my-pham": {
-    include:[/\b(serum|kem|dưỡng|duong|mask|mặt\s*nạ|mat\s*na|sữa\s*rửa\s*mặt|srm|toner|tẩy\s*trang|tay\s*trang|sunscreen|chống\s*nắng|chong\s*nang|BHA|AHA|retinol|Paula|Innisfree|Dove|L'Oreal|LOreal)\b/i],
-    exclude:[],
-    set:{category:"my-pham"}
-  },
-  "me-va-be": {
-    include:[/\b(bỉm|bim|tã|ta|sữa|sua|bình\s*sữa|binh\s*sua|xe\s*đẩy|xe\s*day|nôi|noi|yếm|yen|sơ\s*sinh|so\s*sinh|mẹ\s*bầu|me\s*bầu)\b/i],
-    exclude:[],
-    set:{category:"me-va-be"}
-  },
-  "trang-suc": {
-    include:[/\b(nhẫn|nhan|vòng|vong|dây\s*chuyền|day\s*chuyen|lắc|lac|khuyên\s*tai|bông\s*tai|charm)\b/i],
-    exclude:[],
-    set:{category:"trang-suc"}
-  }
+  "thoi-trang": { include:[/\b(áo|ao|quần|quan|váy|vay|hoodie|khoác|khoac|sweater|tshirt|áo\s*thun|ao\s*thun|short|dép|dep|giày|giay)\b/i], exclude:[/\bserum|kem|mask|mặt\s*nạ|mat\s*na|tã|bỉm|binh\s*sua|sữa|sua\b/i], set:{category:"thoi-trang"} },
+  "my-pham": { include:[/\b(serum|kem|dưỡng|duong|mask|mặt\s*nạ|mat\s*na|sữa\s*rửa\s*mặt|srm|toner|tẩy\s*trang|tay\s*trang|sunscreen|chống\s*nắng|chong\s*nang|BHA|AHA|retinol|Paula|Innisfree|Dove|L'Oreal|LOreal)\b/i], exclude:[], set:{category:"my-pham"} },
+  "me-va-be": { include:[/\b(bỉm|bim|tã|ta|sữa|sua|bình\s*sữa|binh\s*sua|xe\s*đẩy|xe\s*day|nôi|noi|yếm|yen|sơ\s*sinh|so\s*sinh|mẹ\s*bầu|me\s*bầu)\b/i], exclude:[], set:{category:"me-va-be"} },
+  "trang-suc": { include:[/\b(nhẫn|nhan|vòng|vong|dây\s*chuyền|day\s*chuyen|lắc|lac|khuyên\s*tai|bông\s*tai|charm)\b/i], exclude:[], set:{category:"trang-suc"} }
 };
 function autoCategory(text){
   const MAP = window.CATEGORY_KEYWORDS||{};
@@ -325,11 +309,11 @@ const state = { workerOk:false, imgBlob:null, imgName:null, imgW:0, imgH:0 };
 function toast(msg,cls=''){ const t=$("#toast"); t.innerHTML=msg; t.className='toast show '+cls; setTimeout(()=>t.className='toast',4500); }
 function log(msg){ const d=$("#debugLog"); d.textContent = (d.textContent && d.textContent!=='–' ? d.textContent + "\n" : "") + msg; d.scrollTop = d.scrollHeight; }
 
-/* --- layout helpers --- */
+/* layout helpers */
 function updateToastOffset(){ const bar=document.querySelector('.sticky-actions'); const bottom=bar?(bar.offsetHeight+16):12; document.documentElement.style.setProperty('--toast-bottom', bottom+'px'); }
 window.addEventListener('load', updateToastOffset); window.addEventListener('resize', updateToastOffset); if('ResizeObserver'in window){ new ResizeObserver(updateToastOffset).observe(document.querySelector('.sticky-actions')); }
 
-/* --- settings --- */
+/* settings */
 function readSettings(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); }catch(_){ return {}; } }
 function writeSettings(s){ localStorage.setItem(LS_KEY, JSON.stringify(s)); }
 function uiToSettings(){
@@ -363,29 +347,45 @@ function loadSettings(){
 }
 $("#btnSaveSettings").onclick=saveSettings; $("#btnLoadSettings").onclick=loadSettings; $("#btnClearSettings").onclick=()=>{ localStorage.removeItem(LS_KEY); settingsToUi({}); $("#settingsStatus").textContent="Đã xóa."; }; loadSettings();
 
-function hdr(){ const s=readSettings(); const h={}; if(s.xKey) h['x-key']=s.xKey; h['content-type']='application/json'; return h; }
-async function check(url){ try{ const r=await fetch(url,{mode:"cors",headers:hdr()}); const text=await r.text().catch(()=>'' ); return {ok:r.ok,status:r.status,text}; }catch(e){ return {ok:false,status:-1,text:String(e)}; } }
+/* headers */
+function hdrX(){ const s=readSettings(); const h={}; if(s.xKey) h['x-key']=s.xKey; return h; }
+function hdrJson(){ const h=hdrX(); h['content-type']='application/json'; return h; }
+
+/* utils */
+async function check(url){ try{ const r=await fetch(url,{mode:"cors",headers:hdrX()}); const text=await r.text().catch(()=>'' ); return {ok:r.ok,status:r.status,text}; }catch(e){ return {ok:false,status:-1,text:String(e)}; } }
+
+/* health/auth/write */
 $("#btnCheckWorker").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ $("#workerStatus").textContent="Chưa cấu hình Worker."; return; } const u=s.workerUrl.replace(/\/$/,'')+"/health"; const r=await check(u); state.workerOk=r.ok; const msg=r.ok?`Worker OK (health ${r.status})`:`Worker lỗi (${r.status}). ${r.text.slice(0,120)}`; $("#workerStatus").textContent=msg; log("[/health] "+msg); toast(r.ok?"Worker OK":"Worker lỗi "+r.status, r.ok?"ok":"err"); };
 $("#btnCheckAuth").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const u=s.workerUrl.replace(/\/$/,'')+"/whoami"; const r=await check(u); const msg=r.ok?"X-Key hợp lệ.":"X-Key không hợp lệ ("+r.status+")"; log("[/whoami] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
 $("#btnCheckWrite").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const u=s.workerUrl.replace(/\/$/,'')+"/can-write"; const r=await check(u); const msg=r.ok?"Có quyền commit.":"Không có quyền ("+r.status+")"; log("[/can-write] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
 
-$("#btnProbeOptions").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\/$/,'')+"/upload-image"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /upload-image] ${r.status} ${r.ok?'OK':''} — ALLOW: ${r.headers.get('allow')||'-'} | ACR: ${r.headers.get('access-control-allow-methods')||'-'}`); toast("Đã probe OPTIONS /upload-image","ok"); }catch(e){ log("[OPTIONS /upload-image] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
-$("#btnProbePublish").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\/$/,'')+"/publish"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /publish] ${r.status} ${r.ok?'OK':''} — ALLOW: ${r.headers.get('allow')||'-'} | ACR: ${r.headers.get('access-control-allow-methods')||'-'}`); toast("Đã probe OPTIONS /publish","ok"); }catch(e){ log("[OPTIONS /publish] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
+/* probes */
+$("#btnProbeOptions").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\/$/,'')+"/ops/upload"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdrX()}); log(`[OPTIONS /ops/upload] ${r.status} ${r.ok?'OK':''} — ALLOW: ${r.headers.get('allow')||'-'} | ACR: ${r.headers.get('access-control-allow-methods')||'-'}`); toast("Đã probe OPTIONS /ops/upload","ok"); }catch(e){ log("[OPTIONS /ops/upload] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
+$("#btnProbePublish").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\/$/,'')+"/publish"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdrX()}); log(`[OPTIONS /publish] ${r.status} ${r.ok?'OK':''} — ALLOW: ${r.headers.get('allow')||'-'} | ACR: ${r.headers.get('access-control-allow-methods')||'-'}`); toast("Đã probe OPTIONS /publish","ok"); }catch(e){ log("[OPTIONS /publish] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
+
+/* test upload: lite */
 $("#btnTestUpload").onclick=async()=>{
   const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; }
   const c=document.createElement('canvas'); c.width=1; c.height=1;
   const blob=await new Promise(res=>c.toBlob(res,'image/webp',0.5));
-  const b64=await blobToDataURL(blob);
+  const dataUrl=await blobToDataURL(blob);
+  const {mime,base64}=splitDataUrl(dataUrl);
   const path='/assets/img/test/ping.webp';
   try{
-    const r=await fetch(s.workerUrl.replace(/\/$/,'')+'/upload-image',{method:'POST',mode:'cors',headers:hdr(),body:JSON.stringify({sku:'ping',path,file:b64})});
-    const text=await r.text().catch(()=>'' );
-    log(`[TEST UPLOAD] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,180)}`);
+    const base=s.workerUrl.replace(/\/$/,'');
+    const body=new URLSearchParams({path, file_b64:base64, mime, commit:'test: ping'});
+    let r=await fetch(base+'/ops/upload-lite',{method:'POST',mode:'cors',headers:{...hdrX(),'content-type':'application/x-www-form-urlencoded'},body:body.toString()});
+    let text=await r.text().catch(()=>'' );
+    if(!r.ok && r.status===401){
+      r=await fetch(base+'/ops/upload-lite?key='+(encodeURIComponent(readSettings().xKey||'')),{method:'POST',mode:'cors',headers:{'content-type':'application/x-www-form-urlencoded'},body:body.toString()});
+      text=await r.text().catch(()=>'' );
+    }
+    log(`[TEST UPLOAD lite] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,180)}`);
     toast(r.ok?'Test upload OK':'Test upload FAIL '+r.status, r.ok?'ok':'err');
   }catch(e){ log("[TEST UPLOAD] Lỗi: "+e.message); toast("Test upload lỗi.","err"); }
 };
 
-/* --- single image helpers respect defaultFmt --- */
+/* single image helpers */
 function getSelectedFolder(){
   const sel=$("#defaultFolder").value;
   if(sel==='custom'){
@@ -395,7 +395,6 @@ function getSelectedFolder(){
   return sanitizeFolder(sel);
 }
 function getSelectedFmt(){ return ($("#defaultFmt").value||'webp').toLowerCase(); }
-
 function extByFmt(fmt){ return fmt==='png'?'.png':'.webp'; }
 function updateSingleUploadCta(){
   const folder=getSelectedFolder();
@@ -443,7 +442,7 @@ $("#openOrigin").onclick=()=>{ const u=$("#originOut").value.trim()||$("#origin"
 $("#copyDeeplink").onclick=()=>{ const t=$("#deeplink"); t.select(); document.execCommand('copy'); toast("Đã copy Deep-link.","ok"); };
 $("#btnOpenDeeplink").onclick=()=>{ const u=$("#deeplink").value.trim(); if(u){ window.open(u,'_blank'); } else { toast("Chưa có Deep-link.","warn"); } };
 
-/* --- image: single + batch --- */
+/* image: single + batch */
 const drop=$("#drop"), file=$("#file"), thumb=$("#thumb"), imgName=$("#imgName"), imgInfo=$("#imgInfo");
 drop.addEventListener('click', ()=>file.click());
 $("#btnSelectImg").onclick=()=>file.click();
@@ -599,7 +598,7 @@ $("#btnConvertAll").onclick=async()=>{ for(const it of queue){ await queueProces
 $("#btnDownloadAll").onclick=()=>{ for(const it of queue){ if(!it.outBlob) continue; const a=document.createElement('a'); a.href=URL.createObjectURL(it.outBlob); a.download=it.name+'.'+(it.fmt||'webp'); a.click(); } };
 $("#btnUploadAll").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } for(const it of queue){ const row=document.querySelector(`tr[data-id="${it.id}"] .status`); await uploadItem(it,row); } toast("Upload tất cả xong (xem trạng thái từng mục).","ok"); };
 
-/* --- blob helpers --- */
+/* blob helpers */
 function blobToDataURL(blob){ return new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(blob); }); }
 function splitDataUrl(d){ const m = String(d||'').match(/^data:([^;]+);base64,(.+)$/); return m ? { mime:m[1], base64:m[2] } : { mime:'', base64:d||'' }; }
 async function transcodeBlob(blob, fmt, w, h){
@@ -611,38 +610,76 @@ async function transcodeBlob(blob, fmt, w, h){
   return await new Promise(res=>c.toBlob(res, mime, quality));
 }
 
-/* --- upload (batch item) --- */
+/* upload helpers */
+function commitMsgFor(path){ const sku=($("#sku").value||'').trim(); const cat=($("#category").value||'').trim(); return sku ? `feat(images): add ${sku}${cat?` (${cat})`:''}` : `feat(images): add ${path.split('/').pop()}`; }
+function baseUrl(){ const s=readSettings(); return (s.workerUrl||'').replace(/\/$/,''); }
+function xKey(){ const s=readSettings(); return (s.xKey||''); }
+
+async function tryUploadOps(blob, path, commit){
+  const fd=new FormData();
+  fd.append('file', blob, path.split('/').pop()||'file.webp');
+  fd.append('path', path);
+  fd.append('commit', commit||'upload via importer');
+
+  let r=await fetch(baseUrl()+"/ops/upload",{method:"POST",mode:"cors",headers:hdrX(),body:fd});
+  let text=await r.text().catch(()=>'');
+
+  if(!r.ok && r.status===401){
+    r=await fetch(baseUrl()+"/ops/upload?key="+encodeURIComponent(xKey()),{method:"POST",mode:"cors",body:fd});
+    text=await r.text().catch(()=>'');
+  }
+  return {ok:r.ok,status:r.status,text};
+}
+
+async function tryUploadLite(blob, path, commit){
+  const dataUrl=await blobToDataURL(blob);
+  const {mime, base64}=splitDataUrl(dataUrl);
+  const body=new URLSearchParams({path, file_b64:base64, mime, commit:commit||'upload lite'});
+  let r=await fetch(baseUrl()+"/ops/upload-lite",{method:"POST",mode:"cors",headers:{...hdrX(),'content-type':'application/x-www-form-urlencoded'},body:body.toString()});
+  let text=await r.text().catch(()=>'');
+
+  if(!r.ok && r.status===401){
+    r=await fetch(baseUrl()+"/ops/upload-lite?key="+encodeURIComponent(xKey()),{method:"POST",mode:"cors",headers:{'content-type':'application/x-www-form-urlencoded'},body:body.toString()});
+    text=await r.text().catch(()=>'');
+  }
+  return {ok:r.ok,status:r.status,text};
+}
+
+async function tryUploadLegacy(blob, path, commit, sku){
+  const dataUrl=await blobToDataURL(blob);
+  let r=await fetch(baseUrl()+"/upload-image",{method:"POST",mode:"cors",headers:hdrJson(),body:JSON.stringify({ sku:slugify(sku||'tt'), path, file:dataUrl, commit })});
+  let text=await r.text().catch(()=>'');
+
+  if(!r.ok){
+    const {mime, base64} = splitDataUrl(dataUrl);
+    r=await fetch(baseUrl()+"/upload-image",{method:"POST",mode:"cors",headers:hdrJson(),body:JSON.stringify({ sku:slugify(sku||'tt'), path, file:base64, mime, commit })});
+    text=await r.text().catch(()=>'' );
+  }
+  return {ok:r.ok,status:r.status,text};
+}
+
+/* upload (batch item) */
 async function uploadItem(it, statusEl){
   let path=pathFor(it);
   try{
     if(!it.outBlob){ statusEl.textContent='Đang xử lý'; await queueProcess(it); }
-    const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; }
-    const base=s.workerUrl.replace(/\/$/,'');
-    // First attempt: DataURL in "file"
-    const dataUrl=await blobToDataURL(it.outBlob);
-    statusEl.textContent='Uploading…';
-    let r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:dataUrl })});
-    let text=await r.text().catch(()=>'');
+    if(!baseUrl()){ toast("Chưa cấu hình Worker.","warn"); return; }
+    const commit=commitMsgFor(path);
 
+    statusEl.textContent='Uploading (ops)…';
+    let r=await tryUploadOps(it.outBlob, path, commit);
     if(!r.ok){
-      log(`[upload ${path}] FAIL ${r.status}. Thử pure base64… — ${text.slice(0,140)}`);
-      // Second attempt: pure base64 + mime
-      const {mime, base64} = splitDataUrl(dataUrl);
-      r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:base64, mime })});
-      text=await r.text().catch(()=>'' );
+      log(`[upload ${path}] OPS FAIL ${r.status}. ${r.text.slice(0,160)}`);
+      statusEl.textContent='Uploading (lite)…';
+      r=await tryUploadLite(it.outBlob, path, commit);
+    }
+    if(!r.ok){
+      log(`[upload ${path}] LITE FAIL ${r.status}. ${r.text.slice(0,160)} — fallback legacy`);
+      statusEl.textContent='Uploading (legacy)…';
+      r=await tryUploadLegacy(it.outBlob, path, commit, it.name);
     }
 
-    if(!r.ok && it.fmt!=='webp'){
-      log(`[upload ${path}] FAIL nữa. Fallback WebP…`);
-      const webpBlob=await transcodeBlob(it.outBlob, 'webp', it.w||1200, it.h||1200);
-      const newDataUrl=await blobToDataURL(webpBlob);
-      const newPath=path.replace(/\.png$/i,'.webp');
-      r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path:newPath, file:newDataUrl })});
-      text=await r.text().catch(()=>'' );
-      if(r.ok){ it.fmt='webp'; it.outBlob=webpBlob; path=newPath; }
-    }
-
-    if(!r.ok){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] FAIL cuối ${r.status}: ${text.slice(0,200)}`); toast("Upload lỗi "+r.status,"err"); return; }
+    if(!r.ok){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] FAIL cuối ${r.status}`); toast("Upload lỗi "+r.status,"err"); return; }
 
     statusEl.textContent='Đã upload'; it.status='uploaded'; log(`[upload ${path}] OK`);
     const sku=$("#sku").value.trim();
@@ -652,13 +689,12 @@ async function uploadItem(it, statusEl){
   }
 }
 
-/* --- single upload --- */
+/* single upload */
 $("#btnConvert").onclick=()=>{ if(!state.imgBlob){ toast("Chưa chọn ảnh.","warn"); return; } toast("Đã nén .webp sẵn.","ok"); };
 $("#btnSaveImg").onclick=()=>{ if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; } const a=document.createElement('a'); a.href=URL.createObjectURL(state.imgBlob); a.download=state.imgName||'product.webp'; a.click(); };
 $("#btnUploadImg").onclick=async()=>{
   if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; }
-  const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; }
-  const base=s.workerUrl.replace(/\/$/,'');
+  if(!baseUrl()){ toast("Chưa cấu hình Worker.","warn"); return; }
   const sku=($("#sku").value.trim()||'tt');
   const folder=getSelectedFolder();
   const fmt=getSelectedFmt();
@@ -666,16 +702,18 @@ $("#btnUploadImg").onclick=async()=>{
   let blob=state.imgBlob;
   try{
     if(fmt==='png'){ blob = await transcodeBlob(state.imgBlob,'png', state.imgW||1200, state.imgH||1200); }
-    const dataUrl=await blobToDataURL(blob);
-    let r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:dataUrl })});
-    let text=await r.text().catch(()=>'');
+    const commit=commitMsgFor(path);
 
+    let r=await tryUploadOps(blob, path, commit);
     if(!r.ok){
-      const {mime, base64} = splitDataUrl(dataUrl);
-      r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:base64, mime })});
-      text=await r.text().catch(()=>'' );
+      log(`[single ${path}] OPS FAIL ${r.status} — thử lite`);
+      r=await tryUploadLite(blob, path, commit);
     }
-    log(`[single upload ${path}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,160)}`);
+    if(!r.ok){
+      log(`[single ${path}] LITE FAIL ${r.status} — thử legacy`);
+      r=await tryUploadLegacy(blob, path, commit, sku);
+    }
+
     toast(r.ok?"Đã upload ảnh lên repo.":"Upload ảnh lỗi "+r.status, r.ok?"ok":"err");
     if(r.ok) $("#image").value=path;
   }catch(e){
@@ -683,7 +721,7 @@ $("#btnUploadImg").onclick=async()=>{
   }
 };
 
-/* --- publish / verify --- */
+/* publish / verify */
 $("#btnPublish").onclick=()=>doPublish(false); $("#btnPublishFeatured").onclick=()=>doPublish(true);
 async function doPublish(forceFeatured){
   const obj=buildJson();
@@ -697,7 +735,7 @@ async function doPublish(forceFeatured){
   const s=readSettings();
   if(s.workerUrl){
     try{
-      const r=await fetch(s.workerUrl.replace(/\/$/,'')+"/publish",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify(obj)});
+      const r=await fetch(s.workerUrl.replace(/\/$/,'')+"/publish",{method:"POST",mode:"cors",headers:hdrJson(),body:JSON.stringify(obj)});
       const text=await r.text().catch(()=>'' );
       log(`[publish ${obj.sku}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,200)}`);
       if(!r.ok) throw new Error('HTTP '+r.status);
@@ -722,7 +760,7 @@ $("#btnVerify").onclick=async()=>{
   window.open(url,'_blank');
 };
 
-/* --- JSON build --- */
+/* JSON build */
 function buildJson(){
   if(!$("#category").value.trim()){
     const text=`${$("#name").value} ${$("#brand").value} ${$("#origin").value}`;
@@ -750,7 +788,7 @@ function buildJson(){
 }
 $("#btnToJson").onclick=buildJson; $("#btnCopyJson").onclick=()=>{ $("#jsonOut").select(); document.execCommand('copy'); toast("Đã copy JSON."); }; $("#btnDownloadJson").onclick=()=>{ if(!$("#jsonOut").value) buildJson(); const blob=new Blob([$("#jsonOut").value],{type:"application/json"}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='affiliates.append.json'; a.click(); };
 
-/* --- Quick Clear --- */
+/* Quick Clear */
 function installClearers(){
   const sels=['#name','#sku','#price','#origin','#image','#category','#brand','#deeplink'];
   for(const sel of sels){
@@ -773,7 +811,7 @@ installClearers();
 $("#origin").addEventListener('input', ()=>$("#originOut").value=cleanUrl($("#origin").value));
 updateSingleUploadCta();
 
-/* --- Gen commit message --- */
+/* Gen commit message */
 $("#btnGenCommit").onclick=()=>{
   const arr=[];
   const sku=($("#sku").value||'').trim();
