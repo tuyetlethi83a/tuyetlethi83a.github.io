@@ -1,5 +1,5 @@
 <!-- REPLACE WHOLE FILE: /tools/tuyetlethi-importer.html -->
-<!-- FIND: TUYETLETHI-TOOL v4.3.9-pro -->
+<!-- FIND: TUYETLETHI-TOOL v4.3.9-pro2 -->
 <!doctype html>
 <html lang="vi">
 <head>
@@ -12,7 +12,7 @@
       --bg:#f6f7fb; --fg:#0d1a2a; --muted:#4b5b70; --b:#ffffff; --line:#e4e8f1; --accent:#2563eb;
       --ok:#16a34a; --warn:#f59e0b; --err:#ef4444; --toast-bottom:12px;
     }
-    .dark:root{
+    body.dark{
       --bg:#0b0f14; --fg:#e8f0fb; --muted:#a7b4c2; --b:#152132; --line:#223348; --accent:#7cc4ff;
       --ok:#34d399; --warn:#f59e0b; --err:#ef4444;
     }
@@ -29,21 +29,21 @@
     .card{background:var(--b);border:1px solid var(--line);border-radius:12px;padding:14px}
     label{display:block;font-weight:700;margin:8px 0 6px}
     input,select,textarea,button{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#111}
-    .dark input,.dark select,.dark textarea{background:#0f1622;color:var(--fg);border-color:#2b3b52}
+    body.dark input,body.dark select,body.dark textarea{background:#0f1622;color:var(--fg);border-color:#2b3b52}
     textarea{min-height:70px;resize:vertical}
     .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
     .row>*{flex:1}
     .small{font-size:12px;color:var(--muted)}
     .btn{cursor:pointer;border:1px solid var(--line);background:#eef2ff}
     .btn:hover{background:#e3e9ff}
-    .dark .btn{background:#102235;border-color:#2b3b52}
-    .dark .btn:hover{background:#132a43}
+    body.dark .btn{background:#102235;border-color:#2b3b52}
+    body.dark .btn:hover{background:#132a43}
     .btn.primary{background:#2563eb;color:#fff;border-color:#2563eb}
     .btn.primary:hover{filter:brightness(0.98)}
     .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line)}
     .ok{color:var(--ok)} .warn{color:var(--warn)} .err{color:var(--err)}
     .drop{border:2px dashed var(--line);border-radius:12px;padding:16px;text-align:center;background:#fafbff}
-    .dark .drop{background:#0c1623;border-color:#3a5270}
+    body.dark .drop{background:#0c1623;border-color:#3a5270}
     .drop.dragover{border-color:var(--accent)}
     .preview{display:flex;gap:12px;align-items:center}
     .preview img{width:96px;height:96px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
@@ -55,7 +55,7 @@
     table.queue th, table.queue td{font-size:13px;vertical-align:middle}
     table.queue th{text-align:left;padding:6px 8px}
     table.queue td{background:#fafbff;border:1px solid var(--line);padding:6px 8px}
-    .dark table.queue td{background:#0d1826;border-color:#23364b}
+    body.dark table.queue td{background:#0d1826;border-color:#23364b}
     table.queue td:first-child{border-radius:10px 0 0 10px}
     table.queue td:last-child{border-radius:0 10px 10px 0}
     .thumb{width:56px;height:56px;border-radius:8px;object-fit:cover;border:1px solid var(--line);background:#fff}
@@ -75,7 +75,11 @@
 <div class="wrap">
   <div class="topbar">
     <h1>Tuyetlethi Importer v4.3.9 <span class="pill">PRO</span> <span class="pill">Batch</span> <span class="pill">Featured</span> <span class="pill">Debug</span></h1>
-    <button id="btnMode" class="btn mode" type="button">Dark mode</button>
+    <div class="row w-auto" style="gap:6px">
+      <button id="btnMode" class="btn mode" type="button">Dark mode</button>
+      <button id="btnClearFormQuick" class="btn mode" type="button">🧹 Xoá form</button>
+      <button id="btnClearLog" class="btn mode" type="button">🧼 Xoá log</button>
+    </div>
   </div>
 
   <div class="card">
@@ -87,7 +91,7 @@
     <div class="row" style="margin-top:8px">
       <button class="btn" id="btnSaveSettings">💾 Lưu</button>
       <button class="btn" id="btnLoadSettings">↻ Tải</button>
-      <button class="btn" id="btnClearSettings">🗑 Xoá</button>
+      <button class="btn" id="btnClearSettings">🗑 Xoá cài đặt</button>
       <span class="small" id="settingsStatus"></span>
     </div>
     <div class="row" style="margin-top:8px">
@@ -191,8 +195,7 @@
       <button class="btn" id="btnConvertAll">Convert tất cả</button>
       <button class="btn" id="btnDownloadAll">Tải tất cả</button>
       <button class="btn primary" id="btnUploadAll">Upload tất cả</button>
-      <button class="btn" id="btnClearQueue">Xoá hàng đợi</button>
-      <span class="small muted">Tip: thả <b>nhiều ảnh</b> vào vùng trên để thêm trực tiếp vào hàng đợi.</span>
+      <button class="btn" id="btnClearQueue">🗑 Xoá hàng đợi</button>
     </div>
     <div style="overflow:auto;margin-top:10px">
       <table class="queue" id="queueBodyWrap">
@@ -260,135 +263,144 @@
 </div>
 
 <script>
-/* ===== TUYETLETHI-TOOL v4.3.9-pro ===== */
-const $ = s => document.querySelector(s);
-const LS_KEY = 'TUYETLETHI_IMPORTER_SETTINGS_V439PRO';
-const slugify = s => s.toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-const DEFAULT_TPL_SHOPEE='https://go.isclix.com/deep_link/6837055118319564314/4751584435713464237?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}';
-const DEFAULT_TPL_LAZADA='https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}';
-const state = { imgBlob:null, imgName:null, imgW:0, imgH:0 };
+/* ===== TUYETLETHI-TOOL v4.3.9-pro2 ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const $ = s => document.querySelector(s);
+  const LS_KEY = 'TUYETLETHI_IMPORTER_SETTINGS_V439PRO2';
+  const slugify = s => s.toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  const DEFAULT_TPL_SHOPEE='https://go.isclix.com/deep_link/6837055118319564314/4751584435713464237?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}';
+  const DEFAULT_TPL_LAZADA='https://go.isclix.com/deep_link/6837055118319564314/5369219770778085421?url={url}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}';
+  const state = { imgBlob:null, imgName:null, imgW:0, imgH:0 };
 
-/* UI Helpers */
-function toast(msg,cls=''){ const t=$("#toast"); t.innerHTML=msg; t.className='toast show '+cls; setTimeout(()=>t.className='toast',4200); }
-function log(msg){ const d=$("#debugLog"); d.textContent = (d.textContent && d.textContent!=='–' ? d.textContent + "\\n" : "") + msg; d.scrollTop = d.scrollHeight; }
-function updateToastOffset(){ const bar=document.querySelector('.sticky-actions'); const bottom=bar?(bar.offsetHeight+16):12; document.documentElement.style.setProperty('--toast-bottom', bottom+'px'); }
-window.addEventListener('load', updateToastOffset); window.addEventListener('resize', updateToastOffset);
+  /* UI Helpers */
+  function toast(msg,cls=''){ const t=$("#toast"); t.innerHTML=msg; t.className='toast show '+cls; setTimeout(()=>t.className='toast',4200); }
+  function log(msg){ const d=$("#debugLog"); d.textContent = (d.textContent && d.textContent!=='–' ? d.textContent + "\\n" : "") + msg; d.scrollTop = d.scrollHeight; }
+  function updateToastOffset(){ const bar=document.querySelector('.sticky-actions'); const bottom=bar?(bar.offsetHeight+16):12; document.documentElement.style.setProperty('--toast-bottom', bottom+'px'); }
+  updateToastOffset(); window.addEventListener('resize', updateToastOffset);
 
-/* Theme toggle */
-$("#btnMode").onclick=()=>{ document.body.classList.toggle('dark'); $("#btnMode").textContent = document.body.classList.contains('dark')?'Light mode':'Dark mode'; };
+  /* Theme + quick clears */
+  $("#btnMode").onclick=()=>{ document.body.classList.toggle('dark'); $("#btnMode").textContent=document.body.classList.contains('dark')?'Light mode':'Dark mode'; };
+  $("#btnClearLog").onclick=()=>{ $("#debugLog").textContent='–'; toast('Đã xoá log.'); };
+  $("#btnClearFormQuick").onclick=()=>{ document.querySelectorAll('[data-clear]').forEach(el=>el.value=''); $("#featured").checked=false; $("#status").checked=true; $("#sku").dispatchEvent(new Event('input')); $("#imgPreview").style.display='none'; toast('Đã xoá form.'); };
 
-/* Settings */
-function readSettings(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); }catch(_){ return {}; } }
-function writeSettings(s){ localStorage.setItem(LS_KEY, JSON.stringify(s)); }
-function uiToSettings(){ return { workerUrl:$("#workerUrl").value.trim(), xKey:$("#xKey").value.trim(), tplShopee:DEFAULT_TPL_SHOPEE, tplLazada:DEFAULT_TPL_LAZADA, defaultFolder:$("#defaultFolder").value, defaultCustomPath:$("#defaultCustomPath").value.trim(), defaultFmt:$("#defaultFmt").value }; }
-function settingsToUi(s){ $("#workerUrl").value=s.workerUrl||''; $("#xKey").value=s.xKey||''; if(s.defaultFolder) $("#defaultFolder").value=s.defaultFolder; if(s.defaultCustomPath) $("#defaultCustomPath").value=s.defaultCustomPath; if(s.defaultFmt) $("#defaultFmt").value=s.defaultFmt; ensureFolderBase(); updateSingleUploadCta(); }
-function saveSettings(){ writeSettings(uiToSettings()); $("#settingsStatus").textContent="Đã lưu."; toast("Đã lưu cài đặt.","ok"); }
-function loadSettings(){ const s=readSettings(); settingsToUi(s); $("#settingsStatus").textContent="Đã tải cài đặt."; }
-$("#btnSaveSettings").onclick=saveSettings; $("#btnLoadSettings").onclick=loadSettings; $("#btnClearSettings").onclick=()=>{ localStorage.removeItem(LS_KEY); settingsToUi({}); $("#settingsStatus").textContent="Đã xóa."; }; loadSettings();
+  /* Settings */
+  function readSettings(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); }catch(_){ return {}; } }
+  function writeSettings(s){ localStorage.setItem(LS_KEY, JSON.stringify(s)); }
+  function uiToSettings(){ return { workerUrl:$("#workerUrl").value.trim(), xKey:$("#xKey").value.trim(), tplShopee:DEFAULT_TPL_SHOPEE, tplLazada:DEFAULT_TPL_LAZADA, defaultFolder:$("#defaultFolder").value, defaultCustomPath:$("#defaultCustomPath").value.trim(), defaultFmt:$("#defaultFmt").value }; }
+  function settingsToUi(s){ $("#workerUrl").value=s.workerUrl||''; $("#xKey").value=s.xKey||''; if(s.defaultFolder) $("#defaultFolder").value=s.defaultFolder; if(s.defaultCustomPath) $("#defaultCustomPath").value=s.defaultCustomPath; if(s.defaultFmt) $("#defaultFmt").value=s.defaultFmt; ensureFolderBase(); updateSingleUploadCta(); }
+  function saveSettings(){ writeSettings(uiToSettings()); $("#settingsStatus").textContent="Đã lưu."; toast("Đã lưu cài đặt.","ok"); }
+  function loadSettings(){ const s=readSettings(); settingsToUi(s); $("#settingsStatus").textContent="Đã tải cài đặt."; }
+  $("#btnSaveSettings").onclick=saveSettings;
+  $("#btnLoadSettings").onclick=loadSettings;
+  $("#btnClearSettings").onclick=()=>{ localStorage.removeItem(LS_KEY); settingsToUi({}); $("#settingsStatus").textContent="Đã xóa."; toast('Đã xoá cài đặt.'); };
+  loadSettings();
 
-/* Headers với X-Key */
-function hdr(){ const s=readSettings(); const h={}; if(s.xKey) h['x-key']=s.xKey; h['content-type']='application/json'; return h; }
-async function check(url){ try{ const r=await fetch(url,{mode:"cors",headers:hdr()}); const text=await r.text().catch(()=>'' ); return {ok:r.ok,status:r.status,text}; }catch(e){ return {ok:false,status:-1,text:String(e)}; } }
-$("#btnCheckWorker").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const u=s.workerUrl.replace(/\\/$/,'')+"/health"; const r=await check(u); const msg=r.ok?`Worker OK (${r.status})`:`Worker lỗi (${r.status})`; $("#workerStatus").textContent=msg; log("[/health] "+msg); toast(msg, r.ok?"ok":"err"); };
-$("#btnCheckAuth").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const u=s.workerUrl.replace(/\\/$/,'')+"/whoami"; const r=await check(u); const msg=r.ok?"X-Key hợp lệ.":"X-Key không hợp lệ ("+r.status+")"; log("[/whoami] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
-$("#btnCheckWrite").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const u=s.workerUrl.replace(/\\/$/,'')+"/can-write"; const r=await check(u); const msg=r.ok?"Có quyền commit.":"Không có quyền ("+r.status+")"; log("[/can-write] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
-$("#btnProbeOptions").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\\/$/,'')+"/upload-image"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /upload-image] ${r.status}`); toast("Đã probe OPTIONS /upload-image","ok"); }catch(e){ log("[OPTIONS /upload-image] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
-$("#btnProbePublish").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const u=s.workerUrl.replace(/\\/$/,'')+"/publish"; const r=await fetch(u,{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /publish] ${r.status}`); toast("Đã probe OPTIONS /publish","ok"); }catch(e){ log("[OPTIONS /publish] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
-$("#btnTestUpload").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const c=document.createElement('canvas'); c.width=1; c.height=1; const blob=await new Promise(res=>c.toBlob(res,'image/webp',0.5)); const b64=await blobToDataURL(blob); const path='/assets/img/test/ping.webp'; try{ const r=await fetch(s.workerUrl.replace(/\\/$/,'')+'/upload-image',{method:'POST',mode:'cors',headers:hdr(),body:JSON.stringify({sku:'ping',path,file:b64})}); log(`[TEST UPLOAD] ${r.status} ${r.ok?'OK':'FAIL'}`); toast(r.ok?'Test upload OK':'Test upload FAIL '+r.status, r.ok?'ok':'err'); }catch(e){ log("[TEST UPLOAD] Lỗi: "+e.message); toast("Test upload lỗi.","err"); } };
+  /* Headers với X-Key */
+  function hdr(){ const s=readSettings(); const h={'content-type':'application/json'}; if(s.xKey) h['x-key']=s.xKey; return h; }
+  async function check(url){ try{ const r=await fetch(url,{mode:"cors",headers:hdr()}); const text=await r.text().catch(()=>'' ); return {ok:r.ok,status:r.status,text}; }catch(e){ return {ok:false,status:-1,text:String(e)}; } }
+  function baseUrl(){ const s=readSettings(); return (s.workerUrl||'').replace(/\/$/,''); }
 
-/* Category helpers (giữ logic 4.3.8) */
-function vn(s){ return (s||'').toString().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase(); }
-function normCategory(raw){ const base = vn(raw).replace(/\\s+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-').replace(/^-|-$/g,''); if (/^(thoi-trang|ao|quan|vay|hoodie|giay|dep)$/.test(base)) return 'thoi-trang'; if (/^(my-pham|serum|kem|mask|srm|toner|chong-nang)$/.test(base)) return 'my-pham'; if (/^(me-va-be|ta|bim|sua|binh-sua)$/.test(base)) return 'me-va-be'; if (/^(trang-suc|nhan|vong|day-chuyen|lac|khuyen-tai)$/.test(base)) return 'trang-suc'; return base||'thoi-trang'; }
+  /* Check buttons */
+  $("#btnCheckWorker").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const u=b+"/health"; const r=await check(u); const msg=r.ok?`Worker OK (${r.status})`:`Worker lỗi (${r.status})`; $("#workerStatus").textContent=msg; log("[/health] "+msg); toast(msg, r.ok?"ok":"err"); };
+  $("#btnCheckAuth").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const u=b+"/whoami"; const r=await check(u); const msg=r.ok?"X-Key hợp lệ.":"X-Key không hợp lệ ("+r.status+")"; log("[/whoami] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
+  $("#btnCheckWrite").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const u=b+"/can-write"; const r=await check(u); const msg=r.ok?"Có quyền commit.":"Không có quyền ("+r.status+")"; log("[/can-write] "+msg+" — "+r.text.slice(0,120)); toast(msg, r.ok?"ok":"err"); };
 
-/* Deep-link */
-function computeSubs(sku, merchant){ return { sub1: sku||'sku', sub2:(merchant||'merchant').toLowerCase(), sub3:'tool', sub4:'tuyetlethi' }; }
-function ensureSubsInUrl(u, subs){ const has = k => new RegExp(`[?&]${k}=`,`i`).test(u); const qs=[]; for(const k of ['sub1','sub2','sub3','sub4']) if(!has(k)) qs.push(`${k}=${encodeURIComponent(subs[k])}`); return qs.length?(u+(u.includes('?')?'&':'?')+qs.join('&')):u; }
-function cleanUrl(u){ return (u||'').trim().replace(/^["']+|["',]+$/g,''); }
-function activeTplFor(merchant){ const s=readSettings(); return merchant==='shopee' ? (s.tplShopee||DEFAULT_TPL_SHOPEE) : (s.tplLazada||DEFAULT_TPL_LAZADA); }
-function validateDeeplink(){ const dl=$("#deeplink").value.trim(); const badge=$("#dlCheck"); if(!dl){ badge.textContent="chưa có deeplink"; badge.className='badge'; return; } const okHost=/(^https?:\\/\\/)?([^/]*\\.)?isclix\\.com/i.test(dl); const hasUrl=/[?&]url=/.test(dl); const s1=/[?&]sub1=/.test(dl), s2=/[?&]sub2=/.test(dl), s3=/[?&]sub3=/.test(dl), s4=/[?&]sub4=/.test(dl); if(okHost && hasUrl && s1 && s2 && s3 && s4){ badge.textContent="OK affiliate"; badge.className='badge'; return; } if(okHost && !hasUrl){ badge.textContent="isclix thiếu url="; badge.className='badge'; return; } if(okHost){ const missing=['sub1','sub2','sub3','sub4'].filter(k=>!new RegExp(`[?&]${k}=`).test(dl)); badge.textContent="isclix thiếu: "+missing.join(', '); badge.className='badge'; return; } badge.textContent="KHÔNG qua affiliate"; badge.className='badge'; }
-function makeDeeplink(){ const origin=cleanUrl($("#origin").value.trim()); const sku=$("#sku").value.trim(); const merchant=$("#merchant").value; if(!origin){ toast("Thiếu Origin.","warn"); return; } const tpl=activeTplFor(merchant); const subs=computeSubs(sku,merchant); let link=tpl.replace(/\\{url\\}/g,encodeURIComponent(origin)).replace(/\\{sku\\}/g,sku||'sku').replace(/\\{sub1\\}/g,subs.sub1).replace(/\\{sub2\\}/g,subs.sub2).replace(/\\{sub3\\}/g,subs.sub3).replace(/\\{sub4\\}/g,subs.sub4); link=ensureSubsInUrl(link,subs); $("#deeplink").value=link; validateDeeplink(); }
-$("#btnMakeDeeplink").onclick=makeDeeplink; $("#deeplink").addEventListener('input', validateDeeplink);
-$("#copyOrigin").onclick=()=>{ const t=$("#originOut"); t.select(); document.execCommand('copy'); toast("Đã copy Origin.","ok"); };
-$("#openOrigin").onclick=()=>{ const u=$("#originOut").value.trim()||$("#origin").value.trim(); if(u){ window.open(u,'_blank'); } else { toast("Chưa có Origin.","warn"); } };
-$("#copyDeeplink").onclick=()=>{ const t=$("#deeplink"); t.select(); document.execCommand('copy'); toast("Đã copy Deep-link.","ok"); };
-$("#btnOpenDeeplink").onclick=()=>{ const u=$("#deeplink").value.trim(); if(u){ window.open(u,'_blank'); } else { toast("Chưa có Deep-link.","warn"); } };
+  /* Probes + Test upload */
+  $("#btnProbeOptions").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const r=await fetch(b+"/upload-image",{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /upload-image] ${r.status}`); toast("Probe OPTIONS /upload-image","ok"); }catch(e){ log("[OPTIONS /upload-image] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
+  $("#btnProbePublish").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } try{ const r=await fetch(b+"/publish",{method:"OPTIONS",mode:"cors",headers:hdr()}); log(`[OPTIONS /publish] ${r.status}`); toast("Probe OPTIONS /publish","ok"); }catch(e){ log("[OPTIONS /publish] Lỗi: "+e.message); toast("Probe lỗi.","err"); } };
+  $("#btnTestUpload").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const c=document.createElement('canvas'); c.width=1; c.height=1; const blob=await new Promise(res=>c.toBlob(res,'image/webp',0.5)); const dataUrl=await blobToDataURL(blob); try{ const r=await fetch(b+'/upload-image',{method:'POST',mode:'cors',headers:hdr(),body:JSON.stringify({sku:'ping',path:'/assets/img/test/ping.webp',file:dataUrl})}); log(`[TEST UPLOAD] ${r.status} ${r.ok?'OK':'FAIL'}`); toast(r.ok?'Test upload OK':'Test upload FAIL '+r.status, r.ok?'ok':'err'); }catch(e){ log("[TEST UPLOAD] Lỗi: "+e.message); toast("Test upload lỗi.","err"); } };
 
-/* Auto + diag */
-function updateSingleUploadCta(){ const folder=getSelectedFolder(); const fmt=getSelectedFmt(); const sku=($("#sku").value.trim()||'<sku>'); $("#btnUploadImg").textContent=`Upload ảnh → ${folder}${slugify(sku)}${extByFmt(fmt)}`; }
-$("#btnAuto").onclick=()=>{ const name=$("#name").value.trim(); const skuNow=$("#sku").value.trim(); if(name && !skuNow) $("#sku").value=slugify(name); const folder=getSelectedFolder(); const baseSku=$("#sku").value.trim()||'...'; const fmt=getSelectedFmt(); if($("#sku").value && !$("#image").value) $("#image").value=`${folder}${slugify(baseSku)}${extByFmt(fmt)}`; $("#originOut").value=cleanUrl($("#origin").value.trim()); const g=autoCategory(`${name} ${$("#brand").value} ${$("#origin").value}`); if(g && !$("#category").value.trim()) $("#category").value=g; runDiag(); updateSingleUploadCta(); };
-["name","sku","origin","image","merchant"].forEach(id=>$("#"+id).addEventListener('input', ()=>{ runDiag(); if(id==='sku') updateSingleUploadCta(); }));
-function runDiag(){ const sku=$("#sku").value.trim(); const img=$("#image").value.trim(); const origin=cleanUrl($("#origin").value.trim()); const merchant=$("#merchant").value; const expectedFolder=getSelectedFolder(); const fmt=getSelectedFmt(); const msgs=[]; if(!sku) msgs.push("• Thiếu SKU (bắt buộc cho publish)."); if(img && !img.startsWith(`${expectedFolder}${sku||'...'}`)) msgs.push("• Ảnh nên là "+expectedFolder+(sku||'&lt;sku&gt;')+extByFmt(fmt)); if(origin && !/shopee\\.vn|lazada\\.vn/i.test(origin)) msgs.push("• Origin không phải Shopee/Lazada."); msgs.push("• Merchant: "+merchant); $("#diag").innerHTML=msgs.length?msgs.map(x=>`<div>${x}</div>`).join(""):'<span class="ok">Tạm ổn.</span>'; $("#originOut").value=origin; }
+  /* Category + deep-link helpers */
+  const vn = s => (s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
+  function normCategory(raw){ const base = vn(raw).replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-').replace(/^-|-$/g,''); if (/^(thoi-trang|ao|quan|vay|hoodie|giay|dep)$/.test(base)) return 'thoi-trang'; if (/^(my-pham|serum|kem|mask|srm|toner|chong-nang)$/.test(base)) return 'my-pham'; if (/^(me-va-be|ta|bim|sua|binh-sua)$/.test(base)) return 'me-va-be'; if (/^(trang-suc|nhan|vong|day-chuyen|lac|khuyen-tai)$/.test(base)) return 'trang-suc'; return base||'thoi-trang'; }
+  function computeSubs(sku, merchant){ return { sub1: sku||'sku', sub2:(merchant||'merchant').toLowerCase(), sub3:'tool', sub4:'tuyetlethi' }; }
+  function ensureSubsInUrl(u, subs){ const has = k => new RegExp(`[?&]${k}=`,`i`).test(u); const qs=[]; for(const k of ['sub1','sub2','sub3','sub4']) if(!has(k)) qs.push(`${k}=${encodeURIComponent(subs[k])}`); return qs.length?(u+(u.includes('?')?'&':'?')+qs.join('&')):u; }
+  function cleanUrl(u){ return (u||'').trim().replace(/^["']+|["',]+$/g,''); }
+  function activeTplFor(merchant){ const s=readSettings(); return merchant==='shopee' ? (s.tplShopee||DEFAULT_TPL_SHOPEE) : (s.tplLazada||DEFAULT_TPL_LAZADA); }
+  function validateDeeplink(){ const dl=$("#deeplink").value.trim(); const badge=$("#dlCheck"); if(!dl){ badge.textContent="chưa có deeplink"; badge.className='badge'; return; } const okHost=/(^https?:\/\/)?([^/]*\.)?isclix\.com/i.test(dl); const hasUrl=/[?&]url=/.test(dl); const s1=/[?&]sub1=/.test(dl), s2=/[?&]sub2=/.test(dl), s3=/[?&]sub3=/.test(dl), s4=/[?&]sub4=/.test(dl); if(okHost && hasUrl && s1 && s2 && s3 && s4){ badge.textContent="OK affiliate"; badge.className='badge'; return; } if(okHost && !hasUrl){ badge.textContent="isclix thiếu url="; badge.className='badge'; return; } if(okHost){ const missing=['sub1','sub2','sub3','sub4'].filter(k=>!new RegExp(`[?&]${k}=`).test(dl)); badge.textContent="thiếu: "+missing.join(', '); badge.className='badge'; return; } badge.textContent="KHÔNG qua affiliate"; badge.className='badge'; }
+  function makeDeeplink(){ const origin=cleanUrl($("#origin").value.trim()); const sku=$("#sku").value.trim(); const merchant=$("#merchant").value; if(!origin){ toast("Thiếu Origin.","warn"); return; } const tpl=activeTplFor(merchant); const subs=computeSubs(sku,merchant); let link=tpl.replace(/\{url\}/g,encodeURIComponent(origin)).replace(/\{sku\}/g,sku||'sku').replace(/\{sub1\}/g,subs.sub1).replace(/\{sub2\}/g,subs.sub2).replace(/\{sub3\}/g,subs.sub3).replace(/\{sub4\}/g,subs.sub4); link=ensureSubsInUrl(link,subs); $("#deeplink").value=link; validateDeeplink(); }
+  $("#btnMakeDeeplink").onclick=makeDeeplink; $("#deeplink").addEventListener('input', validateDeeplink);
+  $("#copyOrigin").onclick=()=>{ const t=$("#originOut"); t.select(); document.execCommand('copy'); toast("Đã copy Origin.","ok"); };
+  $("#openOrigin").onclick=()=>{ const u=$("#originOut").value.trim()||$("#origin").value.trim(); if(u){ window.open(u,'_blank'); } else { toast("Chưa có Origin.","warn"); } };
+  $("#copyDeeplink").onclick=()=>{ const t=$("#deeplink"); t.select(); document.execCommand('copy'); toast("Đã copy Deep-link.","ok"); };
+  $("#btnOpenDeeplink").onclick=()=>{ const u=$("#deeplink").value.trim(); if(u){ window.open(u,'_blank'); } else { toast("Chưa có Deep-link.","warn"); } };
 
-/* Image & batch */
-const drop=$("#drop"), file=$("#file"), thumb=$("#thumb"), imgName=$("#imgName"), imgInfo=$("#imgInfo");
-drop.addEventListener('click', ()=>file.click());
-$("#btnSelectImg").onclick=()=>file.click();
-drop.addEventListener('dragover', e=>{ e.preventDefault(); drop.classList.add('dragover'); });
-drop.addEventListener('dragleave', ()=>drop.classList.remove('dragover'));
-drop.addEventListener('drop', e=>{ e.preventDefault(); drop.classList.remove('dragover'); handleFiles(e.dataTransfer.files); });
-file.onchange=e=>handleFiles(e.target.files);
-function baseNameWithoutExt(filename){ const s=(filename||'').split('/').pop(); const i=s.lastIndexOf('.'); return (i>0?s.slice(0,i):s); }
-function decideNameFor(file){ const sku=$("#sku").value.trim(); const useFilename=$("#cbUseFilename").checked; if(sku) return slugify(sku); if(useFilename && file && file.name) return slugify(baseNameWithoutExt(file.name)); const nm=$("#name").value.trim(); if(nm) return slugify(nm); return 'tt'; }
-function ensureFolderBase(){ const sel=$("#defaultFolder").value; if(sel==='custom'){ $("#defaultCustomWrap").style.display='block'; let p=$("#defaultCustomPath").value.trim(); if(!p) $("#defaultCustomPath").value="/assets/img/"; } else { $("#defaultCustomWrap").style.display='none'; } }
-$("#defaultFolder").addEventListener('change', ()=>{ ensureFolderBase(); updateSingleUploadCta(); saveSettings(); });
-$("#defaultCustomPath").addEventListener('input', ()=>{ updateSingleUploadCta(); saveSettings(); });
-$("#defaultFmt").addEventListener('change', ()=>{ saveSettings(); updateSingleUploadCta(); });
-function getSelectedFolder(){ const sel=$("#defaultFolder").value; if(sel==='custom'){ const p=$("#defaultCustomPath").value.trim()||'/assets/img/'; return sanitizeFolder(p); } return sanitizeFolder(sel); }
-function sanitizeFolder(p){ if(!p) return '/assets/img/'; p=p.trim(); if(!p.startsWith('/')) p='/'+p; if(!p.endsWith('/')) p+='/'; return p; }
-function getSelectedFmt(){ return ($("#defaultFmt").value||'webp').toLowerCase(); }
-function extByFmt(fmt){ return fmt==='png'?'.png':'.webp'; }
+  /* Auto + diag */
+  function getSelectedFolder(){ const sel=$("#defaultFolder").value; if(sel==='custom'){ const p=$("#defaultCustomPath").value.trim()||'/assets/img/'; return sanitizeFolder(p); } return sanitizeFolder(sel); }
+  function sanitizeFolder(p){ if(!p) return '/assets/img/'; p=p.trim(); if(!p.startsWith('/')) p='/'+p; if(!p.endsWith('/')) p+='/'; return p; }
+  function getSelectedFmt(){ return ($("#defaultFmt").value||'webp').toLowerCase(); }
+  function extByFmt(fmt){ return fmt==='png'?'.png':'.webp'; }
+  function updateSingleUploadCta(){ const folder=getSelectedFolder(); const fmt=getSelectedFmt(); const sku=($("#sku").value.trim()||'<sku>'); $("#btnUploadImg").textContent=`Upload ảnh → ${folder}${slugify(sku)}${extByFmt(fmt)}`; }
+  function runDiag(){ const sku=$("#sku").value.trim(); const img=$("#image").value.trim(); const origin=cleanUrl($("#origin").value.trim()); const merchant=$("#merchant").value; const expectedFolder=getSelectedFolder(); const fmt=getSelectedFmt(); const msgs=[]; if(!sku) msgs.push("• Thiếu SKU (bắt buộc cho publish)."); if(img && !img.startsWith(`${expectedFolder}${sku||'...'}`)) msgs.push("• Ảnh nên là "+expectedFolder+(sku||'<sku>')+extByFmt(fmt)); if(origin && !/shopee\.vn|lazada\.vn/i.test(origin)) msgs.push("• Origin không phải Shopee/Lazada."); msgs.push("• Merchant: "+merchant); $("#diag").innerHTML=msgs.length?msgs.map(x=>`<div>${x}</div>`).join(""):'<span class="ok">Tạm ổn.</span>'; $("#originOut").value=origin; }
+  $("#btnAuto").onclick=()=>{ const name=$("#name").value.trim(); const skuNow=$("#sku").value.trim(); if(name && !skuNow) $("#sku").value=slugify(name); const folder=getSelectedFolder(); const baseSku=$("#sku").value.trim()||'...'; const fmt=getSelectedFmt(); if($("#sku").value && !$("#image").value) $("#image").value=`${folder}${slugify(baseSku)}${extByFmt(fmt)}`; const g=autoCategory(`${name} ${$("#brand").value} ${$("#origin").value}`); if(g && !$("#category").value.trim()) $("#category").value=g; runDiag(); updateSingleUploadCta(); };
+  ["name","sku","origin","image","merchant"].forEach(id=>$("#"+id).addEventListener('input', ()=>{ runDiag(); if(id==='sku') updateSingleUploadCta(); }));
+  $("#defaultFolder").addEventListener('change', ()=>{ ensureFolderBase(); updateSingleUploadCta(); saveSettings(); });
+  $("#defaultCustomPath").addEventListener('input', ()=>{ updateSingleUploadCta(); saveSettings(); });
+  $("#defaultFmt").addEventListener('change', ()=>{ saveSettings(); updateSingleUploadCta(); });
 
-function handleFiles(files){ if(!files || !files.length) return; if(files.length===1){ handleSingleFile(files[0]); } else { for(const f of files){ queueAddRawFile(f); } toast(`Đã thêm ${files.length} ảnh vào hàng đợi.`,'ok'); } }
-function handleSingleFile(f){ const reader=new FileReader(); reader.onload=ev=>{ const img=new Image(); img.onload=()=>{ const maxSide=1200; const scale=Math.min(1, maxSide/Math.max(img.width,img.height)); const w=Math.round(img.width*scale), h=Math.round(img.height*scale); const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h; canvas.getContext('2d').drawImage(img,0,0,w,h); canvas.toBlob(blob=>{ state.imgBlob=blob; state.imgW=w; state.imgH=h; const base=decideNameFor(f); const fmt=getSelectedFmt(); state.imgName=`${base}${extByFmt(fmt)}`; const folder=getSelectedFolder(); $("#image").value=`${folder}${base}${extByFmt(fmt)}`; $("#imgPreview").style.display='flex'; thumb.src=URL.createObjectURL(blob); imgName.textContent=state.imgName; imgInfo.textContent=`${w}×${h}, ${(blob.size/1024).toFixed(1)} KB`; updateSingleUploadCta(); }, 'image/webp', 0.82); }; img.src=ev.target.result; }; reader.readAsDataURL(f); }
+  function ensureFolderBase(){ const sel=$("#defaultFolder").value; $("#defaultCustomWrap").style.display = (sel==='custom')?'block':'none'; if(sel!=='custom') return; if(!$("#defaultCustomPath").value.trim()) $("#defaultCustomPath").value="/assets/img/"; }
+  ensureFolderBase(); updateSingleUploadCta();
 
-const queue=[]; let seq=0;
-async function queueAddRawFile(file){ const name=decideNameFor(file); const fmt=$("#defaultFmt").value||'webp'; let folder=getSelectedFolder(); const item={ id:(++seq), srcFile:file, name, fmt, folder, customPath:$("#defaultFolder").value==='custom', outBlob:null, w:0, h:0, status:'pending' }; queue.push(item); await queueProcess(item); renderQueue(); }
-async function queueProcess(it){ if(it.outBlob && it.w && it.h){ it.status='ready'; return; } if(!it.srcFile){ it.status='error'; return; } it.status='processing'; const dataUrl=await readFileAsDataURL(it.srcFile); const img=document.createElement('img'); await new Promise(r=>{ img.onload=r; img.src=dataUrl; }); const maxSide=1200; const scale=Math.min(1, maxSide/Math.max(img.width,img.height)); const w=Math.round(img.width*scale), h=Math.round(img.height*scale); const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h; canvas.getContext('2d').drawImage(img,0,0,w,h); const mime=it.fmt==='png'?'image/png':'image/webp'; const quality=it.fmt==='png'?1.0:0.82; it.outBlob=await new Promise(res=>canvas.toBlob(res,mime,quality)); it.w=w; it.h=h; it.status='ready'; }
-function renderQueue(){ const tbody=$("#queueBody"); if(!queue.length){ tbody.innerHTML='<tr><td colspan="8" class="muted">Chưa có gì trong hàng đợi.</td></tr>'; return; } tbody.innerHTML=queue.map(it=>{ const url=it.outBlob?URL.createObjectURL(it.outBlob):''; const status=it.status==='ready'?'Sẵn sàng':(it.status==='processing'?'Đang xử lý':(it.status==='uploaded'?'Đã upload':(it.status==='error'?'Lỗi':'Chờ'))); return `<tr data-id="${it.id}"><td><div class="mini">${ url ? `<img class="thumb" src="${url}" alt="thumb">` : '' }</div></td><td><input class="name" value="${it.name}"/></td><td><select class="folder"><option value="/assets/img/products/" ${it.folder==="/assets/img/products/"?'selected':''}>/assets/img/products/</option><option value="/assets/img/categories/" ${it.folder==="/assets/img/categories/"?'selected':''}>/assets/img/categories/</option><option value="/assets/img/og/" ${it.folder==="/assets/img/og/"?'selected':''}>/assets/img/og/</option><option value="/assets/img/brands/" ${it.folder==="/assets/img/brands/"?'selected':''}>/assets/img/brands/</option><option value="custom" ${it.customPath?'selected':''}>Tự nhập…</option></select><input class="customPath" placeholder="/assets/img/blog/2025/" style="margin-top:6px;display:${it.customPath?'block':'none'}" value="${it.customPath?it.folder:''}"/></td><td><select class="fmt"><option value="webp" ${it.fmt==='webp'?'selected':''}>webp</option><option value="png" ${it.fmt==='png'?'selected':''}>png</option></select></td><td class="nowrap">${pathFor(it)}</td><td>${it.w||'–'}×${it.h||'–'}<div class="small muted">${it.outBlob? (it.outBlob.size/1024|0)+' KB':''}</div></td><td class="status">${status}</td><td class="controls"><button class="btn sm do-convert">Convert</button><button class="btn sm do-download">Tải</button><button class="btn sm do-upload">Upload</button><button class="btn sm do-remove">Xoá</button></td></tr>`; }).join(''); tbody.querySelectorAll('tr').forEach(tr=>{ const id=Number(tr.getAttribute('data-id')); const it=queue.find(x=>x.id===id); const nameInput=tr.querySelector('.name'); const folderSel=tr.querySelector('.folder'); const customInput=tr.querySelector('.customPath'); const fmtSel=tr.querySelector('.fmt'); const pathCell=tr.children[4]; const statusEl=tr.querySelector('.status'); nameInput.oninput=()=>{ it.name=slugify(nameInput.value||'tt'); pathCell.textContent=pathFor(it); }; folderSel.onchange=()=>{ if(folderSel.value==='custom'){ it.customPath=true; customInput.style.display='block'; if(customInput.value.trim()==='') customInput.value='/assets/img/'; it.folder=sanitizeFolder(customInput.value.trim()); } else { it.customPath=false; customInput.style.display='none'; it.folder=folderSel.value; } pathCell.textContent=pathFor(it); }; customInput.oninput=()=>{ it.folder=sanitizeFolder(customInput.value.trim()); pathCell.textContent=pathFor(it); }; fmtSel.onchange=async()=>{ it.fmt=fmtSel.value; pathCell.textContent=pathFor(it); await queueProcess(it); statusEl.textContent='Sẵn sàng'; renderQueue(); }; tr.querySelector('.do-remove').onclick=()=>{ const idx=queue.findIndex(x=>x.id===id); if(idx>=0){ queue.splice(idx,1); renderQueue(); } }; tr.querySelector('.do-convert').onclick=async()=>{ statusEl.textContent='Đang xử lý'; await queueProcess(it); statusEl.textContent='Sẵn sàng'; renderQueue(); }; tr.querySelector('.do-download').onclick=()=>{ if(!it.outBlob){ toast("Chưa convert.","warn"); return; } const a=document.createElement('a'); a.href=URL.createObjectURL(it.outBlob); a.download=it.name+'.'+(it.fmt||'webp'); a.click(); }; tr.querySelector('.do-upload').onclick=()=>uploadItem(it, statusEl); }); }
-function pathFor(it){ let base=sanitizeFolder(it.folder||'/assets/img/'); const ext='.'+(it.fmt||'webp').toLowerCase(); return base+it.name+ext; }
-function readFileAsDataURL(file){ return new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); }); }
-function blobToDataURL(blob){ return new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(blob); }); }
-function splitDataUrl(d){ const m = String(d||'').match(/^data:([^;]+);base64,(.+)$/); return m ? { mime:m[1], base64:m[2] } : { mime:'', base64:d||'' }; }
-async function transcodeBlob(blob, fmt, w, h){ const url=URL.createObjectURL(blob); const img=new Image(); await new Promise(r=>{ img.onload=r; img.src=url; }); const c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(img,0,0,w,h); const mime = fmt==='png' ? 'image/png' : 'image/webp'; const quality = fmt==='png' ? 1.0 : 0.82; return await new Promise(res=>c.toBlob(res, mime, quality)); }
+  /* Image & batch */
+  const drop=$("#drop"), file=$("#file"), thumb=$("#thumb"), imgName=$("#imgName"), imgInfo=$("#imgInfo");
+  drop.addEventListener('click', ()=>file.click());
+  $("#btnSelectImg").onclick=()=>file.click();
+  drop.addEventListener('dragover', e=>{ e.preventDefault(); drop.classList.add('dragover'); });
+  drop.addEventListener('dragleave', ()=>drop.classList.remove('dragover'));
+  drop.addEventListener('drop', e=>{ e.preventDefault(); drop.classList.remove('dragover'); handleFiles(e.dataTransfer.files); });
+  file.onchange=e=>handleFiles(e.target.files);
 
-async function uploadItem(it, statusEl){ let path=pathFor(it); try{ if(!it.outBlob){ statusEl.textContent='Đang xử lý'; await queueProcess(it); } const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const base=s.workerUrl.replace(/\\/$/,''); const dataUrl=await blobToDataURL(it.outBlob); statusEl.textContent='Uploading…'; let r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:dataUrl })}); let text=await r.text().catch(()=>'' ); if(!r.ok){ log(`[upload ${path}] FAIL ${r.status}. Thử pure base64… — ${text.slice(0,140)}`); const {mime, base64} = splitDataUrl(dataUrl); r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:base64, mime })}); text=await r.text().catch(()=>'' ); } if(!r.ok && it.fmt!=='webp'){ log(`[upload ${path}] FAIL nữa. Fallback WebP…`); const webpBlob=await transcodeBlob(it.outBlob, 'webp', it.w||1200, it.h||1200); const newDataUrl=await blobToDataURL(webpBlob); const newPath=path.replace(/\\.png$/i,'.webp'); r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path:newPath, file:newDataUrl })}); text=await r.text().catch(()=>'' ); if(r.ok){ it.fmt='webp'; it.outBlob=webpBlob; path=newPath; } } if(!r.ok){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] FAIL cuối ${r.status}: ${text.slice(0,200)}`); toast("Upload lỗi "+r.status,"err"); return; } statusEl.textContent='Đã upload'; it.status='uploaded'; log(`[upload ${path}] OK`); const sku=$("#sku").value.trim(); if(sku && it.name===slugify(sku)) $("#image").value=path; }catch(e){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] EXC: ${e.message}`); toast("Upload lỗi: "+e.message,"err"); } }
+  function baseNameWithoutExt(filename){ const s=(filename||'').split('/').pop(); const i=s.lastIndexOf('.'); return (i>0?s.slice(0,i):s); }
+  function decideNameFor(file){ const sku=$("#sku").value.trim(); const useFilename=$("#cbUseFilename").checked; if(sku) return slugify(sku); if(useFilename && file && file.name) return slugify(baseNameWithoutExt(file.name)); const nm=$("#name").value.trim(); if(nm) return slugify(nm); return 'tt'; }
+  function handleFiles(files){ if(!files || !files.length) return; if(files.length===1){ handleSingleFile(files[0]); } else { for(const f of files){ queueAddRawFile(f); } toast(`Đã thêm ${files.length} ảnh vào hàng đợi.`,'ok'); } }
+  function handleSingleFile(f){ const reader=new FileReader(); reader.onload=ev=>{ const img=new Image(); img.onload=()=>{ const maxSide=1200; const scale=Math.min(1, maxSide/Math.max(img.width,img.height)); const w=Math.round(img.width*scale), h=Math.round(img.height*scale); const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h; canvas.getContext('2d').drawImage(img,0,0,w,h); canvas.toBlob(blob=>{ state.imgBlob=blob; state.imgW=w; state.imgH=h; const base=decideNameFor(f); const fmt=getSelectedFmt(); state.imgName=`${base}${extByFmt(fmt)}`; const folder=getSelectedFolder(); $("#image").value=`${folder}${base}${extByFmt(fmt)}`; $("#imgPreview").style.display='flex'; thumb.src=URL.createObjectURL(blob); imgName.textContent=state.imgName; imgInfo.textContent=`${w}×${h}, ${(blob.size/1024).toFixed(1)} KB`; updateSingleUploadCta(); }, 'image/webp', 0.82); }; img.src=ev.target.result; }; reader.readAsDataURL(f); }
 
-/* Single upload */
-$("#btnConvert").onclick=()=>{ if(!state.imgBlob){ toast("Chưa chọn ảnh.","warn"); return; } toast("Đã nén .webp sẵn.","ok"); };
-$("#btnSaveImg").onclick=()=>{ if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; } const a=document.createElement('a'); a.href=URL.createObjectURL(state.imgBlob); a.download=state.imgName||'product.webp'; a.click(); };
-$("#btnUploadImg").onclick=async()=>{ if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; } const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } const base=s.workerUrl.replace(/\\/$/,''); const sku=($("#sku").value.trim()||'tt'); const folder=getSelectedFolder(); const fmt=getSelectedFmt(); const path=`${folder}${slugify(sku)}${extByFmt(fmt)}`; let blob=state.imgBlob; try{ if(fmt==='png'){ blob = await transcodeBlob(state.imgBlob,'png', state.imgW||1200, state.imgH||1200); } const dataUrl=await blobToDataURL(blob); let r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:dataUrl })}); let text=await r.text().catch(()=>'' ); if(!r.ok){ const {mime, base64} = splitDataUrl(dataUrl); r=await fetch(base+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:base64, mime })}); text=await r.text().catch(()=>'' ); } log(`[single upload ${path}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,160)}`); toast(r.ok?"Đã upload ảnh lên repo.":"Upload ảnh lỗi "+r.status, r.ok?"ok":"err"); if(r.ok) $("#image").value=path; }catch(e){ log("[single upload] EXC: "+e.message); toast("Upload ảnh lỗi: "+e.message,"err"); } };
+  const queue=[]; let seq=0;
+  async function queueAddRawFile(file){ const name=decideNameFor(file); const fmt=$("#defaultFmt").value||'webp'; let folder=getSelectedFolder(); const item={ id:(++seq), srcFile:file, name, fmt, folder, customPath:$("#defaultFolder").value==='custom', outBlob:null, w:0, h:0, status:'pending' }; queue.push(item); await queueProcess(item); renderQueue(); }
+  async function queueProcess(it){ if(it.outBlob && it.w && it.h){ it.status='ready'; return; } if(!it.srcFile){ it.status='error'; return; } it.status='processing'; const dataUrl=await readFileAsDataURL(it.srcFile); const img=document.createElement('img'); await new Promise(r=>{ img.onload=r; img.src=dataUrl; }); const maxSide=1200; const scale=Math.min(1, maxSide/Math.max(img.width,img.height)); const w=Math.round(img.width*scale), h=Math.round(img.height*scale); const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h; canvas.getContext('2d').drawImage(img,0,0,w,h); const mime=it.fmt==='png'?'image/png':'image/webp'; const quality=it.fmt==='png'?1.0:0.82; it.outBlob=await new Promise(res=>canvas.toBlob(res,mime,quality)); it.w=w; it.h=h; it.status='ready'; }
+  function renderQueue(){ const tbody=$("#queueBody"); if(!queue.length){ tbody.innerHTML='<tr><td colspan="8" class="muted">Chưa có gì trong hàng đợi.</td></tr>'; return; } tbody.innerHTML=queue.map(it=>{ const url=it.outBlob?URL.createObjectURL(it.outBlob):''; const status=it.status==='ready'?'Sẵn sàng':(it.status==='processing'?'Đang xử lý':(it.status==='uploaded'?'Đã upload':(it.status==='error'?'Lỗi':'Chờ'))); return `<tr data-id="${it.id}"><td><div class="mini">${ url ? `<img class="thumb" src="${url}" alt="thumb">` : '' }</div></td><td><input class="name" value="${it.name}"/></td><td><select class="folder"><option value="/assets/img/products/" ${it.folder==="/assets/img/products/"?'selected':''}>/assets/img/products/</option><option value="/assets/img/categories/" ${it.folder==="/assets/img/categories/"?'selected':''}>/assets/img/categories/</option><option value="/assets/img/og/" ${it.folder==="/assets/img/og/"?'selected':''}>/assets/img/og/</option><option value="/assets/img/brands/" ${it.folder==="/assets/img/brands/"?'selected':''}>/assets/img/brands/</option><option value="custom" ${it.customPath?'selected':''}>Tự nhập…</option></select><input class="customPath" placeholder="/assets/img/blog/2025/" style="margin-top:6px;display:${it.customPath?'block':'none'}" value="${it.customPath?it.folder:''}"/></td><td><select class="fmt"><option value="webp" ${it.fmt==='webp'?'selected':''}>webp</option><option value="png" ${it.fmt==='png'?'selected':''}>png</option></select></td><td class="nowrap">${pathFor(it)}</td><td>${it.w||'–'}×${it.h||'–'}<div class="small muted">${it.outBlob? (it.outBlob.size/1024|0)+' KB':''}</div></td><td class="status">${status}</td><td class="controls"><button class="btn sm do-convert">Convert</button><button class="btn sm do-download">Tải</button><button class="btn sm do-upload">Upload</button><button class="btn sm do-remove">Xoá</button></td></tr>`; }).join(''); tbody.querySelectorAll('tr').forEach(tr=>{ const id=Number(tr.getAttribute('data-id')); const it=queue.find(x=>x.id===id); const nameInput=tr.querySelector('.name'); const folderSel=tr.querySelector('.folder'); const customInput=tr.querySelector('.customPath'); const fmtSel=tr.querySelector('.fmt'); const pathCell=tr.children[4]; const statusEl=tr.querySelector('.status'); nameInput.oninput=()=>{ it.name=slugify(nameInput.value||'tt'); pathCell.textContent=pathFor(it); }; folderSel.onchange=()=>{ if(folderSel.value==='custom'){ it.customPath=true; customInput.style.display='block'; if(customInput.value.trim()==='') customInput.value='/assets/img/'; it.folder=sanitizeFolder(customInput.value.trim()); } else { it.customPath=false; customInput.style.display='none'; it.folder=folderSel.value; } pathCell.textContent=pathFor(it); }; customInput.oninput=()=>{ it.folder=sanitizeFolder(customInput.value.trim()); pathCell.textContent=pathFor(it); }; fmtSel.onchange=async()=>{ it.fmt=fmtSel.value; pathCell.textContent=pathFor(it); await queueProcess(it); statusEl.textContent='Sẵn sàng'; renderQueue(); }; tr.querySelector('.do-remove').onclick=()=>{ const idx=queue.findIndex(x=>x.id===id); if(idx>=0){ queue.splice(idx,1); renderQueue(); } }; tr.querySelector('.do-convert').onclick=async()=>{ statusEl.textContent='Đang xử lý'; await queueProcess(it); statusEl.textContent='Sẵn sàng'; renderQueue(); }; tr.querySelector('.do-download').onclick=()=>{ if(!it.outBlob){ toast("Chưa convert.","warn"); return; } const a=document.createElement('a'); a.href=URL.createObjectURL(it.outBlob); a.download=it.name+'.'+(it.fmt||'webp'); a.click(); }; tr.querySelector('.do-upload').onclick=()=>uploadItem(it, statusEl); }); }
 
-/* Build JSON & publish */
-function buildJson(){ if(!$("#category").value.trim()){ const text=`${$("#name").value} ${$("#brand").value} ${$("#origin").value}`; const guess=autoCategory(text); if(guess) $("#category").value=guess; } $("#category").value=normCategory($("#category").value); const now=new Date().toISOString(); const obj={ name:$("#name").value.trim(), price_vnd:Number($("#price").value||0), origin_url:cleanUrl($("#origin").value.trim()), merchant:$("#merchant").value, sku:$("#sku").value.trim(), image:$("#image").value.trim(), category:$("#category").value.trim(), brand:$("#brand").value.trim(), featured:$("#featured").checked, status:$("#status").checked, updated_at:now }; const dl=$("#deeplink").value.trim(); if(dl) obj.deeplink=dl; $("#jsonOut").value=JSON.stringify([obj],null,2); return obj; }
-$("#btnToJson").onclick=buildJson;
-$("#btnCopyJson").onclick=()=>{ $("#jsonOut").select(); document.execCommand('copy'); toast("Đã copy JSON."); };
-$("#btnDownloadJson").onclick=()=>{ if(!$("#jsonOut").value) buildJson(); const blob=new Blob([$("#jsonOut").value],{type:"application/json"}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='affiliates.append.json'; a.click(); };
-$("#btnPublish").onclick=()=>doPublish(false);
-$("#btnPublishFeatured").onclick=()=>doPublish(true);
-async function doPublish(forceFeatured){ const obj=buildJson(); if(forceFeatured){ obj.featured=true; $("#featured").checked=true; $("#jsonOut").value=JSON.stringify([obj],null,2); } if(!obj.sku){ toast("Thiếu SKU.","err"); return; } if(!obj.origin_url){ toast("Thiếu origin.","warn"); return; } if(!$("#deeplink").value.trim()){ const maybe=activeTplFor($("#merchant").value); if(maybe){ makeDeeplink(); const dl=$("#deeplink").value.trim(); if(dl){ obj.deeplink=dl; $("#jsonOut").value=JSON.stringify([obj],null,2); } } } const s=readSettings(); if(s.workerUrl){ try{ const r=await fetch(s.workerUrl.replace(/\\/$/,'')+"/publish",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify(obj)}); const text=await r.text().catch(()=>'' ); log(`[publish ${obj.sku}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,200)}`); if(!r.ok) throw new Error('HTTP '+r.status); toast("Publish OK → store"+(obj.featured?" + nổi bật":""),"ok"); window.scrollTo({top:0,behavior:'smooth'}); return; }catch(e){ toast("Publish lỗi (sẽ tải JSON để commit tay): "+e.message,"err"); } } const blob=new Blob([JSON.stringify([obj],null,2)],{type:"application/json"}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='affiliates.append.json'; a.click(); }
+  function pathFor(it){ let base=sanitizeFolder(it.folder||'/assets/img/'); const ext='.'+(it.fmt||'webp').toLowerCase(); return base+it.name+ext; }
+  function readFileAsDataURL(file){ return new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); }); }
+  function blobToDataURL(blob){ return new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(blob); }); }
+  function splitDataUrl(d){ const m = String(d||'').match(/^data:([^;]+);base64,(.+)$/); return m ? { mime:m[1], base64:m[2] } : { mime:'', base64:d||'' }; }
+  async function transcodeBlob(blob, fmt, w, h){ const url=URL.createObjectURL(blob); const img=new Image(); await new Promise(r=>{ img.onload=r; img.src=url; }); const c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(img,0,0,w,h); const mime = fmt==='png' ? 'image/png' : 'image/webp'; const quality = fmt==='png' ? 1.0 : 0.82; return await new Promise(res=>c.toBlob(res, mime, quality)); }
 
-/* Verify */
-$("#btnVerify").onclick=async()=>{ const sku=$("#sku").value.trim(); if(!sku){ toast("Chưa có SKU để kiểm tra.","warn"); return; } try{ const r=await fetch('/assets/data/affiliates.json?_='+Date.now(),{cache:'no-cache'}); const arr=await r.json(); const list = Array.isArray(arr)?arr:(arr.items||[]); const found=list.some(x=>(String(x.sku||'').toLowerCase())===sku.toLowerCase()); toast(found?"ĐÃ CÓ trong affiliates.json.":"CHƯA THẤY trong affiliates.json.", found?"ok":"warn"); }catch(e){ toast("Không đọc được assets/data/affiliates.json: "+e.message, "err"); } const url=`/store.html?dev=1&sku=${encodeURIComponent(sku)}&v=${Date.now()}`; window.open(url,'_blank'); };
+  async function uploadItem(it, statusEl){ let path=pathFor(it); try{ if(!it.outBlob){ statusEl.textContent='Đang xử lý'; await queueProcess(it); } const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const dataUrl=await blobToDataURL(it.outBlob); statusEl.textContent='Uploading…'; let r=await fetch(b+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:dataUrl })}); let text=await r.text().catch(()=>'' ); if(!r.ok){ log(`[upload ${path}] FAIL ${r.status}. Thử base64 thuần… — ${text.slice(0,140)}`); const {mime, base64} = splitDataUrl(dataUrl); r=await fetch(b+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path, file:base64, mime })}); text=await r.text().catch(()=>'' ); } if(!r.ok && it.fmt!=='webp'){ log(`[upload ${path}] FAIL nữa. Fallback WebP…`); const webpBlob=await transcodeBlob(it.outBlob, 'webp', it.w||1200, it.h||1200); const newDataUrl=await blobToDataURL(webpBlob); const newPath=path.replace(/\.png$/i,'.webp'); r=await fetch(b+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:it.name, path:newPath, file:newDataUrl })}); text=await r.text().catch(()=>'' ); if(r.ok){ it.fmt='webp'; it.outBlob=webpBlob; path=newPath; } } if(!r.ok){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] FAIL cuối ${r.status}: ${text.slice(0,200)}`); toast("Upload lỗi "+r.status,"err"); return; } statusEl.textContent='Đã upload'; it.status='uploaded'; log(`[upload ${path}] OK`); const sku=$("#sku").value.trim(); if(sku && it.name===slugify(sku)) $("#image").value=path; }catch(e){ statusEl.textContent='Lỗi upload'; log(`[upload ${path}] EXC: ${e.message}`); toast("Upload lỗi: "+e.message,"err"); } }
 
-/* Batch table wiring */
-function pathCell(it){ return pathFor(it); }
-$("#btnClearQueue").onclick=()=>{ queue.length=0; renderQueue(); };
-$("#btnConvertAll").onclick=async()=>{ for(const it of queue){ await queueProcess(it); } toast("Đã convert tất cả.","ok"); renderQueue(); };
-$("#btnDownloadAll").onclick=()=>{ for(const it of queue){ if(!it.outBlob) continue; const a=document.createElement('a'); a.href=URL.createObjectURL(it.outBlob); a.download=it.name+'.'+(it.fmt||'webp'); a.click(); } };
-$("#btnUploadAll").onclick=async()=>{ const s=readSettings(); if(!s.workerUrl){ toast("Chưa cấu hình Worker.","warn"); return; } for(const it of queue){ const row=document.querySelector(`tr[data-id="${it.id}"] .status`); await uploadItem(it,row); } toast("Upload tất cả xong (xem trạng thái từng mục).","ok"); };
+  $("#btnClearQueue").onclick=()=>{ queue.length=0; renderQueue(); toast('Đã xoá hàng đợi.'); };
+  $("#btnConvertAll").onclick=async()=>{ for(const it of queue){ await queueProcess(it); } toast("Đã convert tất cả.","ok"); renderQueue(); };
+  $("#btnDownloadAll").onclick=()=>{ for(const it of queue){ if(!it.outBlob) continue; const a=document.createElement('a'); a.href=URL.createObjectURL(it.outBlob); a.download=it.name+'.'+(it.fmt||'webp'); a.click(); } };
+  $("#btnUploadAll").onclick=async()=>{ const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } for(const it of queue){ const row=document.querySelector(`tr[data-id="${it.id}"] .status`); await uploadItem(it,row); } toast("Upload tất cả xong (xem trạng thái từng mục).","ok"); };
 
-/* Small utilities */
-function readAsText(el){ return el.value.trim(); }
-function readFileAsText(file){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.onerror=rej; fr.readAsText(file); }); }
+  /* Single upload */
+  $("#btnConvert").onclick=()=>{ if(!state.imgBlob){ toast("Chưa chọn ảnh.","warn"); return; } toast("Đã nén .webp sẵn.","ok"); };
+  $("#btnSaveImg").onclick=()=>{ if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; } const a=document.createElement('a'); a.href=URL.createObjectURL(state.imgBlob); a.download=state.imgName||'product.webp'; a.click(); };
+  $("#btnUploadImg").onclick=async()=>{ if(!state.imgBlob){ toast("Chưa có ảnh.","warn"); return; } const b=baseUrl(); if(!b){ toast("Chưa cấu hình Worker.","warn"); return; } const sku=($("#sku").value.trim()||'tt'); const folder=getSelectedFolder(); const fmt=getSelectedFmt(); const path=`${folder}${slugify(sku)}${extByFmt(fmt)}`; let blob=state.imgBlob; try{ if(fmt==='png'){ blob = await transcodeBlob(state.imgBlob,'png', state.imgW||1200, state.imgH||1200); } const dataUrl=await blobToDataURL(blob); let r=await fetch(b+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:dataUrl })}); let text=await r.text().catch(()=>'' ); if(!r.ok){ const {mime, base64} = splitDataUrl(dataUrl); r=await fetch(b+"/upload-image",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify({ sku:slugify(sku), path, file:base64, mime })}); text=await r.text().catch(()=>'' ); } log(`[single upload ${path}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,160)}`); toast(r.ok?"Đã upload ảnh lên repo.":"Upload ảnh lỗi "+r.status, r.ok?"ok":"err"); if(r.ok) $("#image").value=path; }catch(e){ log("[single upload] EXC: "+e.message); toast("Upload ảnh lỗi: "+e.message,"err"); } };
 
-/* Commit message */
-$("#btnGenCommit").onclick=()=>{ const arr=[]; const sku=($("#sku").value||'').trim(); const cat=($("#category").value||'').trim(); const merchant=($("#merchant").value||'').trim(); const imgSet = queue.length ? ` + ${queue.length} image(s)` : ''; if(sku){ arr.push(`feat(data): add ${sku}${cat?` (category: ${cat})`:''}${merchant?` [${merchant}]`:''}${imgSet}`); }else if(queue.length){ arr.push(`feat(images): upload ${queue.length} asset(s) via importer`); }else{ arr.push(`chore(tool): update importer settings`); } $("#commitMsg").value = arr.join(' | '); };
+  /* Build JSON & publish */
+  function buildJson(){ if(!$("#category").value.trim()){ const text=`${$("#name").value} ${$("#brand").value} ${$("#origin").value}`; const guess=autoCategory(text); if(guess) $("#category").value=guess; } $("#category").value=normCategory($("#category").value); const now=new Date().toISOString(); const obj={ name:$("#name").value.trim(), price_vnd:Number($("#price").value||0), origin_url:cleanUrl($("#origin").value.trim()), merchant:$("#merchant").value, sku:$("#sku").value.trim(), image:$("#image").value.trim(), category:$("#category").value.trim(), brand:$("#brand").value.trim(), featured:$("#featured").checked, status:$("#status").checked, updated_at:now }; const dl=$("#deeplink").value.trim(); if(dl) obj.deeplink=dl; $("#jsonOut").value=JSON.stringify([obj],null,2); return obj; }
+  $("#btnToJson").onclick=buildJson;
+  $("#btnCopyJson").onclick=()=>{ $("#jsonOut").select(); document.execCommand('copy'); toast("Đã copy JSON."); };
+  $("#btnDownloadJson").onclick=()=>{ if(!$("#jsonOut").value) buildJson(); const blob=new Blob([$("#jsonOut").value],{type:"application/json"}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='affiliates.append.json'; a.click(); };
 
-/* Init */
-function autoCategory(text){ const t=vn(text); if(/\b(ao|áo|quan|quần|váy|hoodie|giay|giày|dep|dép)\b/i.test(text)) return 'thoi-trang'; if(/\b(serum|kem|mask|mặt\s*nạ|srm|toner|chong\s*nang)\b/i.test(text)) return 'my-pham'; if(/\b(bỉm|tã|sữa|bình\s*sữa)\b/i.test(text)) return 'me-va-be'; if(/\b(dây\s*chuyền|nhẫn|vòng|lắc|khuyên\s*tai)\b/i.test(text)) return 'trang-suc'; return ''; }
+  $("#btnPublish").onclick=()=>doPublish(false);
+  $("#btnPublishFeatured").onclick=()=>doPublish(true);
 
-/* queue row events */
-function renderQueue(){ /* already defined above */ } // (kept as is)
+  async function doPublish(forceFeatured){ const obj=buildJson(); if(forceFeatured){ obj.featured=true; $("#featured").checked=true; $("#jsonOut").value=JSON.stringify([obj],null,2); } if(!obj.sku){ toast("Thiếu SKU.","err"); return; } if(!obj.origin_url){ toast("Thiếu origin.","warn"); return; } if(!$("#deeplink").value.trim()){ const maybe=activeTplFor($("#merchant").value); if(maybe){ makeDeeplink(); const dl=$("#deeplink").value.trim(); if(dl){ obj.deeplink=dl; $("#jsonOut").value=JSON.stringify([obj],null,2); } } } const b=baseUrl(); if(b){ try{ const r=await fetch(b+"/publish",{method:"POST",mode:"cors",headers:hdr(),body:JSON.stringify(obj)}); const text=await r.text().catch(()=>'' ); log(`[publish ${obj.sku}] ${r.status} ${r.ok?'OK':'FAIL'} — ${text.slice(0,200)}`); if(!r.ok) throw new Error('HTTP '+r.status); toast("Publish OK → store"+(obj.featured?" + nổi bật":""),"ok"); window.scrollTo({top:0,behavior:'smooth'}); return; }catch(e){ toast("Publish lỗi (auto tải JSON để commit tay): "+e.message,"err"); } } const blob=new Blob([JSON.stringify([obj],null,2)],{type:"application/json"}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='affiliates.append.json'; a.click(); }
+
+  /* Verify */
+  $("#btnVerify").onclick=async()=>{ const sku=$("#sku").value.trim(); if(!sku){ toast("Chưa có SKU để kiểm tra.","warn"); return; } try{ const r=await fetch('/assets/data/affiliates.json?_='+Date.now(),{cache:'no-cache'}); const arr=await r.json(); const list = Array.isArray(arr)?arr:(arr.items||[]); const found=list.some(x=>(String(x.sku||'').toLowerCase())===sku.toLowerCase()); toast(found?"ĐÃ CÓ trong affiliates.json.":"CHƯA THẤY trong affiliates.json.", found?"ok":"warn"); }catch(e){ toast("Không đọc được assets/data/affiliates.json: "+e.message, "err"); } const url=`/store.html?dev=1&sku=${encodeURIComponent(sku)}&v=${Date.now()}`; window.open(url,'_blank'); };
+
+  /* Utilities */
+  function autoCategory(text){ const t=vn(text); if(/\b(ao|áo|quan|quần|váy|hoodie|giay|giày|dep|dép)\b/i.test(text)) return 'thoi-trang'; if(/\b(serum|kem|mask|mặt\s*nạ|srm|toner|chong\s*nang)\b/i.test(text)) return 'my-pham'; if(/\b(bỉm|tã|sữa|bình\s*sữa)\b/i.test(text)) return 'me-va-be'; if(/\b(dây\s*chuyền|nhẫn|vòng|lắc|khuyên\s*tai)\b/i.test(text)) return 'trang-suc'; return ''; }
+  function pathFor(it){ let base=sanitizeFolder(it.folder||'/assets/img/'); const ext='.'+(it.fmt||'webp').toLowerCase(); return base+it.name+ext; }
+  function readFileAsDataURL(file){ return new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); }); }
+  function blobToDataURL(blob){ return new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(blob); }); }
+
+  // initial render
+  renderQueue();
+});
 </script>
 <!-- mxd-soi-addon.js đã bỏ để tránh 404 -->
 </body>
