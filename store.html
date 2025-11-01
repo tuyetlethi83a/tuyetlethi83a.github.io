@@ -34,4 +34,11 @@
   </ul>
 </div>
 <footer><div class="container"><small class="muted">Theo chuẩn MXD — MXD Rule 53</small></div></footer>
+
+<script>
+  // MXD-CHECK: SW register
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  }
+</script>
 </body></html>
