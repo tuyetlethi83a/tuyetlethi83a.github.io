@@ -1,5 +1,6 @@
 /* REPLACE WHOLE FILE: /assets/site.css */
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:#111827;background:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:#111827;background:#fff}
 a{color:#0b3b5b;text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1080px;margin:0 auto;padding:0 16px}
 .muted{color:#6b7280}
