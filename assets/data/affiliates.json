@@ -91,6 +91,19 @@
     "updated_at": "2025-10-21T15:19:36.186Z"
   },
   {
+    "sku": "ao-the-thao-body-dai-tay-w-co-khoa-phoi-chan-vay-xep-ly",
+    "name": "Áo Thể Thao Body Dài Tay W Cổ Khóa Phối Chân Váy Xếp Ly",
+    "merchant": "shopee",
+    "origin_url": "https://shopee.vn/Set-%C4%90%E1%BB%93-N%E1%BB%AF-%C4%90%E1%BB%93-Th%E1%BB%83-Thao-N%E1%BB%AF-%C3%81o-Th%E1%BB%83-Thao-Body-D%C3%A0i-Tay-W-C%E1%BB%95-Kh%C3%B3a-Ph%E1%BB%91i-Ch%C3%A2n-V%C3%A1y-X%E1%BA%BFp-Ly-Basic-H11-Ms444-i.1298531293.28892870218?extraParams=%7B%22display_model_id%22%3A286944113272%2C%22model_selection_logic%22%3A3%7D&sp_atk=934563cf-4038-4803-806e-59456bbe827e&xptdk=934563cf-4038-4803-806e-59456bbe827e",
+    "image": "/assets/img/products/ao-the-thao-body-dai-tay-w-co-khoa-phoi-chan-vay-xep-ly.webp",
+    "price_vnd": 309000,
+    "category": "thoi-trang",
+    "brand": "",
+    "featured": false,
+    "status": true,
+    "updated_at": "2025-10-31T14:27:29.249Z"
+  },
+  {
     "sku": "ao-thun-nelly-couple-her-him-100-cotton",
     "name": "Áo thun NELLY - COUPLE \"HER-HIM\" 100% cotton",
     "merchant": "shopee",
@@ -286,6 +299,17 @@
     "updated_at": "2025-10-22T15:40:28.834Z"
   },
   {
+    "name": "Dây chuyền bạc nữ TLEE ONLY YOU mặt đá trái tim tua giọt nước nữ tính",
+    "price_vnd": 387000,
+    "origin_url": "https://shopee.vn/D%C3%A2y-chuy%E1%BB%81n-b%E1%BA%A1c-n%E1%BB%AF-TLEE-ONLY-YOU-m%E1%BA%B7t-%C4%91%C3%A1-tr%C3%A1i-tim-tua-gi%E1%BB%8Dt-n%C6%B0%E1%BB%9Bc-n%E1%BB%AF-t%C3%ADnh-TLEE-JEWELRY-D0337-i.11263389.26622276812?extraParams=%7B%22display_model_id%22%3A205689110810%2C%22model_selection_logic%22%3A3%7D&sp_atk=c0675319-b9e7-4a0a-9935-6419ded419c3&xptdk=c0675319-b9e7-4a0a-9935-6419ded419c3",
+    "merchant": "shopee",
+    "sku": "dây chuyền bạc nữ tlee only you mặt đá trái tim tua giọt nước nữ tính",
+    "image": "/assets/img/products/day-chuyen-bac-nu-tlee-only-you-mat-da-trai-tim-tua-giot-nuoc-nu-tinh.webp",
+    "category": "trang-suc",
+    "status": true,
+    "updated_at": "2025-11-01T11:01:58.464Z"
+  },
+  {
     "sku": "dep-cross-dep-suc-cao-cap-tang-kem-12-sticker",
     "name": "Dép Cross, dép sục cao cấp tặng kèm 12 sticker",
     "merchant": "shopee",
@@ -479,18 +503,5 @@
     "featured": true,
     "status": true,
     "updated_at": "2025-10-27T15:16:42.934Z"
-  },
-  {
-    "sku": "ao-the-thao-body-dai-tay-w-co-khoa-phoi-chan-vay-xep-ly",
-    "name": "Áo Thể Thao Body Dài Tay W Cổ Khóa Phối Chân Váy Xếp Ly",
-    "merchant": "shopee",
-    "origin_url": "https://shopee.vn/Set-%C4%90%E1%BB%93-N%E1%BB%AF-%C4%90%E1%BB%93-Th%E1%BB%83-Thao-N%E1%BB%AF-%C3%81o-Th%E1%BB%83-Thao-Body-D%C3%A0i-Tay-W-C%E1%BB%95-Kh%C3%B3a-Ph%E1%BB%91i-Ch%C3%A2n-V%C3%A1y-X%E1%BA%BFp-Ly-Basic-H11-Ms444-i.1298531293.28892870218?extraParams=%7B%22display_model_id%22%3A286944113272%2C%22model_selection_logic%22%3A3%7D&sp_atk=934563cf-4038-4803-806e-59456bbe827e&xptdk=934563cf-4038-4803-806e-59456bbe827e",
-    "image": "/assets/img/products/ao-the-thao-body-dai-tay-w-co-khoa-phoi-chan-vay-xep-ly.webp",
-    "price_vnd": 309000,
-    "category": "thoi-trang",
-    "brand": "",
-    "featured": false,
-    "status": true,
-    "updated_at": "2025-10-31T14:27:29.249Z"
   }
 ]
