@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-  <title>Tuyet Store </title>
+  <title>Tuyet Store</title>
   <meta name="description" content="Cửa hàng liên kết chuẩn MXD: Danh mục nổi bật và Sản phẩm nổi bật."/>
   <link rel="canonical" href="https://tuyetlethi83a.github.io/"/>
   <meta name="robots" content="index,follow"/>
@@ -24,6 +24,14 @@
     }
     .hero{background:var(--brand); color:var(--hero-text);}
     .badge{background:var(--accent); color:#fff; border-radius:999px; padding:.15rem .5rem; display:inline-block}
+    /* Hiển thị 4 tile danh mục nổi bật trên trang chủ */
+    #featured-cats .category-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(220px,1fr));
+      gap:1rem;
+    }
+    @media (max-width:1024px){ #featured-cats .category-grid{ grid-template-columns:repeat(3,1fr);} }
+    @media (max-width:640px){ #featured-cats .category-grid{ grid-template-columns:repeat(2,1fr);} }
   </style>
 
   <link rel="stylesheet" href="/assets/site.css"/>
@@ -41,14 +49,14 @@
 <!-- NAV -->
 <header class="topbar">
   <div class="container nav">
-    <a class="brand" href="/">Cửa hàng </a>
+    <a class="brand" href="/">Cửa hàng</a>
     <nav>
       <a href="/">Trang chủ</a>
       <a href="/store.html">Cửa hàng</a>
       <a href="/store/thoi-trang.html">Thời trang</a>
       <a href="/store/my-pham.html">Mỹ phẩm</a>
       <a href="/store/me-va-be.html">Mẹ & Bé</a>
-      <a href="/store/trang-suc.html">Trang Sức</a>
+      <a href="/store/trang-suc.html">Trang sức</a>
       <a href="/lien-he.html">Liên hệ</a>
     </nav>
   </div>
@@ -60,32 +68,40 @@
     <p class="muted">GA4 trước affiliate • Canonical tuyệt đối • SW bật sẵn</p>
     <div class="actions">
       <a class="btn" href="/store.html">Vào Store</a>
-      <a class="btn outline" href="/g.html?sku=ao-croptop-ba-lo-nu-toptify"</a>
+      <a class="btn outline" href="/g.html?sku=ao-croptop-ba-lo-nu-toptify">Xem trang sản phẩm (demo)</a>
     </div>
   </div>
 </section>
 
 <main>
   <!-- Danh mục nổi bật -->
-  <section class="container">
+  <section class="container" id="featured-cats">
     <h2>Danh mục nổi bật</h2>
     <ul class="category-grid">
-      <li><a class="category-tile" href="/store/thoi-trang.html">
-        <img src="/assets/img/categories/thoi-trang.webp" alt="Thời trang — MXD" width="400" height="240"/>
-        <span>Thời trang</span></a></li>
-      <li><a class="category-tile" href="/store/my-pham.html">
-        <img src="/assets/img/categories/my-pham.webp" alt="Mỹ phẩm — MXD" width="400" height="240"/>
-        <span>Mỹ phẩm</span></a></li>
-      <li><a class="category-tile" href="/store/me-va-be.html">
-        <img src="/assets/img/categories/me-va-be.webp" alt="Mẹ & Bé — MXD" width="400" height="240"/>
-        <span>Mẹ & Bé</span></a></li>
-      <!-- INSERT trong .category-grid (trang chủ) -->
-<a class="category-tile" href="/store/trang-suc.html">
-  <img src="/assets/img/categories/trang-suc.webp"
-       alt="Trang sức — MXD" width="320" height="200" loading="lazy">
-  <span>Trang sức</span>
-</a>
-
+      <li>
+        <a class="category-tile" href="/store/thoi-trang.html">
+          <img src="/assets/img/categories/thoi-trang.webp" alt="Thời trang — MXD" width="400" height="240" loading="lazy"/>
+          <span>Thời trang</span>
+        </a>
+      </li>
+      <li>
+        <a class="category-tile" href="/store/my-pham.html">
+          <img src="/assets/img/categories/my-pham.webp" alt="Mỹ phẩm — MXD" width="400" height="240" loading="lazy"/>
+          <span>Mỹ phẩm</span>
+        </a>
+      </li>
+      <li>
+        <a class="category-tile" href="/store/me-va-be.html">
+          <img src="/assets/img/categories/me-va-be.webp" alt="Mẹ & Bé — MXD" width="400" height="240" loading="lazy"/>
+          <span>Mẹ & Bé</span>
+        </a>
+      </li>
+      <li>
+        <a class="category-tile" href="/store/trang-suc.html">
+          <img src="/assets/img/categories/trang-suc.webp" alt="Trang sức — MXD" width="400" height="240" loading="lazy"/>
+          <span>Trang sức</span>
+        </a>
+      </li>
     </ul>
     <p style="margin-top:1rem"><a class="btn" href="/store.html">Xem tất cả danh mục</a></p>
   </section>
