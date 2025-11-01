@@ -1,0 +1,87 @@
+<!-- REPLACE WHOLE FILE: /store/trang-suc.html -->
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Trang sức | MXD</title>
+<meta name="description" content="Danh mục Trang sức — hiển thị sản phẩm từ affiliates.json theo chuẩn MXD."/>
+<link rel="canonical" href="https://tuyetlethi83a.github.io/store/trang-suc.html"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Trang sức | MXD"/>
+<meta property="og:description" content="Danh mục Trang sức"/>
+<meta property="og:url" content="https://tuyetlethi83a.github.io/store/trang-suc.html"/>
+<meta property="og:image" content="https://tuyetlethi83a.github.io/assets/og/default-og.webp"/>
+<link rel="stylesheet" href="/assets/site.css"/>
+<script defer src="/assets/analytics.js"></script>
+<script defer src="/assets/mxd-affiliate.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+  <a class="brand" href="/">Cửa hàng liên kết</a>
+  <nav><a href="/">Trang chủ</a><a href="/store.html">Cửa hàng</a><a href="/store/thoi-trang.html">Thời trang</a><a href="/store/my-pham.html">Mỹ phẩm</a><a href="/store/me-va-be.html">Mẹ & Bé</a><a href="/store/trang-suc.html">Trang sức</a><a href="/lien-he.html">Liên hệ</a></nav>
+</div></header>
+
+<header class="container"><h1>Trang sức</h1></header>
+<main class="container">
+  <div id="grid" class="product-grid"><p>Đang tải…</p></div>
+</main>
+<footer><div class="container"><small class="muted">MXD — category hub</small></div></footer>
+
+<script>
+/* FIND: category hub loader v2025-11-01-b01 — slug=trang-suc */
+const SLUG = 'trang-suc';
+const $ = (id)=>document.getElementById(id);
+
+function priceText(v){ const n=Number(v); return Number.isFinite(n)? n.toLocaleString('vi-VN')+' ₫' : ''; }
+function imgPath(p){ return p.image || ('/assets/img/products/'+p.sku+'.webp'); }
+function card(p){
+  const origin = p.origin_url ?? p.origin ?? '#';
+  const priceRaw = p.price_vnd ?? p.price;
+  const price = priceText(priceRaw);
+  return `
+    <div class="card product-card">
+      <a class="product-meta" href="${origin}"
+         data-merchant="${p.merchant||''}" data-sku="${p.sku}"
+         data-img="${imgPath(p)}" ${Number.isFinite(Number(priceRaw))?`data-price="${Number(priceRaw)}"`:''}>${p.name}</a>
+      <img src="${imgPath(p)}" alt="${p.name}"/>
+      ${price?`<p><strong>${price}</strong></p>`:''}
+      <p><span class="badge">${p.merchant||''}</span></p>
+      <p><a class="btn buy" href="#">Mua ngay</a></p>
+    </div>`;
+}
+
+async function loadAffiliates(){
+  const candidates=['/assets/data/affiliates.json','/affiliates.json'];
+  for(const url of candidates){
+    try{
+      const r=await fetch(url,{cache:'no-store'});
+      if(r.ok){
+        const j=await r.json();
+        if(Array.isArray(j)) return j;
+      }
+    }catch(e){}
+  }
+  return [];
+}
+
+(async()=>{
+  try{
+    const list = await loadAffiliates();
+    const items = list
+      .filter(p => ((p.category||'').toLowerCase().startsWith(SLUG)) && (p.status !== false))
+      .slice(0,60);
+    $('grid').innerHTML = items.length ? items.map(card).join('') : '<p>Chưa có sản phẩm trong danh mục này.</p>';
+
+    // JSON-LD ItemList
+    const itemList = {"@context":"https://schema.org","@type":"ItemList","itemListElement":items.map((p,i)=>({"@type":"ListItem","position":i+1,"url":new URL('/g.html?sku='+encodeURIComponent(p.sku),location.origin).href}))};
+    const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(itemList); document.head.appendChild(s);
+  }catch(e){
+    $('grid').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+    console.error(e);
+  }
+
+  // MXD-CHECK: SW register
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  }
+})();
+</script>
+</body></html>
