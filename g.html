@@ -106,6 +106,11 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     <p><span class="badge">${p.merchant||''}</span></p>
     <p><a class="btn buy" href="#">Mua ngay</a></p>
   </div>`;
+
+  // MXD-CHECK: SW register
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  }
 });
 </script>
 </body></html>
