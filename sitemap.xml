@@ -26,5 +26,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+<!-- INSERT (if not exists): /store/trang-suc.html -->
+<url>
+  <loc>https://tuyetlethi83a.github.io/store/trang-suc.html</loc>
+  <lastmod>2025-11-01</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
 
 </urlset>
